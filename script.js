@@ -1,40 +1,31 @@
-let slides=document.querySelectorAll(".slide");
-let current=0;
-
-let subtitles=[
-"Premium Residential & Structural Consultant",
-"Luxury Home Specialist",
-"Modern Elevation Expert",
-"Trusted Construction Supervisor",
-"Precision Engineering Services",
-"High-End Residential Planning",
-"Architectural Structural Design",
-"Contemporary Elevation Designer",
-"Urban Luxury Housing Specialist",
-"Quality & Durability Focused",
-"Modern Structural Consultant",
-"Elegant Building Design Expert"
-];
-
-let sub=document.getElementById("hero-sub");
-
-function nextSlide(){
-slides[current].classList.remove("active");
-
-current=(current+1)%slides.length;
-
-slides[current].classList.add("active");
-
-sub.style.opacity=0;
-setTimeout(()=>{
-sub.innerText=subtitles[current];
-sub.style.opacity=1;
-},500);
-}
-
-setInterval(nextSlide,3500);
-
 /* MOBILE MENU */
 function toggleMenu(){
 document.getElementById("nav").classList.toggle("active");
+}
+
+/* FILTER */
+function filterProjects(category){
+let items=document.querySelectorAll(".portfolio-item");
+let buttons=document.querySelectorAll(".filter-buttons button");
+
+buttons.forEach(btn=>btn.classList.remove("active"));
+event.target.classList.add("active");
+
+items.forEach(item=>{
+if(category==="all"||item.classList.contains(category)){
+item.style.display="block";
+}else{
+item.style.display="none";
+}
+});
+}
+
+/* POPUP */
+function openPopup(element){
+let img=element.querySelector("img").src;
+document.getElementById("popup-img").src=img;
+document.getElementById("popup").style.display="flex";
+}
+function closePopup(){
+document.getElementById("popup").style.display="none";
 }
