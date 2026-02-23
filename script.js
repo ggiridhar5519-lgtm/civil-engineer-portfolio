@@ -1,52 +1,57 @@
 let slides=document.querySelectorAll(".slide");
 let current=0;
 
-function showSlide(index){
-slides.forEach(s=>s.classList.remove("active","prev"));
-slides[current].classList.add("prev");
-slides[index].classList.add("active");
-current=index;
+let titles=[
+"S HARINATH GUPTHA",
+"S HARINATH GUPTHA",
+"S HARINATH GUPTHA",
+"S HARINATH GUPTHA"
+];
+
+let subtitles=[
+"Professional Civil Engineer",
+"Structural Design Specialist",
+"Modern Construction Consultant",
+"Trusted Site Supervisor"
+];
+
+let tags=[
+"Strong Foundations • Smart Structures • Trusted Execution",
+"Precision Planning • Durable Structures • Excellence",
+"Engineering Quality • Cost Efficient • Reliable",
+"Safe Designs • Accurate Estimation • Professional Execution"
+];
+
+let title=document.getElementById("hero-title");
+let sub=document.getElementById("hero-sub");
+let tag=document.getElementById("hero-tag");
+
+function changeText(index){
+title.classList.remove("fade-up");
+sub.classList.remove("fade-up");
+tag.classList.remove("fade-up");
+
+setTimeout(()=>{
+title.innerText=titles[index];
+sub.innerText=subtitles[index];
+tag.innerText=tags[index];
+
+title.classList.add("fade-up","show");
+sub.classList.add("fade-up","show");
+tag.classList.add("fade-up","show");
+},300);
 }
 
 function nextSlide(){
-let next=(current+1)%slides.length;
-showSlide(next);
+slides[current].classList.remove("active");
+current=(current+1)%slides.length;
+slides[current].classList.add("active");
+changeText(current);
 }
 
-setInterval(nextSlide,4000);
+setInterval(nextSlide,4500);
 
+/* MOBILE MENU */
 function toggleMenu(){
 document.getElementById("nav").classList.toggle("active");
 }
-
-/* SCROLL REVEAL */
-window.addEventListener("scroll",()=>{
-document.querySelectorAll(".reveal").forEach(el=>{
-if(el.getBoundingClientRect().top<window.innerHeight-100){
-el.classList.add("active");
-}
-});
-});
-
-/* COUNTERS */
-document.querySelectorAll(".counter").forEach(counter=>{
-function update(){
-let target=+counter.getAttribute("data-target");
-let count=+counter.innerText;
-let inc=target/200;
-if(count<target){
-counter.innerText=Math.ceil(count+inc);
-setTimeout(update,10);
-}else{
-counter.innerText=target;
-}
-}
-update();
-});
-
-/* PARALLAX */
-window.addEventListener("mousemove",(e)=>{
-let x=(window.innerWidth/2-e.pageX)/50;
-let y=(window.innerHeight/2-e.pageY)/50;
-slides[current].style.transform=`translate(${x}px,${y}px) scale(1.05)`;
-});
