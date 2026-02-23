@@ -10,18 +10,23 @@
 </head>
 <body>
 
-<header class="glass-header">
+<!-- LOADING INTRO -->
+<div class="loader">
+    <h1>S.H.G ENGINEERING</h1>
+</div>
+
+<header id="header">
 
     <div class="logo-area">
         <div class="logo">S.H.G <span>ENGINEERING</span></div>
-        <div id="working-hours" class="hours">8:30 AM – 6:30 PM</div>
+        <div id="status" class="status">Online</div>
     </div>
 
     <nav id="nav">
         <a href="#portfolio">Portfolio</a>
-        <a href="#services">Services</a>
+        <a href="#elevations">Elevations</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
-        <a href="#about">About</a>
     </nav>
 
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -37,18 +42,38 @@
         <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85');"></div>
         <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd');"></div>
         <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6');"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae');"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1502673530728-f79b4cab31b1');"></div>
     </div>
 
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
-        <h1>S HARINATH GUPTHA</h1>
-        <p>Premium Residential & Elevation Consultant</p>
-        <a href="#portfolio" class="btn">View Portfolio</a>
+        <h1 id="hero-title">S HARINATH GUPTHA</h1>
+        <p id="hero-sub">Premium Residential Consultant</p>
+        <a href="#portfolio" class="btn">Explore Projects</a>
     </div>
 
+</section>
+
+<!-- ELEVATION SECTION -->
+
+<section id="elevations" class="section">
+    <h2>Elevation Concepts</h2>
+    <div class="elevation-wrapper">
+        <div class="elevation-box"></div>
+        <div class="elevation-box"></div>
+        <div class="elevation-box"></div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section id="testimonials" class="section dark">
+    <h2>Client Testimonials</h2>
+    <div class="testimonial-slider">
+        <div class="testimonial active">“Professional and highly precise execution.”</div>
+        <div class="testimonial">“Excellent structural planning and supervision.”</div>
+        <div class="testimonial">“Delivered modern and elegant elevation designs.”</div>
+    </div>
 </section>
 
 <script src="script.js"></script>
