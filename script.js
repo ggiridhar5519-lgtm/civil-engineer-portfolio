@@ -40,7 +40,7 @@ window.addEventListener("scroll", () => {
 /* =========================
    ONLINE / OFFLINE STATUS
    Working Hours:
-   8:30 AM to 6:30 PM
+   8:30 AM to 5:30 PM
 ========================= */
 
 let now = new Date();
@@ -55,7 +55,7 @@ let currentTime = hours * 60 + minutes;
 
 /* Working time range in minutes */
 let startTime = 8 * 60 + 30;   // 8:30 AM
-let endTime   = 18 * 60 + 30;  // 6:30 PM
+let endTime   = 17 * 60 + 30;  // 6:30 PM
 
 if (currentTime >= startTime && currentTime <= endTime) {
 
