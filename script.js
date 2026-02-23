@@ -11,7 +11,7 @@ current=(current+1)%slides.length;
 showSlide(current);
 }
 
-setInterval(nextSlide,6000);
+setInterval(nextSlide,3500);
 
 function toggleMenu(){
 document.getElementById("nav").classList.toggle("active");
