@@ -1,11 +1,16 @@
-const slides = document.querySelectorAll(".slide");
+let slides = document.querySelectorAll(".slide");
 let current = 0;
 
-function changeSlide() {
-    slides[current].classList.remove("active");
-    current = (current + 1) % slides.length;
-    slides[current].classList.add("active");
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
 }
 
-setInterval(changeSlide, 4000);
+function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+}
 
+setInterval(() => {
+    nextSlide();
+}, 5000);
