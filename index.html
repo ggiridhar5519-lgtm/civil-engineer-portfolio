@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,76 +13,79 @@
 
 <header>
     <div class="logo">S.H.G <span>ENGINEERING</span></div>
-
-    <!-- Mobile Menu -->
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
     <nav id="nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#elevations">Elevations</a>
+        <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<!-- HERO SECTION -->
-
+<!-- HERO -->
 <section class="hero">
-
-    <div class="slides">
-        <!-- 12 Premium Constructed Buildings -->
-        <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1494526585095-c41746248156');"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85');"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6');"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae');"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1501183638710-841dd1904471');"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1523217582562-09d0def993a6');"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd');"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1493809842364-78817add7ffb');"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1507086182422-97bd6d8b6b62');"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29');"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1505691723518-36a5ac3be353');"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1502673530728-f79b4cab31b1');"></div>
-    </div>
-
-    <div class="overlay"></div>
-
     <div class="hero-content">
-        <h1 id="hero-title">S HARINATH GUPTHA</h1>
-        <p id="hero-sub">Premium Residential & Structural Consultant</p>
-        <p id="hero-tag">Modern Elevations • Luxury Homes • Precision Engineering</p>
-        <a href="#contact" class="btn">Contact Now</a>
-    </div>
-
-</section>
-
-<!-- PROJECT SECTION -->
-
-<section id="projects" class="section">
-    <h2>Completed Projects</h2>
-    <p>Premium residential and commercial structures designed and supervised with precision.</p>
-</section>
-
-<!-- ELEVATION SECTION -->
-
-<section id="elevations" class="section light">
-    <h2>Elevation Designs</h2>
-    <div class="elevation-grid">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab">
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd">
+        <h1>S HARINATH GUPTHA</h1>
+        <p>Luxury Residential & Elevation Specialist</p>
+        <a href="#portfolio" class="btn">View Projects</a>
     </div>
 </section>
 
-<section id="contact" class="section">
+<!-- PORTFOLIO -->
+<section id="portfolio" class="section">
+    <h2>Portfolio</h2>
+
+    <!-- FILTER BUTTONS -->
+    <div class="filter-buttons">
+        <button onclick="filterProjects('all')" class="active">All</button>
+        <button onclick="filterProjects('residential')">Residential</button>
+        <button onclick="filterProjects('villa')">Villa</button>
+        <button onclick="filterProjects('commercial')">Commercial</button>
+    </div>
+
+    <!-- GRID -->
+    <div class="portfolio-grid">
+
+        <div class="portfolio-item residential" onclick="openPopup(this)">
+            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
+        </div>
+
+        <div class="portfolio-item villa" onclick="openPopup(this)">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+        </div>
+
+        <div class="portfolio-item commercial" onclick="openPopup(this)">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab">
+        </div>
+
+        <div class="portfolio-item residential" onclick="openPopup(this)">
+            <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd">
+        </div>
+
+        <div class="portfolio-item villa" onclick="openPopup(this)">
+            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
+        </div>
+
+    </div>
+</section>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+    <span class="close" onclick="closePopup()">×</span>
+    <img id="popup-img">
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="section light">
     <h2>Contact</h2>
     <p>📞 XXXXXXXX</p>
     <p>📍 DHONE, Andhra Pradesh</p>
 </section>
 
 <footer>
-    <p>© 2026 S Harinath Guptha | All Rights Reserved</p>
+    <p>© 2026 S Harinath Guptha</p>
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919515504419" class="whatsapp" target="_blank">💬</a>
 
 <script src="script.js"></script>
 </body>
