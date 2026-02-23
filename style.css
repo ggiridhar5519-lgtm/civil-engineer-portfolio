@@ -1,97 +1,132 @@
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background:#f5f5f5;color:#111}
+body{font-family:'Poppins',sans-serif;background:#111;color:#fff}
 
-/* HEADER */
-header{
+/* GLASS HEADER */
+.glass-header{
 position:fixed;width:100%;top:0;
 display:flex;justify-content:space-between;align-items:center;
-padding:20px 60px;background:#fff;
-box-shadow:0 5px 25px rgba(0,0,0,.05);
+padding:20px 60px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+-webkit-backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,0.1);
 z-index:1000;
 }
-.logo span{color:#f4c430;font-size:12px}
-nav a{margin-left:25px;text-decoration:none;color:#333}
+
+.logo span{color:#f4c430;font-size:12px;display:block}
+
+.logo-area{display:flex;flex-direction:column}
+
+.hours{
+font-size:12px;
+margin-top:3px;
+font-weight:500;
+}
+
+/* NAV */
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#fff;
+transition:.3s;
+}
 nav a:hover{color:#f4c430}
-.menu-toggle{display:none}
+
+.menu-toggle{
+display:none;
+font-size:26px;
+cursor:pointer;
+color:#fff;
+}
 
 /* HERO */
-.hero{position:relative;height:100vh;overflow:hidden}
-.slides{position:absolute;width:100%;height:100%}
-.slide{
-position:absolute;width:100%;height:100%;
-background-size:cover;background-position:center;
-opacity:0;transition:opacity 1.5s ease;
+.hero{
+position:relative;
+height:100vh;
+overflow:hidden;
 }
-.slide.active{opacity:1}
+
+.slides{
+position:absolute;
+width:100%;
+height:100%;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+transform:scale(1.05);
+transition:opacity 1.2s ease, transform 6s ease;
+}
+
+.slide.active{
+opacity:1;
+transform:scale(1);
+}
 
 .hero-overlay{
-position:absolute;width:100%;height:100%;
+position:absolute;
+width:100%;
+height:100%;
 background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.7));
 }
 
 .hero-content{
-position:absolute;top:50%;left:50%;
+position:absolute;
+top:50%;
+left:50%;
 transform:translate(-50%,-50%);
-color:#fff;text-align:center;
+text-align:center;
+z-index:2;
 animation:fadeUp 1.2s ease;
 }
+
 @keyframes fadeUp{
 from{opacity:0;transform:translate(-50%,-40%)}
 to{opacity:1;transform:translate(-50%,-50%)}
 }
 
-.hero-content h1{font-size:55px;color:#f4c430;margin-bottom:10px}
+.hero-content h1{
+font-size:55px;
+color:#f4c430;
+margin-bottom:10px;
+}
+
 .btn{
-display:inline-block;margin-top:20px;
-padding:12px 28px;border-radius:30px;
-background:#f4c430;color:#000;text-decoration:none;
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:#f4c430;
+color:#000;
+text-decoration:none;
+border-radius:30px;
 transition:.3s;
 }
-.btn:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgba(0,0,0,.2)}
-
-/* SECTION */
-.section{padding:120px 60px;text-align:center}
-.section h2{margin-bottom:40px;color:#333}
-.light{background:#fff}
-
-/* PORTFOLIO GRID */
-.portfolio-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-.card{
-overflow:hidden;border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-transition:.4s;
-}
-.card img{
-width:100%;height:250px;object-fit:cover;
-transition:transform .6s ease;
-}
-.card:hover img{transform:scale(1.1)}
-.card:hover{transform:translateY(-10px)}
-
-/* WHATSAPP */
-.whatsapp{
-position:fixed;bottom:25px;right:25px;
-background:#25D366;color:#fff;
-width:55px;height:55px;border-radius:50%;
-text-align:center;line-height:55px;
-text-decoration:none;font-size:22px;
-animation:pulse 2s infinite;
-}
-@keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}
-70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}
-100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(0,0,0,.3);
 }
 
 /* MOBILE */
 @media(max-width:768px){
-.menu-toggle{display:block}
-nav{display:none;position:absolute;top:70px;right:0;background:#fff;padding:20px;flex-direction:column}
+
+nav{
+display:none;
+position:absolute;
+top:80px;
+right:0;
+background:#111;
+padding:20px;
+flex-direction:column;
+}
+
 nav.active{display:flex}
-.section{padding:80px 20px}
-.hero-content h1{font-size:32px}
+
+.menu-toggle{display:block}
+
+.glass-header{padding:20px}
 }
