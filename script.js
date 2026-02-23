@@ -60,3 +60,22 @@ status.innerText="Offline";
 function toggleMenu(){
 document.getElementById("nav").classList.toggle("active");
 }
+/* PREMIUM MOBILE MENU */
+function toggleMenu(){
+let nav=document.getElementById("nav");
+let toggle=document.querySelector(".menu-toggle");
+
+nav.classList.toggle("active");
+toggle.classList.toggle("active");
+}
+
+/* STICKY SHRINK HEADER */
+window.addEventListener("scroll",()=>{
+let header=document.getElementById("header");
+
+if(window.scrollY>60){
+header.classList.add("shrink");
+}else{
+header.classList.remove("shrink");
+}
+});
