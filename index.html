@@ -12,6 +12,8 @@
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
     <div class="logo">S.H.G <span>ENGINEERING</span></div>
 
@@ -25,14 +27,19 @@
     </nav>
 </header>
 
+<!-- ================= HERO ================= -->
 
-
-   <section class="hero-slider" onclick="nextSlide()">
+<section class="hero-slider" onclick="nextSlide()">
 
     <div class="slides">
-        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');"></div>
-        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd');"></div>
-        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab');"></div>
+        <div class="slide active"
+            style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');"></div>
+
+        <div class="slide"
+            style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd');"></div>
+
+        <div class="slide"
+            style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab');"></div>
     </div>
 
     <div class="hero-overlay"></div>
@@ -46,12 +53,28 @@
 
 </section>
 
+<!-- ================= COUNTERS ================= -->
 
-<script src="script.js"></script>
+<section class="counter-section">
+    <div class="counter-box">
+        <h2 class="counter" data-target="120">0</h2>
+        <p>Projects Completed</p>
+    </div>
 
+    <div class="counter-box">
+        <h2 class="counter" data-target="85">0</h2>
+        <p>Happy Clients</p>
+    </div>
 
+    <div class="counter-box">
+        <h2 class="counter" data-target="10">0</h2>
+        <p>Years Experience</p>
+    </div>
+</section>
 
-<section id="about" class="section">
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section reveal">
     <h2>About</h2>
     <p>
         Experienced Civil Engineer based in DHONE, specializing in structural planning,
@@ -60,9 +83,13 @@
     </p>
 </section>
 
-<section id="services" class="section dark">
+<!-- ================= SERVICES ================= -->
+
+<section id="services" class="section dark reveal">
     <h2>Services</h2>
+
     <div class="cards">
+
         <div class="card">
             <h3>Structural Design</h3>
             <p>Safe, optimized and durable structural planning.</p>
@@ -82,32 +109,55 @@
             <h3>Site Supervision</h3>
             <p>Professional monitoring for quality construction.</p>
         </div>
+
     </div>
 </section>
 
-<section id="projects" class="section">
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects" class="section dark">
     <h2>Projects</h2>
-    <div class="cards">
-        <div class="card">Residential Building Project</div>
-        <div class="card">Independent House Plan</div>
-        <div class="card">Villa Construction</div>
-        <div class="card">Renovation Project</div>
+
+    <div class="project-grid">
+
+        <div class="project-card reveal">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+            <div class="project-overlay">Residential Building</div>
+        </div>
+
+        <div class="project-card reveal">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd">
+            <div class="project-overlay">Villa Construction</div>
+        </div>
+
+        <div class="project-card reveal">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab">
+            <div class="project-overlay">Commercial Project</div>
+        </div>
+
     </div>
 </section>
 
-<section id="contact" class="section dark">
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="section reveal">
     <h2>Contact</h2>
-    <p>📞XXXXXXX</p>
+    <p>📞 XXXXXXXX</p>
     <p>📍 DHONE, Andhra Pradesh</p>
     <p>📧 yourmail@email.com</p>
 </section>
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
     <p>© 2026 S Harinath Guptha | All Rights Reserved</p>
 </footer>
 
-<!-- WhatsApp Floating Button -->
+<!-- WhatsApp Button -->
 <a href="https://wa.me/919515504419" class="whatsapp" target="_blank">💬</a>
+
+<!-- SCRIPT (Always at bottom) -->
+<script src="script.js"></script>
 
 </body>
 </html>
