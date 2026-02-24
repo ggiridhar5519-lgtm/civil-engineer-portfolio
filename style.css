@@ -1,2 +1,323 @@
-(
-j
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#111;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* LOADER */
+.loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+animation:fadeOut 1.5s forwards;
+animation-delay:1.5s;
+}
+
+.loader h1{
+color:#f4c430;
+letter-spacing:2px;
+}
+
+@keyframes fadeOut{
+to{opacity:0;visibility:hidden;}
+}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+z-index:1000;
+transition:all 0.4s ease;
+background:transparent;
+}
+
+header.shrink{
+padding:10px 60px;
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(12px);
+}
+
+.logo span{
+color:#f4c430;
+font-size:12px;
+display:block;
+}
+
+.status{
+font-size:12px;
+margin-top:3px;
+}
+
+nav{
+display:flex;
+align-items:center;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#fff;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#f4c430;
+}
+
+/* HERO */
+.hero{
+position:relative;
+height:100vh;
+overflow:hidden;
+}
+
+.slides{
+position:absolute;
+width:100%;
+height:100%;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+transform:scale(1.05);
+transition:opacity 1.2s ease, transform 6s ease;
+}
+
+.slide.active{
+opacity:1;
+transform:scale(1);
+}
+
+.hero-overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.75));
+}
+
+.hero-content{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+z-index:2;
+width:90%;
+max-width:700px;
+}
+
+.hero-content h1{
+font-size:55px;
+color:#f4c430;
+}
+
+.hero-content p{
+margin-top:10px;
+font-size:18px;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+border-radius:30px;
+background:#f4c430;
+color:#000;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* =============================
+   MOBILE MENU
+============================= */
+
+.menu-toggle{
+display:none;
+width:30px;
+height:22px;
+position:relative;
+cursor:pointer;
+z-index:1200;
+}
+
+.menu-toggle span{
+position:absolute;
+height:3px;
+width:100%;
+background:#fff;
+left:0;
+transition:0.4s ease;
+border-radius:2px;
+}
+
+.menu-toggle span:nth-child(1){top:0;}
+.menu-toggle span:nth-child(2){top:9px;}
+.menu-toggle span:nth-child(3){top:18px;}
+
+.menu-toggle.active span:nth-child(1){
+transform:rotate(45deg);
+top:9px;
+}
+.menu-toggle.active span:nth-child(2){
+opacity:0;
+}
+.menu-toggle.active span:nth-child(3){
+transform:rotate(-45deg);
+top:9px;
+}
+
+/* 🔥 RESPONSIVE FIX */
+@media (max-width: 768px){
+
+header{
+padding:15px 20px;
+}
+
+nav{
+position:fixed;
+top:0;
+right:-100%;
+width:260px;
+height:100vh;
+background:rgba(0,0,0,0.95);
+backdrop-filter:blur(15px);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+transition:0.5s ease;
+z-index:1100;
+}
+
+nav.active{
+right:0;
+}
+
+nav a{
+margin:20px 0;
+font-size:18px;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.hero-content h1{
+font-size:30px;
+line-height:1.3;
+}
+
+.hero-content p{
+font-size:15px;
+}
+
+}
+/* STATUS DOT */
+.status{
+display:flex;
+align-items:center;
+gap:8px;
+font-size:12px;
+margin-top:3px;
+font-weight:500;
+}
+
+/* Blinking dot */
+.dot{
+width:8px;
+height:8px;
+border-radius:50%;
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+0%{opacity:1;}
+50%{opacity:0.3;}
+100%{opacity:1;}
+}
+
+/* Online state */
+.online{
+background:limegreen;
+box-shadow:0 0 8px limegreen;
+}
+
+/* Offline state */
+.offline{
+background:red;
+box-shadow:0 0 8px red;
+}
+/* STATUS AREA */
+.status{
+display:flex;
+align-items:center;
+gap:8px;
+font-size:12px;
+margin-top:3px;
+font-weight:500;
+}
+
+/* DOT BASE */
+.dot{
+width:8px;
+height:8px;
+border-radius:50%;
+}
+
+/* ONLINE STATE */
+.online{
+background:limegreen;
+animation:blink 1s infinite, pulseGlow 2s infinite;
+box-shadow:0 0 8px limegreen;
+}
+
+/* OFFLINE STATE */
+.offline{
+background:red;
+box-shadow:0 0 6px red;
+}
+
+/* BLINK */
+@keyframes blink{
+0%{opacity:1;}
+50%{opacity:0.3;}
+100%{opacity:1;}
+}
+
+/* PULSE GLOW */
+@keyframes pulseGlow{
+0%{box-shadow:0 0 5px limegreen;}
+50%{box-shadow:0 0 18px limegreen;}
+100%{box-shadow:0 0 5px limegreen;}
+}
+
