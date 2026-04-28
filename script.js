@@ -8,7 +8,7 @@ window.onload = function () {
   }, 3800);
 };
 
-// HERO SLIDER
+// HERO IMAGE SLIDER
 const slides = document.querySelectorAll(".slide");
 let current = 0;
 
@@ -20,19 +20,23 @@ if (slides.length > 0) {
   }, 4500);
 }
 
-// HAMBURGER MENU
+// PREMIUM HAMBURGER MENU
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 
 if (menuBtn && navMenu) {
+
   menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("active");
+    menuBtn.classList.toggle("open");
   });
 
-  // close after clicking link on mobile
+  // Close after clicking link
   document.querySelectorAll("#navMenu a").forEach(link => {
     link.addEventListener("click", () => {
       navMenu.classList.remove("active");
+      menuBtn.classList.remove("open");
     });
   });
+
 }
