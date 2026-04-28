@@ -1,4 +1,4 @@
-/* style.css - FULL UPDATED PREMIUM VERSION */
+/* style.css - FULL FINAL PREMIUM VERSION */
 
 *{
 margin:0;
@@ -75,7 +75,7 @@ padding:18px 55px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(255,255,255,.94);
+background:rgba(255,255,255,.95);
 backdrop-filter:blur(14px);
 -webkit-backdrop-filter:blur(14px);
 z-index:1000;
@@ -382,7 +382,7 @@ padding:18px;
 font-size:14px;
 }
 
-/* MENU OVERLAY */
+/* OVERLAY */
 
 .menu-overlay{
 position:fixed;
@@ -390,7 +390,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,.35);
+background:rgba(0,0,0,.45);
 backdrop-filter:blur(4px);
 -webkit-backdrop-filter:blur(4px);
 z-index:1090;
@@ -438,7 +438,7 @@ text-overflow:ellipsis;
 display:flex;
 }
 
-/* PREMIUM DARK GLASS MENU */
+/* FINAL PREMIUM MENU */
 
 nav{
 position:fixed;
@@ -446,7 +446,6 @@ top:10px;
 right:-100%;
 width:82%;
 height:94vh;
-
 padding:84px 16px 24px 16px;
 
 display:flex;
@@ -454,7 +453,7 @@ flex-direction:column;
 align-items:center;
 gap:16px;
 
-background:rgba(10,18,35,0.82);
+background:rgba(8,12,24,.92);
 backdrop-filter:blur(14px);
 -webkit-backdrop-filter:blur(14px);
 
@@ -473,23 +472,32 @@ right:0;
 nav a{
 width:100%;
 max-width:260px;
-padding:15px;
+padding:16px 18px;
 text-align:center;
-font-size:20px;
-font-weight:700;
-color:#fff;
 
-border-radius:16px;
-background:rgba(255,255,255,.08);
-border:1px solid rgba(255,255,255,.08);
+font-size:21px;
+font-weight:800;
+letter-spacing:.4px;
+color:#ffffff;
 
-text-shadow:0 1px 2px rgba(0,0,0,.5);
+background:rgba(255,255,255,.16);
+border:1px solid rgba(255,255,255,.22);
+border-radius:18px;
+
+box-shadow:
+0 8px 18px rgba(0,0,0,.22),
+inset 0 1px 0 rgba(255,255,255,.08);
+
+text-shadow:0 2px 6px rgba(0,0,0,.65);
+
+transition:.28s ease;
 }
 
 nav a:hover,
 nav a:active{
 background:#0d47a1;
-transform:translateY(-2px);
+border-color:#2d6cdf;
+transform:translateY(-2px) scale(1.01);
 }
 
 /* HERO */
@@ -503,7 +511,7 @@ line-height:1.2;
 font-size:16px;
 }
 
-/* STACK ALL */
+/* STACK */
 
 .blocks,
 .why,
