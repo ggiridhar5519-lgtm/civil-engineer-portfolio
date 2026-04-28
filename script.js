@@ -1,18 +1,17 @@
 // script.js
 
-// INTRO REMOVE
-window.onload = function () {
+window.addEventListener("load", () => {
   setTimeout(() => {
     const intro = document.getElementById("intro");
     if (intro) intro.style.display = "none";
   }, 3200);
-};
+});
 
-// HERO SLIDER
+/* HERO SLIDER */
 const slides = document.querySelectorAll(".slide");
 let current = 0;
 
-if (slides.length > 0) {
+if (slides.length) {
   setInterval(() => {
     slides[current].classList.remove("active");
     current = (current + 1) % slides.length;
@@ -20,14 +19,19 @@ if (slides.length > 0) {
   }, 4500);
 }
 
-// MENU
+/* MENU */
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 
-// create overlay automatically
 const overlay = document.createElement("div");
-overlay.classList.add("menu-overlay");
+overlay.className = "menu-overlay";
 document.body.appendChild(overlay);
+
+function openMenu(){
+  navMenu.classList.add("active");
+  menuBtn.classList.add("open");
+  overlay.classList.add("show");
+}
 
 function closeMenu(){
   navMenu.classList.remove("active");
@@ -37,10 +41,14 @@ function closeMenu(){
 
 if(menuBtn && navMenu){
 
-  menuBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-    menuBtn.classList.toggle("open");
-    overlay.classList.toggle("show");
+  menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    if(navMenu.classList.contains("active")){
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
 
   overlay.addEventListener("click", closeMenu);
