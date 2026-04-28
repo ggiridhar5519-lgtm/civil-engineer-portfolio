@@ -1,20 +1,38 @@
 // script.js
 
-// Intro remove after animation
+// INTRO REMOVE
 window.onload = function () {
   setTimeout(() => {
-    document.getElementById("intro").style.display = "none";
+    const intro = document.getElementById("intro");
+    if (intro) intro.style.display = "none";
   }, 3800);
 };
 
-// Background slider
+// HERO SLIDER
 const slides = document.querySelectorAll(".slide");
 let current = 0;
 
-setInterval(() => {
-  slides[current].classList.remove("active");
+if (slides.length > 0) {
+  setInterval(() => {
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+  }, 4500);
+}
 
-  current = (current + 1) % slides.length;
+// HAMBURGER MENU
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
 
-  slides[current].classList.add("active");
-}, 4500);
+if (menuBtn && navMenu) {
+  menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+
+  // close after clicking link on mobile
+  document.querySelectorAll("#navMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+}
