@@ -1,6 +1,6 @@
 /* ==========================================
-   HARI ASSOCIATES - FINAL MASTER CSS
-   Cleaned | Premium | Responsive
+   HARI ASSOCIATES - FULL CSS
+   Apple iOS Premium Floating Sheet Menu
 ========================================== */
 
 *{
@@ -12,7 +12,7 @@ scroll-behavior:smooth;
 
 body{
 font-family:Arial,Helvetica,sans-serif;
-background:#fff;
+background:#ffffff;
 color:#111;
 overflow-x:hidden;
 line-height:1.6;
@@ -22,10 +22,7 @@ line-height:1.6;
 
 .intro{
 position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
+inset:0;
 background:#fff;
 display:flex;
 justify-content:center;
@@ -37,7 +34,7 @@ animation-delay:2.7s;
 
 .intro-content{
 text-align:center;
-animation:zoomIn 1.7s ease;
+animation:zoomIn 1.6s ease;
 padding:20px;
 }
 
@@ -56,15 +53,12 @@ letter-spacing:2px;
 }
 
 @keyframes zoomIn{
-0%{opacity:0;transform:scale(.72);}
+0%{opacity:0;transform:scale(.75);}
 100%{opacity:1;transform:scale(1);}
 }
 
 @keyframes fadeOut{
-to{
-opacity:0;
-visibility:hidden;
-}
+to{opacity:0;visibility:hidden;}
 }
 
 /* HEADER */
@@ -114,7 +108,7 @@ background:#0d47a1;
 color:#fff;
 }
 
-/* HAMBURGER */
+/* MENU BTN */
 
 .menu-btn{
 display:none;
@@ -122,7 +116,7 @@ width:34px;
 cursor:pointer;
 flex-direction:column;
 gap:6px;
-z-index:3001;
+z-index:4001;
 }
 
 .menu-btn span{
@@ -153,11 +147,9 @@ height:100vh;
 overflow:hidden;
 }
 
-.slides,
-.slide{
+.slides,.slide{
 position:absolute;
-top:0;
-left:0;
+inset:0;
 width:100%;
 height:100%;
 }
@@ -177,10 +169,7 @@ transform:scale(1);
 
 .overlay{
 position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
+inset:0;
 background:linear-gradient(rgba(0,0,0,.30),rgba(0,0,0,.58));
 }
 
@@ -226,19 +215,12 @@ background:#1565c0;
 transform:translateY(-3px);
 }
 
-/* COMMON GRID */
+/* GRID */
 
-.blocks,
-.why,
-.showcase,
-.stats,
-.test-grid,
-footer{
+.blocks,.why,.showcase,.stats,.test-grid,footer{
 display:grid;
 gap:24px;
 }
-
-/* BLOCKS */
 
 .blocks{
 grid-template-columns:repeat(3,1fr);
@@ -258,8 +240,6 @@ margin-bottom:12px;
 color:#0d47a1;
 }
 
-/* WHY */
-
 .why{
 grid-template-columns:repeat(4,1fr);
 padding:70px 60px;
@@ -271,10 +251,7 @@ padding:24px;
 text-align:center;
 border-radius:16px;
 font-weight:700;
-box-shadow:0 8px 18px rgba(0,0,0,.05);
 }
-
-/* SHOWCASE */
 
 .showcase{
 grid-template-columns:repeat(3,1fr);
@@ -299,8 +276,6 @@ background-size:cover;
 background-position:center;
 }
 
-/* STATS */
-
 .stats{
 grid-template-columns:repeat(4,1fr);
 padding:75px 60px;
@@ -311,8 +286,6 @@ text-align:center;
 font-size:44px;
 color:#0d47a1;
 }
-
-/* TESTIMONIAL */
 
 .testimonials{
 padding:85px 60px;
@@ -336,8 +309,6 @@ border-radius:18px;
 box-shadow:0 10px 24px rgba(0,0,0,.07);
 }
 
-/* CTA */
-
 .cta{
 padding:90px 30px;
 text-align:center;
@@ -349,8 +320,6 @@ color:#fff;
 font-size:42px;
 margin-bottom:20px;
 }
-
-/* FOOTER */
 
 footer{
 grid-template-columns:repeat(3,1fr);
@@ -377,21 +346,18 @@ padding:18px;
 font-size:14px;
 }
 
-/* MENU OVERLAY */
+/* OVERLAY */
 
 .menu-overlay{
 position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.48);
-backdrop-filter:blur(6px);
--webkit-backdrop-filter:blur(6px);
+inset:0;
+background:rgba(0,0,0,.42);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
 opacity:0;
 visibility:hidden;
 transition:.3s ease;
-z-index:2500;
+z-index:3000;
 }
 
 .menu-overlay.show{
@@ -400,7 +366,7 @@ visibility:visible;
 }
 
 /* ===================================
-   MOBILE
+   MOBILE MENU - APPLE FLOATING SHEET
 =================================== */
 
 @media(max-width:992px){
@@ -421,35 +387,35 @@ text-overflow:ellipsis;
 display:flex;
 }
 
-/* PREMIUM GLASS MENU */
+/* FLOATING SHEET */
 
 nav{
 position:fixed;
-top:18px;
+top:14px;
 right:-100%;
-width:84%;
-height:92vh;
+width:86%;
+height:93vh;
 
-padding:78px 16px 18px;
+padding:78px 18px 20px;
 
 display:flex;
 flex-direction:column;
 align-items:center;
 gap:14px;
 
-background:rgba(10,18,35,.74);
-backdrop-filter:blur(18px);
--webkit-backdrop-filter:blur(18px);
+background:rgba(18,28,46,.78);
+backdrop-filter:blur(24px) saturate(150%);
+-webkit-backdrop-filter:blur(24px) saturate(150%);
 
-border:1px solid rgba(255,255,255,.10);
-border-radius:28px 0 0 28px;
+border:1px solid rgba(255,255,255,.12);
+border-radius:30px 0 0 30px;
 
 box-shadow:
--16px 0 35px rgba(0,0,0,.30),
-inset 0 1px 0 rgba(255,255,255,.06);
+-20px 0 40px rgba(0,0,0,.30),
+inset 0 1px 0 rgba(255,255,255,.08);
 
-z-index:3000;
-transition:right .35s ease;
+transition:right .36s ease;
+z-index:4000;
 overflow-y:auto;
 }
 
@@ -457,33 +423,40 @@ nav.active{
 right:0;
 }
 
+/* MENU ITEMS */
+
 nav a{
 width:100%;
-max-width:270px;
-padding:16px 18px;
+max-width:280px;
+padding:17px 18px;
 
 text-align:center;
 text-decoration:none;
 
 font-size:20px;
 font-weight:800;
-color:#fff;
+color:#ffffff;
 
 background:rgba(255,255,255,.08);
 border:1px solid rgba(255,255,255,.10);
 border-radius:18px;
 
-box-shadow:0 10px 20px rgba(0,0,0,.16);
+box-shadow:
+0 10px 18px rgba(0,0,0,.16),
+inset 0 1px 0 rgba(255,255,255,.06);
+
+text-shadow:0 1px 2px rgba(0,0,0,.28);
+
 transition:.28s ease;
 }
 
 nav a:hover,
 nav a:active{
-background:rgba(255,255,255,.16);
+background:rgba(255,255,255,.14);
 transform:translateY(-2px);
 }
 
-/* CALL BUTTON */
+/* CTA BUTTON */
 
 nav::after{
 content:"📞 Call Us Now";
@@ -492,17 +465,18 @@ align-items:center;
 justify-content:center;
 
 width:100%;
-max-width:270px;
+max-width:280px;
 min-height:58px;
 margin-top:auto;
 
 font-size:16px;
-font-weight:700;
+font-weight:800;
 color:#fff;
 
 background:#0d47a1;
 border-radius:18px;
-box-shadow:0 12px 20px rgba(13,71,161,.28);
+
+box-shadow:0 14px 22px rgba(13,71,161,.32);
 }
 
 /* HERO */
@@ -518,35 +492,20 @@ font-size:16px;
 
 /* STACK */
 
-.blocks,
-.why,
-.showcase,
-.stats,
-.test-grid,
-footer{
+.blocks,.why,.showcase,.stats,.test-grid,footer{
 grid-template-columns:1fr;
 padding-left:20px;
 padding-right:20px;
 gap:18px;
 }
 
-.blocks,
-.why,
-.showcase,
-.stats,
-.testimonials,
-footer{
+.blocks,.why,.showcase,.stats,.testimonials,footer{
 padding-top:60px;
 padding-bottom:60px;
 }
 
-.stats h3{
-font-size:34px;
-}
-
-.cta h2{
-font-size:28px;
-}
+.stats h3{font-size:34px;}
+.cta h2{font-size:28px;}
 
 .intro-content h1{
 font-size:34px;
