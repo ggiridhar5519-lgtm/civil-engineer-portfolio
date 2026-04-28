@@ -1,7 +1,7 @@
-/* ===============================
-   HARI ASSOCIATES - FINAL CLEAN CSS
-   Premium Responsive Version
-================================= */
+/* ==========================================
+   HARI ASSOCIATES - FINAL MASTER CSS
+   Cleaned | Premium | Responsive
+========================================== */
 
 *{
 margin:0;
@@ -11,8 +11,8 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
-background:#ffffff;
+font-family:Arial,Helvetica,sans-serif;
+background:#fff;
 color:#111;
 overflow-x:hidden;
 line-height:1.6;
@@ -26,18 +26,18 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:#ffffff;
+background:#fff;
 display:flex;
 justify-content:center;
 align-items:center;
 z-index:9999;
 animation:fadeOut 1s forwards;
-animation-delay:2.8s;
+animation-delay:2.7s;
 }
 
 .intro-content{
 text-align:center;
-animation:zoomIn 1.8s ease;
+animation:zoomIn 1.7s ease;
 padding:20px;
 }
 
@@ -56,7 +56,7 @@ letter-spacing:2px;
 }
 
 @keyframes zoomIn{
-0%{opacity:0;transform:scale(.7);}
+0%{opacity:0;transform:scale(.72);}
 100%{opacity:1;transform:scale(1);}
 }
 
@@ -78,11 +78,11 @@ padding:18px 55px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(255,255,255,.95);
-backdrop-filter:blur(12px);
--webkit-backdrop-filter:blur(12px);
-box-shadow:0 8px 20px rgba(0,0,0,.08);
-z-index:1000;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+z-index:2000;
 }
 
 .logo{
@@ -106,7 +106,7 @@ color:#111;
 font-weight:700;
 padding:10px 16px;
 border-radius:12px;
-transition:.3s ease;
+transition:.28s ease;
 }
 
 nav a:hover{
@@ -122,18 +122,16 @@ width:34px;
 cursor:pointer;
 flex-direction:column;
 gap:6px;
-z-index:1200;
+z-index:3001;
 }
 
 .menu-btn span{
 height:3px;
 width:100%;
 background:#111;
-border-radius:5px;
+border-radius:6px;
 transition:.35s ease;
 }
-
-/* OPEN ICON */
 
 .menu-btn.open span:nth-child(1){
 transform:translateY(9px) rotate(45deg);
@@ -169,7 +167,7 @@ background-size:cover;
 background-position:center;
 opacity:0;
 transform:scale(1.08);
-transition:opacity 1s ease, transform 7s ease;
+transition:opacity 1s ease,transform 7s ease;
 }
 
 .slide.active{
@@ -193,7 +191,7 @@ left:50%;
 transform:translate(-50%,-50%);
 text-align:center;
 color:#fff;
-z-index:2;
+z-index:5;
 width:92%;
 max-width:850px;
 padding:10px;
@@ -220,7 +218,7 @@ color:#fff;
 text-decoration:none;
 font-weight:700;
 border-radius:30px;
-transition:.3s ease;
+transition:.28s ease;
 }
 
 .btn:hover{
@@ -228,11 +226,7 @@ background:#1565c0;
 transform:translateY(-3px);
 }
 
-.btn.dark{
-background:#111;
-}
-
-/* SECTIONS */
+/* COMMON GRID */
 
 .blocks,
 .why,
@@ -243,6 +237,8 @@ footer{
 display:grid;
 gap:24px;
 }
+
+/* BLOCKS */
 
 .blocks{
 grid-template-columns:repeat(3,1fr);
@@ -262,6 +258,8 @@ margin-bottom:12px;
 color:#0d47a1;
 }
 
+/* WHY */
+
 .why{
 grid-template-columns:repeat(4,1fr);
 padding:70px 60px;
@@ -275,6 +273,8 @@ border-radius:16px;
 font-weight:700;
 box-shadow:0 8px 18px rgba(0,0,0,.05);
 }
+
+/* SHOWCASE */
 
 .showcase{
 grid-template-columns:repeat(3,1fr);
@@ -293,11 +293,13 @@ font-size:24px;
 font-weight:800;
 color:#fff;
 background:
-linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.58)),
+linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.55)),
 url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
 background-size:cover;
 background-position:center;
 }
+
+/* STATS */
 
 .stats{
 grid-template-columns:repeat(4,1fr);
@@ -310,10 +312,12 @@ font-size:44px;
 color:#0d47a1;
 }
 
+/* TESTIMONIAL */
+
 .testimonials{
 padding:85px 60px;
-text-align:center;
 background:#f7faff;
+text-align:center;
 }
 
 .testimonials h2{
@@ -331,6 +335,8 @@ padding:30px;
 border-radius:18px;
 box-shadow:0 10px 24px rgba(0,0,0,.07);
 }
+
+/* CTA */
 
 .cta{
 padding:90px 30px;
@@ -371,7 +377,7 @@ padding:18px;
 font-size:14px;
 }
 
-/* OVERLAY */
+/* MENU OVERLAY */
 
 .menu-overlay{
 position:fixed;
@@ -379,13 +385,13 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,.45);
-backdrop-filter:blur(3px);
--webkit-backdrop-filter:blur(3px);
-z-index:1090;
+background:rgba(0,0,0,.48);
+backdrop-filter:blur(6px);
+-webkit-backdrop-filter:blur(6px);
 opacity:0;
 visibility:hidden;
 transition:.3s ease;
+z-index:2500;
 }
 
 .menu-overlay.show{
@@ -393,9 +399,9 @@ opacity:1;
 visibility:visible;
 }
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
+/* ===================================
+   MOBILE
+=================================== */
 
 @media(max-width:992px){
 
@@ -415,35 +421,36 @@ text-overflow:ellipsis;
 display:flex;
 }
 
-/* FINAL MENU */
+/* PREMIUM GLASS MENU */
 
 nav{
 position:fixed;
-top:0;
+top:18px;
 right:-100%;
 width:84%;
-height:100vh;
-padding:82px 18px 24px 18px;
+height:92vh;
+
+padding:78px 16px 18px;
 
 display:flex;
 flex-direction:column;
 align-items:center;
-gap:16px;
+gap:14px;
 
-background:linear-gradient(
-180deg,
-rgba(7,12,22,0.98),
-rgba(10,18,35,0.97)
-);
+background:rgba(10,18,35,.74);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
 
-backdrop-filter:blur(6px);
--webkit-backdrop-filter:blur(6px);
+border:1px solid rgba(255,255,255,.10);
+border-radius:28px 0 0 28px;
 
-border-left:1px solid rgba(255,255,255,.08);
-box-shadow:-18px 0 45px rgba(0,0,0,.55);
+box-shadow:
+-16px 0 35px rgba(0,0,0,.30),
+inset 0 1px 0 rgba(255,255,255,.06);
 
-transition:.42s ease;
-z-index:1100;
+z-index:3000;
+transition:right .35s ease;
+overflow-y:auto;
 }
 
 nav.active{
@@ -452,25 +459,50 @@ right:0;
 
 nav a{
 width:100%;
-max-width:260px;
-padding:16px;
-text-align:center;
+max-width:270px;
+padding:16px 18px;
 
-font-size:21px;
+text-align:center;
+text-decoration:none;
+
+font-size:20px;
 font-weight:800;
 color:#fff;
 
-background:#162845;
-border:1px solid rgba(255,255,255,.08);
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.10);
 border-radius:18px;
 
-box-shadow:0 10px 18px rgba(0,0,0,.25);
+box-shadow:0 10px 20px rgba(0,0,0,.16);
+transition:.28s ease;
 }
 
 nav a:hover,
 nav a:active{
-background:#0d47a1;
+background:rgba(255,255,255,.16);
 transform:translateY(-2px);
+}
+
+/* CALL BUTTON */
+
+nav::after{
+content:"📞 Call Us Now";
+display:flex;
+align-items:center;
+justify-content:center;
+
+width:100%;
+max-width:270px;
+min-height:58px;
+margin-top:auto;
+
+font-size:16px;
+font-weight:700;
+color:#fff;
+
+background:#0d47a1;
+border-radius:18px;
+box-shadow:0 12px 20px rgba(13,71,161,.28);
 }
 
 /* HERO */
@@ -484,7 +516,7 @@ line-height:1.2;
 font-size:16px;
 }
 
-/* STACK LAYOUT */
+/* STACK */
 
 .blocks,
 .why,
@@ -532,172 +564,6 @@ height:200px;
 .testimonials{
 padding-left:20px;
 padding-right:20px;
-}
-
-}
-/* ===== FINAL MOBILE MENU FORCE FIX ===== */
-@media (max-width: 992px){
-
-nav{
-  position: fixed !important;
-  top: 0 !important;
-  right: -100% !important;
-  width: 85% !important;
-  height: 100vh !important;
-
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  gap: 16px !important;
-
-  padding: 90px 18px 30px !important;
-
-  background: #08111f !important;   /* fully opaque */
-  opacity: 1 !important;
-
-  z-index: 99999 !important;
-  overflow-y: auto !important;
-
-  transition: right .35s ease !important;
-}
-
-nav.active{
-  right: 0 !important;
-}
-
-nav a{
-  width: 100% !important;
-  max-width: 260px !important;
-
-  padding: 16px !important;
-  border-radius: 16px !important;
-
-  background: #16345f !important;
-  color: #ffffff !important;
-
-  font-size: 21px !important;
-  font-weight: 800 !important;
-  text-align: center !important;
-  text-decoration: none !important;
-
-  border: 1px solid rgba(255,255,255,.08) !important;
-}
-
-nav a:hover,
-nav a:active{
-  background:#0d47a1 !important;
-}
-
-.menu-btn{
-  z-index: 100000 !important;
-}
-
-.menu-overlay{
-  z-index: 99998 !important;
-  background: rgba(0,0,0,.55) !important;
-}
-
-.hero-content,
-.hero,
-.slide,
-.slides{
-  z-index: 1 !important;
-}
-}
-/* ===== APPEND THIS AT VERY END OF YOUR CSS FILE ===== */
-/* FINAL ULTRA CLEAR MOBILE MENU PATCH */
-
-@media (max-width: 992px){
-
-/* Remove blur causing fuzzy text */
-nav{
-position: fixed !important;
-top: 0 !important;
-right: -100% !important;
-width: 85% !important;
-height: 100vh !important;
-
-padding: 88px 16px 24px !important;
-
-display: flex !important;
-flex-direction: column !important;
-align-items: center !important;
-gap: 14px !important;
-
-background: #0a1322 !important;   /* solid dark */
-background-image: none !important;
-
-backdrop-filter: none !important;
--webkit-backdrop-filter: none !important;
-filter: none !important;
-
-opacity: 1 !important;
-transform: none !important;
-
-z-index: 99999 !important;
-overflow-y: auto !important;
-
-transition: right .28s ease !important;
-}
-
-nav.active{
-right:0 !important;
-}
-
-/* CLEAR SHARP BUTTONS */
-nav a{
-width:100% !important;
-max-width:260px !important;
-
-padding:16px 14px !important;
-
-background:#1b3d70 !important;
-color:#ffffff !important;
-
-font-size:20px !important;
-font-weight:800 !important;
-line-height:1.2 !important;
-letter-spacing:.2px !important;
-
-text-align:center !important;
-text-decoration:none !important;
-
-border-radius:14px !important;
-border:1px solid #2d5a96 !important;
-
-box-shadow:none !important;
-text-shadow:none !important;
-filter:none !important;
-opacity:1 !important;
-
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-}
-
-nav a:hover,
-nav a:active{
-background:#0d47a1 !important;
-}
-
-/* keep menu above all */
-.menu-btn{
-z-index:100000 !important;
-}
-
-.menu-overlay{
-background:rgba(0,0,0,.6) !important;
-backdrop-filter:none !important;
--webkit-backdrop-filter:none !important;
-z-index:99998 !important;
-}
-
-/* Push hero behind */
-.hero,
-.hero-content,
-.slide,
-.slides,
-.overlay{
-z-index:1 !important;
 }
 
 }
