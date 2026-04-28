@@ -5,10 +5,10 @@ window.onload = function () {
   setTimeout(() => {
     const intro = document.getElementById("intro");
     if (intro) intro.style.display = "none";
-  }, 3800);
+  }, 3200);
 };
 
-// HERO IMAGE SLIDER
+// HERO SLIDER
 const slides = document.querySelectorAll(".slide");
 let current = 0;
 
@@ -20,23 +20,33 @@ if (slides.length > 0) {
   }, 4500);
 }
 
-// PREMIUM HAMBURGER MENU
+// MENU
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 
-if (menuBtn && navMenu) {
+// create overlay automatically
+const overlay = document.createElement("div");
+overlay.classList.add("menu-overlay");
+document.body.appendChild(overlay);
+
+function closeMenu(){
+  navMenu.classList.remove("active");
+  menuBtn.classList.remove("open");
+  overlay.classList.remove("show");
+}
+
+if(menuBtn && navMenu){
 
   menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("active");
     menuBtn.classList.toggle("open");
+    overlay.classList.toggle("show");
   });
 
-  // Close after clicking link
-  document.querySelectorAll("#navMenu a").forEach(link => {
-    link.addEventListener("click", () => {
-      navMenu.classList.remove("active");
-      menuBtn.classList.remove("open");
-    });
+  overlay.addEventListener("click", closeMenu);
+
+  document.querySelectorAll("#navMenu a").forEach(link=>{
+    link.addEventListener("click", closeMenu);
   });
 
 }
