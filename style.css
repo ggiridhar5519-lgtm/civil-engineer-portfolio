@@ -172,17 +172,17 @@ transform:translateY(-3px);
 background:#9d5f26;
 }
 
-/* Warm Beige Premium 3 Card Section */
+/* Premium Responsive 3 Card Section */
 
 .blocks{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
 gap:28px;
-padding:95px 60px;
+padding:95px 40px;
 background:linear-gradient(135deg,#e9e2d7,#ddd4c7,#efe8de);
 align-items:start;
 max-width:1400px;
-margin:auto;
+margin:0 auto;
 }
 
 /* floating glass cards */
@@ -265,15 +265,9 @@ line-height:1.9;
 color:#444444;
 }
 
-/* tablet */
-@media(max-width:1100px){
-.blocks{
-grid-template-columns:1fr 1fr;
-}
-}
-
 /* mobile */
 @media(max-width:768px){
+
 .blocks{
 grid-template-columns:1fr;
 padding:65px 18px;
@@ -300,6 +294,7 @@ font-size:52px;
 right:16px;
 bottom:14px;
 }
+
 }
 
 
