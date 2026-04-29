@@ -172,20 +172,80 @@ transform:translateY(-3px);
 background:#9d5f26;
 }
 
-/* Apple Style Premium Glass 3 Cards */
+/* Premium Bulb + Glass Cards Section */
 
 .blocks{
+position:relative;
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:30px;
-padding:95px 60px;
+gap:32px;
+padding:160px 60px 110px;
+overflow:hidden;
+
 background:
-linear-gradient(135deg,#0b0b0b,#161616,#0d0d0d);
+linear-gradient(180deg,#1a1612,#0f0f0f 60%,#22170f 100%);
 }
 
+/* hanging bulbs */
+.bulbs{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:130px;
+pointer-events:none;
+z-index:1;
+}
+
+.bulbs span{
+position:absolute;
+top:0;
+width:3px;
+height:72px;
+background:rgba(255,255,255,.18);
+}
+
+.bulbs span::before{
+content:'';
+position:absolute;
+bottom:-26px;
+left:50%;
+transform:translateX(-50%);
+width:26px;
+height:26px;
+border-radius:50%;
+background:rgba(255,190,90,.95);
+box-shadow:
+0 0 18px rgba(255,190,90,.9),
+0 0 45px rgba(255,190,90,.55),
+0 0 80px rgba(255,190,90,.22);
+}
+
+.bulbs span:nth-child(1){left:8%; height:78px;}
+.bulbs span:nth-child(2){left:24%; height:58px;}
+.bulbs span:nth-child(3){left:41%; height:82px;}
+.bulbs span:nth-child(4){left:58%; height:62px;}
+.bulbs span:nth-child(5){left:76%; height:76px;}
+.bulbs span:nth-child(6){left:91%; height:56px;}
+
+/* wood table bottom */
+.blocks::after{
+content:'';
+position:absolute;
+left:0;
+bottom:0;
+width:100%;
+height:95px;
+background:
+linear-gradient(180deg,#5a3418,#3f2311);
+box-shadow:inset 0 8px 18px rgba(255,255,255,.06);
+z-index:0;
+}
+
+/* glass cards */
 .card{
 position:relative;
-overflow:hidden;
+z-index:2;
 padding:38px 34px;
 border-radius:26px;
 
@@ -193,10 +253,10 @@ background:rgba(255,255,255,.08);
 backdrop-filter:blur(16px);
 -webkit-backdrop-filter:blur(16px);
 
-border:1px solid rgba(255,255,255,.14);
+border:1px solid rgba(255,255,255,.16);
 
 box-shadow:
-0 18px 45px rgba(0,0,0,.30),
+0 20px 45px rgba(0,0,0,.30),
 inset 0 1px 0 rgba(255,255,255,.10);
 
 transition:.35s ease;
@@ -205,55 +265,23 @@ transition:.35s ease;
 .card:hover{
 transform:translateY(-10px);
 box-shadow:
-0 28px 55px rgba(0,0,0,.35),
-inset 0 1px 0 rgba(255,255,255,.16);
-}
-
-/* watermark glow */
-.card::before{
-content:'';
-position:absolute;
-top:-40px;
-right:-30px;
-width:180px;
-height:180px;
-border-radius:50%;
-background:radial-gradient(circle,
-rgba(197,138,43,.18),
-transparent 70%);
-pointer-events:none;
-}
-
-/* subtle watermark text */
-.card::after{
-content:'HA';
-position:absolute;
-bottom:18px;
-right:22px;
-font-size:82px;
-font-weight:800;
-color:rgba(255,255,255,.04);
-letter-spacing:4px;
-pointer-events:none;
+0 28px 60px rgba(0,0,0,.35),
+0 0 30px rgba(255,190,90,.12);
 }
 
 .card h3{
-position:relative;
-z-index:2;
-margin-bottom:18px;
 font-size:34px;
 font-weight:800;
 font-style:italic;
 line-height:1.25;
-color:#d49a37;
+margin-bottom:18px;
+color:#d89b33;
 }
 
 .card p{
-position:relative;
-z-index:2;
 font-size:18px;
 line-height:1.9;
-color:rgba(255,255,255,.92);
+color:rgba(255,255,255,.94);
 }
 
 /* tablet */
@@ -267,7 +295,7 @@ grid-template-columns:1fr 1fr;
 @media(max-width:768px){
 .blocks{
 grid-template-columns:1fr;
-padding:65px 18px;
+padding:130px 18px 90px;
 gap:22px;
 }
 
@@ -278,7 +306,6 @@ border-radius:20px;
 
 .card h3{
 font-size:26px;
-margin-bottom:12px;
 }
 
 .card p{
@@ -286,8 +313,18 @@ font-size:16px;
 line-height:1.7;
 }
 
-.card::after{
-font-size:58px;
+.bulbs{
+height:95px;
+}
+
+.bulbs span{
+display:none;
+}
+
+.bulbs span:nth-child(1),
+.bulbs span:nth-child(3),
+.bulbs span:nth-child(5){
+display:block;
 }
 }
 /* FOOTER */
