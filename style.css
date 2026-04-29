@@ -176,11 +176,13 @@ background:#9d5f26;
 
 .blocks{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:32px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:28px;
 padding:95px 60px;
-background:
-linear-gradient(135deg,#e9e2d7,#ddd4c7,#efe8de);
+background:linear-gradient(135deg,#e9e2d7,#ddd4c7,#efe8de);
+align-items:start;
+max-width:1400px;
+margin:auto;
 }
 
 /* floating glass cards */
