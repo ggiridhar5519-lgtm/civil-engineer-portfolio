@@ -46,11 +46,10 @@ box-shadow:none;
 z-index:1000;
 }
 
-.logo img{
-   height:58px;
-   width:auto;
-   display:block;
-   object-fit:contain;
+.logo{
+background:none;
+box-shadow:none;
+padding:0;
 }
 /* NAV */
 
