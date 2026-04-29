@@ -317,18 +317,20 @@ min-width:55px;
 line-height:1;
 }
 
-.feature-text h3{
+ .feature-text h3{
   font-size:34px;
   font-weight:500;
   color:#ffffff;
   margin-bottom:14px;
+  text-shadow:0 2px 8px rgba(0,0,0,.45);
 }
 
 .feature-text p{
   font-size:18px;
   line-height:1.9;
-  color:#333;
+  color:rgba(255,255,255,.92);
   max-width:340px;
+  text-shadow:0 2px 8px rgba(0,0,0,.45);
 }
 
 @media(max-width:1100px){
@@ -402,7 +404,7 @@ animation-delay:12s;
 content:'';
 position:absolute;
 inset:0;
-background:rgba(8,18,40,.72);
+background:rgba(7,18,42,.92);
 z-index:-1;
 }
 
