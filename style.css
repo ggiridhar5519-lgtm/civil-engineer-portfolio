@@ -404,7 +404,7 @@ animation-delay:12s;
 content:'';
 position:absolute;
 inset:0;
-background:rgba(7,18,42,.92);
+background:rgba(0,0,0,.45);
 z-index:-1;
 }
 
