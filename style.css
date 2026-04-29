@@ -58,6 +58,7 @@ align-items:center;
 gap:8px;
 }
 
+/* Your existing nav links */
 nav a{
 text-decoration:none;
 color:#222;
@@ -67,12 +68,19 @@ border-radius:12px;
 transition:.28s ease;
 }
 
-nav a:hover,
+/* Active page style (Home, current page) */
 nav a.active{
-background:#b87333;
-color:#fff;
+background:none;
+color:#c57b30;
+border-bottom:2px solid #c57b30;
+border-radius:0;
+padding-bottom:6px;
 }
 
+/* Hover effect */
+nav a:hover{
+color:#c57b30;
+}
 /* MENU BTN */
 
 .menu-btn{
