@@ -176,8 +176,6 @@ transform:translateY(-3px);
 background:#9d5f26;
 }
 
-/* ===== PREMIUM BLOCKS SECTION ===== */
-
 /* ===== LUXURY BLOCK SECTION ===== */
 .blocks{
 position:relative;
@@ -196,13 +194,13 @@ content:'';
 position:absolute;
 inset:0;
 background:linear-gradient(
-rgba(10,10,10,.65),
-rgba(10,10,10,.85)
+rgba(10,10,10,.55),
+rgba(10,10,10,.75)
 );
 z-index:-1;
 }
 
-/* ===== LUXURY CARD ===== */
+/* ===== CARD ===== */
 .card{
 position:relative;
 height:420px;
@@ -213,16 +211,19 @@ display:flex;
 flex-direction:column;
 justify-content:flex-end;
 
-background-size:cover;
+background-size:110%;
 background-position:center;
 
 box-shadow:
-0 30px 80px rgba(0,0,0,.6);
+0 25px 70px rgba(0,0,0,.55);
 
-transition:all .45s ease;
+transition:
+transform .45s ease,
+box-shadow .45s ease,
+background-size 1.2s ease;
 }
 
-/* DARK OVERLAY ON CARD */
+/* DARK OVERLAY (TEXT READABILITY) */
 .card::before{
 content:'';
 position:absolute;
@@ -234,50 +235,135 @@ rgba(0,0,0,.85)
 z-index:1;
 }
 
-/* WATERMARK */
+/* LIGHT SWEEP (SUBTLE PREMIUM) */
 .card::after{
-content:'HA';
+content:'';
 position:absolute;
-right:20px;
-bottom:16px;
-font-size:70px;
-font-weight:900;
-color:rgba(255,255,255,.06);
+inset:0;
+background:linear-gradient(
+120deg,
+rgba(255,255,255,.12),
+transparent 45%,
+transparent 65%,
+rgba(255,255,255,.08)
+);
+opacity:.5;
+transition:.5s ease;
 z-index:2;
 }
 
-/* CONTENT WRAPPER */
+/* CONTENT */
 .card-content{
 position:relative;
 z-index:3;
 padding:28px;
-}
 
-/* HEADING */
-.card h3{
-font-size:30px;
-font-weight:800;
-font-style:italic;
-margin-bottom:10px;
-color:#d4af37; /* 🔥 luxury gold */
+transform:translateY(20px);
+opacity:.9;
+transition:.45s ease;
 }
 
 /* TEXT */
+.card h3{
+font-size:28px;
+font-weight:800;
+font-style:italic;
+margin-bottom:10px;
+color:#d4af37;
+position:relative;
+}
+
 .card p{
 font-size:16px;
 line-height:1.7;
 color:#e0e0e0;
 }
 
-/* HOVER EFFECT */
-.card:hover{
-transform:translateY(-14px) scale(1.03);
-box-shadow:
-0 40px 120px rgba(0,0,0,.75);
+/* GOLD LINE */
+.card h3::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:2px;
+background:#d4af37;
+transition:.4s ease;
 }
 
+/* ===== HOVER ===== */
+.card:hover{
+transform:translateY(-12px) scale(1.02);
+box-shadow:
+0 40px 120px rgba(0,0,0,.75);
+background-size:120%;
+}
 
+.card:hover .card-content{
+transform:translateY(0);
+opacity:1;
+}
 
+.card:hover h3::after{
+width:100%;
+}
+
+.card:hover::after{
+opacity:.9;
+}
+
+/* ===== TABLET ===== */
+@media(max-width:1100px){
+.blocks{
+grid-template-columns:1fr 1fr;
+}
+
+.card{
+height:auto;
+min-height:360px;
+}
+}
+
+/* ===== MOBILE (FIXED PROPERLY) ===== */
+@media(max-width:768px){
+
+.blocks{
+grid-template-columns:1fr;
+padding:60px 18px;
+gap:24px;
+}
+
+/* FIX CARD SHAPE */
+.card{
+height:auto;
+min-height:260px;
+border-radius:18px;
+background-size:cover;
+}
+
+/* FIX CONTENT */
+.card-content{
+padding:20px;
+transform:none;
+opacity:1;
+}
+
+/* TEXT */
+.card h3{
+font-size:22px;
+}
+
+.card p{
+font-size:14px;
+line-height:1.6;
+}
+
+/* REDUCE HOVER EFFECT */
+.card:hover{
+transform:translateY(-6px) scale(1.01);
+}
+
+}
 /* ===== PREMIUM FOOTER ===== */
 
 footer{
