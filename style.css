@@ -1406,115 +1406,69 @@ grid-template-columns:1fr;
 }
 
 /* ===============================
-   PREMIUM MOBILE NAV
+   MOBILE NAV FINAL FIX
 ================================*/
 
-/* ===== HAMBURGER ===== */
 .menu-btn{
 display:none;
 flex-direction:column;
 gap:5px;
 cursor:pointer;
-z-index:1300;
+z-index:1200;
 }
 
 .menu-btn span{
 width:26px;
 height:3px;
-background:#111;
-transition:.35s ease;
-border-radius:2px;
+background:#000;
+display:block;
+transition:.3s;
 }
 
-/* ANIMATION → X */
-.menu-btn.open span:nth-child(1){
-transform:rotate(45deg) translateY(8px);
-}
-
-.menu-btn.open span:nth-child(2){
-opacity:0;
-}
-
-.menu-btn.open span:nth-child(3){
-transform:rotate(-45deg) translateY(-8px);
-}
-
-/* ===== MOBILE ===== */
+/* MOBILE */
 @media(max-width:768px){
 
 .menu-btn{
 display:flex;
 }
 
-/* GLASS MENU */
+/* NAV PANEL */
 #navMenu{
 position:fixed;
 top:0;
 right:-100%;
 width:75%;
 height:100vh;
-
-background:rgba(255,255,255,0.75);
-backdrop-filter:blur(18px);
--webkit-backdrop-filter:blur(18px);
-
-padding:90px 25px;
+background:#ffffff;
 
 display:flex;
 flex-direction:column;
-gap:18px;
-
-transition:.45s cubic-bezier(.77,0,.18,1);
-z-index:1200;
-}
-
-/* OPEN */
-#navMenu.active{
-right:0;
-}
-
-/* LINKS */
-#navMenu a{
-font-size:20px;
-font-weight:600;
-padding:14px;
-border-radius:10px;
-text-align:center;
-background:rgba(255,255,255,.6);
-transition:.3s;
-}
-
-#navMenu a:hover{
-background:#d4af37;
-color:#000;
-transform:translateX(6px);
-}
-
-/* ===== OVERLAY ===== */
-.menu-overlay{
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.35);
-
-opacity:0;
-pointer-events:none;
+gap:20px;
+padding:80px 20px;
 
 transition:.35s ease;
 z-index:1100;
 }
 
-/* SHOW */
+/* ACTIVE STATE */
+#navMenu.active{
+right:0;
+}
+
+/* OVERLAY */
+.menu-overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.4);
+opacity:0;
+pointer-events:none;
+transition:.3s;
+z-index:1000;
+}
+
 .menu-overlay.show{
 opacity:1;
 pointer-events:auto;
 }
 
-#navMenu{
-transform:translateX(40px);
-}
-
-#navMenu.active{
-transform:translateX(0);
-}
-   
 }
