@@ -1,5 +1,5 @@
 // ===============================
-// FIXED & SAFE SCRIPT
+// FIXED & SAFE SCRIPT (FINAL)
 // ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -24,17 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 7000);
   }
 
-  // ===== MENU (FIXED) =====
+  // ===== MENU =====
   const menuBtn = document.getElementById("menuBtn");
   const navMenu = document.getElementById("navMenu");
 
-  // safety check
   if (!menuBtn || !navMenu) {
     console.log("Menu elements missing");
     return;
   }
 
-  // create overlay only once
+  // create overlay if not exists
   let overlay = document.querySelector(".menu-overlay");
   if (!overlay) {
     overlay = document.createElement("div");
@@ -54,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.remove("show");
   }
 
-  // CLICK
+  // ===== TOGGLE MENU =====
   menuBtn.addEventListener("click", (e) => {
     e.stopPropagation();
 
@@ -65,12 +64,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // CLICK OUTSIDE
+  // ===== CLICK OUTSIDE =====
   overlay.addEventListener("click", closeMenu);
 
-  // CLICK LINK
+  // ===== CLICK LINKS (FINAL FIX) =====
   document.querySelectorAll("#navMenu a").forEach(link => {
-    link.addEventListener("click", closeMenu);
+    link.addEventListener("click", (e) => {
+
+      const href = link.getAttribute("href");
+
+      // close menu first
+      closeMenu();
+
+      // force navigation (fix for mobile)
+      if (href && href !== "#") {
+        setTimeout(() => {
+          window.location.href = href;
+        }, 50);
+      }
+
+    });
   });
 
 });
