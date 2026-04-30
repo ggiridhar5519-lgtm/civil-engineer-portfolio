@@ -116,14 +116,18 @@ inset:0;
 .slide{
 background-size:cover;
 background-position:center;
+
 opacity:0;
-transform:scale(1.06);
-transition:opacity 1s ease, transform 6s ease;
+transform:scale(1);
+
+transition:
+opacity 2s ease-in-out,
+transform 7s ease-in-out;
 }
 
 .slide.active{
 opacity:1;
-transform:scale(1);
+transform:scale(1.08);
 }
 
 .overlay{
