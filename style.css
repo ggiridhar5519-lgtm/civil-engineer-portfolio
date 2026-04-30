@@ -1509,4 +1509,12 @@ opacity:1;
 pointer-events:auto;
 }
 
+#navMenu{
+transform:translateX(40px);
+}
+
+#navMenu.active{
+transform:translateX(0);
+}
+   
 }
