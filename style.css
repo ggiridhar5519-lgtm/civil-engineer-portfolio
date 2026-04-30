@@ -211,7 +211,7 @@ display:flex;
 flex-direction:column;
 justify-content:flex-end;
 
-background-size:110%;
+background-size:cover; 
 background-position:center;
 
 box-shadow:
@@ -223,7 +223,82 @@ box-shadow .45s ease,
 background-size 1.2s ease;
 }
 
-/* DARK OVERLAY (TEXT READABILITY) */
+/* ===== BLOCKS LAYOUT ===== */
+.blocks{
+position:relative;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+padding:120px 50px;
+max-width:1400px;
+margin:auto;
+z-index:1;
+overflow:hidden; /* prevent zoom bleed */
+}
+
+/* ===== CINEMATIC MOVING BACKGROUND ===== */
+.blocks::before{
+content:'';
+position:absolute;
+inset:0;
+
+background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+background-size:cover;
+background-position:center;
+
+animation:cinematicZoom 28s ease-in-out infinite alternate;
+
+z-index:-3;
+}
+
+/* ===== DARK OVERLAY (READABILITY) ===== */
+.blocks::after{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(
+rgba(10,10,10,.55),
+rgba(10,10,10,.75)
+);
+z-index:-2;
+}
+
+/* ===== BACKGROUND ANIMATION ===== */
+@keyframes cinematicZoom{
+0%{
+transform:scale(1);
+}
+100%{
+transform:scale(1.12);
+}
+}
+
+/* ===== CARD ===== */
+.card{
+position:relative;
+height:420px;
+border-radius:24px;
+overflow:hidden;
+
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+
+/* FIXED IMAGE HANDLING */
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+box-shadow:
+0 25px 70px rgba(0,0,0,.55);
+
+transition:
+transform .45s ease,
+box-shadow .45s ease,
+background-size 1.2s ease;
+}
+
+/* ===== CARD DARK GRADIENT (TEXT VISIBILITY) ===== */
 .card::before{
 content:'';
 position:absolute;
@@ -235,7 +310,7 @@ rgba(0,0,0,.85)
 z-index:1;
 }
 
-/* LIGHT SWEEP (SUBTLE PREMIUM) */
+/* ===== LIGHT SWEEP EFFECT ===== */
 .card::after{
 content:'';
 position:absolute;
@@ -252,7 +327,7 @@ transition:.5s ease;
 z-index:2;
 }
 
-/* CONTENT */
+/* ===== CONTENT ===== */
 .card-content{
 position:relative;
 z-index:3;
@@ -263,7 +338,7 @@ opacity:.9;
 transition:.45s ease;
 }
 
-/* TEXT */
+/* ===== TEXT ===== */
 .card h3{
 font-size:28px;
 font-weight:800;
@@ -279,7 +354,7 @@ line-height:1.7;
 color:#e0e0e0;
 }
 
-/* GOLD LINE */
+/* ===== GOLD UNDERLINE ===== */
 .card h3::after{
 content:'';
 position:absolute;
@@ -296,7 +371,7 @@ transition:.4s ease;
 transform:translateY(-12px) scale(1.02);
 box-shadow:
 0 40px 120px rgba(0,0,0,.75);
-background-size:120%;
+background-size:110%; /* controlled zoom */
 }
 
 .card:hover .card-content{
@@ -324,7 +399,7 @@ min-height:360px;
 }
 }
 
-/* ===== MOBILE (FIXED PROPERLY) ===== */
+/* ===== MOBILE ===== */
 @media(max-width:768px){
 
 .blocks{
@@ -333,7 +408,6 @@ padding:60px 18px;
 gap:24px;
 }
 
-/* FIX CARD SHAPE */
 .card{
 height:auto;
 min-height:260px;
@@ -341,14 +415,12 @@ border-radius:18px;
 background-size:cover;
 }
 
-/* FIX CONTENT */
 .card-content{
 padding:20px;
 transform:none;
 opacity:1;
 }
 
-/* TEXT */
 .card h3{
 font-size:22px;
 }
@@ -358,7 +430,6 @@ font-size:14px;
 line-height:1.6;
 }
 
-/* REDUCE HOVER EFFECT */
 .card:hover{
 transform:translateY(-6px) scale(1.01);
 }
