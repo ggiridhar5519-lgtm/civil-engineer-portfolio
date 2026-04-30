@@ -1406,7 +1406,24 @@ grid-template-columns:1fr;
 }
 
 
-/* ===== MOBILE NAV ===== */
+/* ===== MOBILE NAV REQUIRED ===== */
+
+.menu-btn{
+display:none;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
+z-index:1200;
+}
+
+.menu-btn span{
+width:25px;
+height:3px;
+background:#000;
+display:block;
+}
+
+/* MOBILE */
 @media(max-width:768px){
 
 .menu-btn{
@@ -1418,37 +1435,25 @@ display:flex;
 position:fixed;
 top:0;
 right:-100%;
-width:75%;
+width:70%;
 height:100vh;
-
 background:#ffffff;
-padding:90px 20px;
 
 display:flex;
 flex-direction:column;
 gap:20px;
+padding:80px 20px;
 
-transition:.3s ease;
+transition:0.3s ease;
 z-index:1100;
 }
 
-/* OPEN STATE */
+/* ACTIVE STATE */
 #navMenu.active{
 right:0;
 }
 
-/* LINKS */
-#navMenu a{
-font-size:20px;
-padding:12px;
-background:#f5f5f5;
-text-align:center;
-border-radius:8px;
-}
-
-}
-
-/* OVERLAY */
+/* overlay */
 .menu-overlay{
 position:fixed;
 inset:0;
@@ -1456,10 +1461,12 @@ background:rgba(0,0,0,.4);
 opacity:0;
 pointer-events:none;
 transition:.3s;
-z-index:1050;
+z-index:1000;
 }
 
 .menu-overlay.show{
 opacity:1;
 pointer-events:auto;
+}
+
 }
