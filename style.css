@@ -746,3 +746,75 @@ text-align:center;
 justify-content:center;
 }
 }
+/* ===== ABOUT HERO ===== */
+.about-hero{
+position:relative;
+height:60vh;
+background:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.about-overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.6);
+}
+
+.about-content{
+position:relative;
+color:#fff;
+text-align:center;
+}
+
+.about-content h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+
+/* ===== ABOUT SECTION ===== */
+.about-section{
+padding:80px 8%;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about-image img{
+width:100%;
+border-radius:16px;
+}
+
+/* ===== STATS ===== */
+.about-stats{
+display:flex;
+justify-content:center;
+gap:80px;
+padding:60px;
+background:#111;
+color:#fff;
+text-align:center;
+}
+
+.stat h3{
+font-size:36px;
+color:#d4af37;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.about-grid{
+grid-template-columns:1fr;
+}
+
+.about-stats{
+flex-direction:column;
+gap:30px;
+}
+}
