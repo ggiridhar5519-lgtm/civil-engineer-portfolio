@@ -1406,7 +1406,7 @@ grid-template-columns:1fr;
 }
 
 /* ===============================
-   MOBILE NAV FINAL FIX
+   MOBILE NAV FINAL (FIXED)
 ================================*/
 
 .menu-btn{
@@ -1414,7 +1414,7 @@ display:none;
 flex-direction:column;
 gap:5px;
 cursor:pointer;
-z-index:1200;
+z-index:1300;
 }
 
 .menu-btn span{
@@ -1447,12 +1447,22 @@ gap:20px;
 padding:80px 20px;
 
 transition:.35s ease;
-z-index:1100;
+
+/* 🔥 IMPORTANT FIX */
+z-index:2000;
+pointer-events:auto;
 }
 
-/* ACTIVE STATE */
+/* ACTIVE */
 #navMenu.active{
 right:0;
+}
+
+/* NAV LINKS (force clickable) */
+#navMenu a{
+pointer-events:auto;
+z-index:2100;
+position:relative;
 }
 
 /* OVERLAY */
@@ -1460,12 +1470,17 @@ right:0;
 position:fixed;
 inset:0;
 background:rgba(0,0,0,.4);
+
 opacity:0;
 pointer-events:none;
-transition:.3s;
-z-index:1000;
+
+transition:.3s ease;
+
+/* 🔥 BELOW MENU */
+z-index:1500;
 }
 
+/* SHOW */
 .menu-overlay.show{
 opacity:1;
 pointer-events:auto;
