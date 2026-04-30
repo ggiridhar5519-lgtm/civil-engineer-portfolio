@@ -173,11 +173,10 @@ background:#9d5f26;
 }
 
 /* Premium Section with Background Slider - FIXED ALIGNMENT */
-
 .blocks{
 position:relative;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(3,1fr); /* FIXED */
 gap:24px;
 padding:90px 25px;
 max-width:1350px;
@@ -204,11 +203,15 @@ z-index:-2;
 
 /* cards */
 .card{
+.card{
 position:relative;
-height:420px;                 /* SAME HEIGHT = aligned */
+height:420px;
 display:flex;
 flex-direction:column;
 justify-content:flex-start;
+
+width:100%;        /* FIX */
+min-width:0;       /* FIX */
 
 padding:38px 30px;
 border-radius:26px;
@@ -222,6 +225,8 @@ border:1px solid rgba(255,255,255,.6);
 box-shadow:0 18px 40px rgba(0,0,0,.10);
 transition:.35s ease;
 overflow:hidden;
+   width:100%;
+min-width:0;
 }
 
 .card:hover{
