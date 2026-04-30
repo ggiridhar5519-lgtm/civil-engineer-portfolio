@@ -441,7 +441,7 @@ transform:translateY(-6px) scale(1.01);
 .features-clean{
 position:relative;
 overflow:hidden;
-padding:90px 8%;
+padding:90px 8% 60px;  /* reduced bottom space */
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:55px 45px;
@@ -569,11 +569,10 @@ transform:translateY(0);
 }
 /* ===== FOOTER BASE ===== */
 .footer{
-background:#0a0a0a;
-color:#fff;
-margin-top:100px;
+  background:#0a0a0a;
+  color:#fff;
+  margin-top:0;   /* FIXED */
 }
-
 /* ===== NEWSLETTER ===== */
 .footer-news{
 text-align:center;
