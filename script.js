@@ -1,60 +1,76 @@
-// script.js
+// ===============================
+// FIXED & SAFE SCRIPT
+// ===============================
 
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    const intro = document.getElementById("intro");
-    if (intro) intro.style.display = "none";
-  }, 3200);
-});
+document.addEventListener("DOMContentLoaded", () => {
 
-/* HERO SLIDER */
-const slides = document.querySelectorAll(".slide");
-let current = 0;
+  // ===== INTRO =====
+  const intro = document.getElementById("intro");
+  if (intro) {
+    setTimeout(() => {
+      intro.style.display = "none";
+    }, 3200);
+  }
 
-if (slides.length) {
-  setInterval(() => {
-    slides[current].classList.remove("active");
-    current = (current + 1) % slides.length;
-    slides[current].classList.add("active");
-  }, 7000);
-}
+  // ===== HERO SLIDER =====
+  const slides = document.querySelectorAll(".slide");
+  let current = 0;
 
-/* MENU */
-const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
+  if (slides.length > 0) {
+    setInterval(() => {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }, 7000);
+  }
 
-const overlay = document.createElement("div");
-overlay.className = "menu-overlay";
-document.body.appendChild(overlay);
+  // ===== MENU (FIXED) =====
+  const menuBtn = document.getElementById("menuBtn");
+  const navMenu = document.getElementById("navMenu");
 
-function openMenu(){
-  navMenu.classList.add("active");
-  menuBtn.classList.add("open");
-  overlay.classList.add("show");
-}
+  // safety check
+  if (!menuBtn || !navMenu) {
+    console.log("Menu elements missing");
+    return;
+  }
 
-function closeMenu(){
-  navMenu.classList.remove("active");
-  menuBtn.classList.remove("open");
-  overlay.classList.remove("show");
-}
+  // create overlay only once
+  let overlay = document.querySelector(".menu-overlay");
+  if (!overlay) {
+    overlay = document.createElement("div");
+    overlay.className = "menu-overlay";
+    document.body.appendChild(overlay);
+  }
 
-if(menuBtn && navMenu){
+  function openMenu(){
+    navMenu.classList.add("active");
+    menuBtn.classList.add("open");
+    overlay.classList.add("show");
+  }
 
+  function closeMenu(){
+    navMenu.classList.remove("active");
+    menuBtn.classList.remove("open");
+    overlay.classList.remove("show");
+  }
+
+  // CLICK
   menuBtn.addEventListener("click", (e) => {
     e.stopPropagation();
 
-    if(navMenu.classList.contains("active")){
+    if (navMenu.classList.contains("active")) {
       closeMenu();
     } else {
       openMenu();
     }
   });
 
+  // CLICK OUTSIDE
   overlay.addEventListener("click", closeMenu);
 
-  document.querySelectorAll("#navMenu a").forEach(link=>{
+  // CLICK LINK
+  document.querySelectorAll("#navMenu a").forEach(link => {
     link.addEventListener("click", closeMenu);
   });
 
-}
+});
