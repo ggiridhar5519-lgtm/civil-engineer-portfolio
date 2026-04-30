@@ -178,62 +178,60 @@ background:#9d5f26;
 
 /* ===== PREMIUM BLOCKS SECTION ===== */
 
+/* ===== LUXURY BLOCK SECTION ===== */
 .blocks{
 position:relative;
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:40px;
-padding:110px 40px;
+padding:120px 50px;
 max-width:1400px;
 margin:auto;
+z-index:1;
 }
 
-/* DARKER BACKGROUND CONTROL */
+/* DARK CINEMATIC OVERLAY */
 .blocks::after{
 content:'';
 position:absolute;
 inset:0;
-background:rgba(0,0,0,.35); /* 🔥 more contrast */
+background:linear-gradient(
+rgba(10,10,10,.65),
+rgba(10,10,10,.85)
+);
 z-index:-1;
 }
 
-/* PREMIUM GLASS CARD */
+/* ===== LUXURY CARD ===== */
 .card{
 position:relative;
-padding:42px 34px;
-border-radius:28px;
-
-background:rgba(255,255,255,.78); /* 🔥 NOT pure white */
-backdrop-filter:blur(18px);
--webkit-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,255,255,.6);
-
-/* 🔥 DEPTH */
-box-shadow:
-0 25px 60px rgba(0,0,0,.18),
-0 10px 25px rgba(0,0,0,.10);
-
-transition:all .4s ease;
+height:420px;
+border-radius:24px;
 overflow:hidden;
+
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+
+background-size:cover;
+background-position:center;
+
+box-shadow:
+0 30px 80px rgba(0,0,0,.6);
+
+transition:all .45s ease;
 }
 
-/* SOFT TOP LIGHT EFFECT */
+/* DARK OVERLAY ON CARD */
 .card::before{
 content:'';
 position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
+inset:0;
 background:linear-gradient(
-120deg,
-rgba(255,255,255,.4),
-transparent 45%,
-transparent 70%,
-rgba(255,255,255,.2)
+rgba(0,0,0,.2),
+rgba(0,0,0,.85)
 );
-pointer-events:none;
+z-index:1;
 }
 
 /* WATERMARK */
@@ -244,78 +242,41 @@ right:20px;
 bottom:16px;
 font-size:70px;
 font-weight:900;
-color:rgba(0,0,0,.04);
+color:rgba(255,255,255,.06);
+z-index:2;
 }
 
-/* HOVER */
-.card:hover{
-transform:translateY(-14px) scale(1.02);
-box-shadow:
-0 35px 90px rgba(0,0,0,.25),
-0 15px 40px rgba(0,0,0,.12);
+/* CONTENT WRAPPER */
+.card-content{
+position:relative;
+z-index:3;
+padding:28px;
+}
+
+/* HEADING */
+.card h3{
+font-size:30px;
+font-weight:800;
+font-style:italic;
+margin-bottom:10px;
+color:#d4af37; /* 🔥 luxury gold */
 }
 
 /* TEXT */
-.card h3{
-font-size:32px;
-font-weight:800;
-font-style:italic;
-margin-bottom:16px;
-color:#111;
-}
-
-.card p{
-font-size:17px;
-line-height:1.8;
-color:#444;
-}
-/* ===== BACKGROUND SLIDER ===== */
-@keyframes bgslide{
-0%,33%{
-background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
-}
-34%,66%{
-background:url('https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde') center/cover;
-}
-67%,100%{
-background:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c') center/cover;
-}
-}
-
-/* ===== TABLET ===== */
-@media(max-width:1100px){
-.blocks{
-grid-template-columns:1fr 1fr;
-}
-
-.card{
-height:auto;
-min-height:360px;
-}
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-.blocks{
-grid-template-columns:1fr;
-padding:70px 18px;
-gap:22px;
-}
-
-.card{
-height:auto;
-padding:28px 22px;
-}
-
-.card h3{
-font-size:26px;
-}
-
 .card p{
 font-size:16px;
 line-height:1.7;
+color:#e0e0e0;
 }
+
+/* HOVER EFFECT */
+.card:hover{
+transform:translateY(-14px) scale(1.03);
+box-shadow:
+0 40px 120px rgba(0,0,0,.75);
 }
+
+
 
 /* ===== PREMIUM FOOTER ===== */
 
