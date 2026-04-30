@@ -3,49 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Hari Associates</title>
 
-<title>Contact | Hari Associates</title>
-
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<div id="header"></div>
+<header class="main-header">
+  <div class="logo">
+    <img src="images/logo.png">
+  </div>
 
-<!-- CONTACT SECTION -->
-<section class="contact-section">
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <h2>Have Some Questions?</h2>
-  <p class="contact-sub">We’d love to hear from you</p>
+<section class="services-hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Our Services</h1>
+    <p>Design • Planning • Execution</p>
+  </div>
+</section>
 
-  <div class="contact-container">
+<section class="services-section">
+  <div class="services-grid">
 
-    <!-- LEFT -->
-    <div class="contact-left">
-      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="contact">
+    <div class="service-card" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');">
+      <div class="service-content">
+        <h3>Residential</h3>
+        <p>Premium house construction</p>
+      </div>
     </div>
 
-    <!-- RIGHT -->
-    <div class="contact-form">
-
-      <input type="text" placeholder="First Name">
-      <input type="text" placeholder="Last Name">
-      <input type="email" placeholder="What's your email?">
-      <textarea placeholder="Your questions..."></textarea>
-
-      <button>Send Message</button>
-
+    <div class="service-card" style="background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750');">
+      <div class="service-content">
+        <h3>Commercial</h3>
+        <p>Office & retail buildings</p>
+      </div>
     </div>
 
   </div>
-
 </section>
 
-<div id="footer"></div>
-
-<script src="js/script.js"></script>
+<footer class="footer">
+  <p>© Hari Associates</p>
+</footer>
 
 </body>
 </html>
