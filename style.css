@@ -182,127 +182,93 @@ background:#9d5f26;
 position:relative;
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:28px;
-padding:100px 30px;
-max-width:1350px;
-margin:0 auto;
-align-items:stretch;
+gap:40px;
+padding:110px 40px;
+max-width:1400px;
+margin:auto;
 }
 
-/* background slider */
-.blocks::before{
-content:'';
-position:absolute;
-inset:0;
-background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
-animation:bgslide 18s infinite;
-z-index:-3;
-}
-
-/* soft premium overlay (FIXED) */
+/* DARKER BACKGROUND CONTROL */
 .blocks::after{
 content:'';
 position:absolute;
 inset:0;
-background:linear-gradient(
-rgba(255,255,255,.60),
-rgba(255,255,255,.75)
-);
-z-index:-2;
+background:rgba(0,0,0,.35); /* 🔥 more contrast */
+z-index:-1;
 }
 
-/* ===== CARDS ===== */
+/* PREMIUM GLASS CARD */
 .card{
 position:relative;
-height:420px;
-display:flex;
-flex-direction:column;
-justify-content:flex-start;
-
-padding:40px 32px;
+padding:42px 34px;
 border-radius:28px;
 
-background:rgba(255,255,255,.55);
+background:rgba(255,255,255,.78); /* 🔥 NOT pure white */
 backdrop-filter:blur(18px);
 -webkit-backdrop-filter:blur(18px);
 
-border:1px solid rgba(255,255,255,.65);
+border:1px solid rgba(255,255,255,.6);
 
+/* 🔥 DEPTH */
 box-shadow:
-0 25px 60px rgba(0,0,0,.15),
-0 10px 25px rgba(0,0,0,.08);
+0 25px 60px rgba(0,0,0,.18),
+0 10px 25px rgba(0,0,0,.10);
 
+transition:all .4s ease;
 overflow:hidden;
-
-/* 👇 UPDATED PART */
-transition:all .4s cubic-bezier(.4,0,.2,1);
-transform:translateY(0);
-}
-.card::after{
-content:'';
-position:absolute;
-top:0;
-left:-120%;
-width:60%;
-height:100%;
-
-background:linear-gradient(
-120deg,
-transparent,
-rgba(255,255,255,.5),
-transparent
-);
-
-transform:skewX(-20deg);
-transition:.6s;
 }
 
-.card:hover::after{
-left:120%;
-}
-/* subtle glass shine */
+/* SOFT TOP LIGHT EFFECT */
 .card::before{
 content:'';
 position:absolute;
-inset:0;
+top:0;
+left:0;
+width:100%;
+height:100%;
 background:linear-gradient(
 120deg,
-rgba(255,255,255,.25),
-transparent 40%,
-transparent 60%,
-rgba(255,255,255,.15)
+rgba(255,255,255,.4),
+transparent 45%,
+transparent 70%,
+rgba(255,255,255,.2)
 );
 pointer-events:none;
 }
 
-/* hover */
-.card:hover{
-transform:translateY(-14px) scale(1.02);
-
-box-shadow:
-0 40px 90px rgba(0,0,0,.22),
-0 15px 35px rgba(0,0,0,.12);
-
-background:rgba(255,255,255,.65);
+/* WATERMARK */
+.card::after{
+content:'HA';
+position:absolute;
+right:20px;
+bottom:16px;
+font-size:70px;
+font-weight:900;
+color:rgba(0,0,0,.04);
 }
 
-/* heading */
+/* HOVER */
+.card:hover{
+transform:translateY(-14px) scale(1.02);
+box-shadow:
+0 35px 90px rgba(0,0,0,.25),
+0 15px 40px rgba(0,0,0,.12);
+}
+
+/* TEXT */
 .card h3{
-font-size:34px;
+font-size:32px;
 font-weight:800;
 font-style:italic;
-line-height:1.2;
-margin-bottom:18px;
+margin-bottom:16px;
 color:#111;
 }
 
-/* text */
 .card p{
-font-size:18px;
-line-height:1.85;
-color:#333;
+font-size:17px;
+line-height:1.8;
+color:#444;
 }
-
 /* ===== BACKGROUND SLIDER ===== */
 @keyframes bgslide{
 0%,33%{
