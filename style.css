@@ -1567,7 +1567,37 @@ gap:25px;
 max-width:1200px;
 margin:auto;
 }
+.zoom-icon{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) scale(0.8);
 
+width:45px;
+height:45px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:rgba(0,0,0,0.6);
+border-radius:50%;
+
+opacity:0;
+transition:.3s;
+z-index:3;
+}
+
+.zoom-icon svg{
+width:18px;
+height:18px;
+fill:#fff;
+}
+
+.gallery-item:hover .zoom-icon{
+opacity:1;
+transform:translate(-50%,-50%) scale(1);
+}
 /* ===== CARD ===== */
 .gallery-item{
 position:relative;
