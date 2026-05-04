@@ -1400,10 +1400,7 @@ grid-template-columns:1fr;
 }
 
 /* ===============================
-   SINGLE PANEL PREMIUM MOBILE NAV (FINAL CLEAN)
-================================*/
-/* ===============================
-   NAVIGATION (FINAL FIXED)
+   NAVIGATION (FINAL STABLE FIX)
 ================================*/
 
 /* hide checkbox */
@@ -1456,10 +1453,8 @@ color:#c57b30;
 display:none;
 }
 
-/* clean desktop nav */
 #navMenu{
 position:static;
-transform:none;
 opacity:1;
 pointer-events:auto;
 
@@ -1469,9 +1464,8 @@ border:none;
 padding:0;
 }
 
-/* hide mobile-only */
-.menu-close,
-.menu-logo{
+/* hide mobile elements */
+.menu-close{
 display:none;
 }
 
@@ -1484,7 +1478,7 @@ display:none;
 display:flex;
 }
 
-/* mobile panel */
+/* FULL SCREEN MENU */
 #navMenu{
 position:fixed;
 top:0;
@@ -1499,24 +1493,23 @@ justify-content:center;
 align-items:center;
 gap:25px;
 
-background:rgba(15,15,15,0.95);
+background:rgba(15,15,15,0.96);
 backdrop-filter:blur(18px);
 
 opacity:0;
 pointer-events:none;
-transition:.3s ease;
+transition:opacity .3s ease;
 
 z-index:9999;
 }
 
-/* open */
+/* OPEN MENU */
 #menuToggle:checked ~ #navMenu{
 opacity:1;
 pointer-events:auto;
-transform:translate(-50%,-50%) scale(1);
 }
 
-/* mobile links */
+/* links */
 #navMenu a{
 color:#fff;
 font-size:20px;
@@ -1525,9 +1518,9 @@ font-size:20px;
 /* close button */
 .menu-close{
 position:absolute;
-top:15px;
-right:18px;
-font-size:20px;
+top:18px;
+right:22px;
+font-size:22px;
 color:#fff;
 cursor:pointer;
 }
@@ -1543,45 +1536,6 @@ opacity:0;
 
 #menuToggle:checked + .menu-btn span:nth-child(3){
 transform:rotate(-45deg) translateY(-8px);
-}
-
-}
-
-
-@media(max-width:768px){
-
-#navMenu{
-position:fixed !important;
-top:0 !important;
-left:0 !important;
-right:0 !important;
-bottom:0 !important;
-
-width:100vw !important;
-height:100vh !important;
-
-transform:none !important;
-margin:0 !important;
-max-width:none !important;
-
-display:flex !important;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-gap:25px;
-
-background:rgba(0,0,0,0.92);
-
-opacity:0;
-pointer-events:none;
-transition:.3s ease;
-
-z-index:9999;
-}
-
-#menuToggle:checked ~ #navMenu{
-opacity:1 !important;
-pointer-events:auto !important;
 }
 
 }
