@@ -63,3 +63,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+const filterButtons = document.querySelectorAll(".gallery-filter button");
+const items = document.querySelectorAll(".gallery-item");
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    // active button
+    filterButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.getAttribute("data-filter");
+
+    items.forEach(item => {
+      const category = item.getAttribute("data-category");
+
+      if(filter === "all" || filter === category){
+        item.classList.remove("hide");
+      } else {
+        item.classList.add("hide");
+      }
+    });
+
+  });
+});
