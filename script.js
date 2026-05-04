@@ -5,12 +5,30 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   // ===== INTRO =====
+  // ===== INTRO LOADER % =====
+let percent = document.getElementById("percent");
+
+if (percent) {
+  let value = 0;
+
+  let interval = setInterval(() => {
+    value += Math.floor(Math.random()*15)+5;
+
+    if(value >= 100){
+      value = 100;
+      clearInterval(interval);
+    }
+
+    percent.innerText = value + "%";
+
+  }, 120);
+}
   const intro = document.getElementById("intro");
   if (intro) {
-    setTimeout(() => {
-      intro.style.display = "none";
-    }, 3200);
-  }
+  setTimeout(() => {
+    intro.classList.add("hide");
+  }, 2500);
+}
 
   // ===== HERO SLIDER =====
   const slides = document.querySelectorAll(".slide");
