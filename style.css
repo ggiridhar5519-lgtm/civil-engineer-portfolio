@@ -1406,22 +1406,28 @@ grid-template-columns:1fr;
 }
 
 /* ===============================
-   MOBILE NAV FINAL (FIXED)
+   FINAL MOBILE NAV (CLEAN)
 ================================*/
 
+/* hide checkbox */
+#menuToggle{
+display:none;
+}
+
+/* hamburger */
 .menu-btn{
 display:none;
 flex-direction:column;
-gap:5px;
+gap:6px;
 cursor:pointer;
-z-index:1300;
+z-index:3000;
 }
 
 .menu-btn span{
-width:26px;
+width:28px;
 height:3px;
-background:#000;
-display:block;
+background:#222;
+border-radius:2px;
 transition:.3s;
 }
 
@@ -1432,58 +1438,49 @@ transition:.3s;
 display:flex;
 }
 
-/* NAV PANEL */
+/* FULL SCREEN MENU */
 #navMenu{
 position:fixed;
 top:0;
 right:-100%;
-width:75%;
+width:100%;
 height:100vh;
+
 background:#ffffff;
 
 display:flex;
 flex-direction:column;
-gap:20px;
-padding:80px 20px;
+justify-content:center;
+align-items:center;
+gap:25px;
 
-transition:.35s ease;
-
-/* 🔥 IMPORTANT FIX */
-z-index:2000;
-pointer-events:auto;
+transition:.4s ease;
+z-index:2500;
 }
 
-/* ACTIVE */
-#navMenu.active{
+/* OPEN MENU */
+#menuToggle:checked ~ #navMenu{
 right:0;
 }
 
-/* NAV LINKS (force clickable) */
+/* LINKS */
 #navMenu a{
-pointer-events:auto;
-z-index:2100;
-position:relative;
+font-size:22px;
+font-weight:700;
+color:#222;
 }
 
-/* OVERLAY */
-.menu-overlay{
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.4);
+/* HAMBURGER → X */
+#menuToggle:checked + .menu-btn span:nth-child(1){
+transform:rotate(45deg) translateY(8px);
+}
 
+#menuToggle:checked + .menu-btn span:nth-child(2){
 opacity:0;
-pointer-events:none;
-
-transition:.3s ease;
-
-/* 🔥 BELOW MENU */
-z-index:1500;
 }
 
-/* SHOW */
-.menu-overlay.show{
-opacity:1;
-pointer-events:auto;
+#menuToggle:checked + .menu-btn span:nth-child(3){
+transform:rotate(-45deg) translateY(-8px);
 }
 
 }
