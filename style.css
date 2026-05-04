@@ -1406,7 +1406,7 @@ grid-template-columns:1fr;
 }
 
 /* ===============================
-   PREMIUM FLOATING MOBILE NAV (FIXED)
+   PREMIUM FLOATING MOBILE NAV (FINAL)
 ================================*/
 
 /* hide checkbox */
@@ -1450,37 +1450,49 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-background:rgba(10,10,10,0.6);
-backdrop-filter:blur(16px);
--webkit-backdrop-filter:blur(16px);
+/* premium dim */
+background:rgba(10,10,10,0.55);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
 
+/* state */
 opacity:0;
 pointer-events:none;
-transition:.4s ease;
+
+/* smooth motion */
+transition:.45s cubic-bezier(.77,0,.18,1);
 
 z-index:2500;
 }
 
 /* ===== CENTER BOX ===== */
 .menu-box{
-width:85%;
+width:86%;
 max-width:360px;
 
-background:rgba(15,15,15,0.85);
+background:rgba(15,15,15,0.78);
 backdrop-filter:blur(20px);
 
+/* premium edge */
+border:1px solid rgba(255,255,255,0.08);
 border-radius:22px;
-padding:40px 25px;
+
+padding:48px 28px;
 
 display:flex;
 flex-direction:column;
 align-items:center;
-gap:24px;
+gap:22px;
 
-box-shadow:0 40px 100px rgba(0,0,0,.5);
+/* depth */
+box-shadow:
+0 40px 100px rgba(0,0,0,.55),
+inset 0 1px 0 rgba(255,255,255,.05);
 
-transform:scale(.9);
-transition:.4s ease;
+/* animation */
+transform:scale(.92);
+opacity:0;
+transition:.45s cubic-bezier(.77,0,.18,1);
 }
 
 /* ===== OPEN STATE ===== */
@@ -1491,28 +1503,62 @@ pointer-events:auto;
 
 #menuToggle:checked ~ #navMenu .menu-box{
 transform:scale(1);
+opacity:1;
 }
 
 /* ===== LINKS ===== */
 .menu-box a{
-font-size:22px;
+position:relative;
+
+font-size:20px;
 font-weight:600;
-letter-spacing:.5px;
+letter-spacing:.4px;
 color:#fff;
 text-decoration:none;
 
-padding:12px 20px;
+padding:12px 22px;
 border-radius:12px;
 
 opacity:0;
 transform:translateY(20px);
-transition:.3s ease;
+
+transition:.25s ease;
+}
+
+/* subtle hover layer */
+.menu-box a::before{
+content:'';
+position:absolute;
+inset:0;
+border-radius:12px;
+background:rgba(255,255,255,0.06);
+opacity:0;
+transition:.25s ease;
 }
 
 /* hover */
+.menu-box a:hover::before{
+opacity:1;
+}
+
 .menu-box a:hover{
 color:#d4af37;
-transform:translateX(6px) scale(1.05);
+transform:translateX(4px);
+}
+
+/* active page */
+.menu-box a.active{
+color:#d4af37;
+}
+
+.menu-box a.active::after{
+content:'';
+display:block;
+height:2px;
+width:60%;
+margin:6px auto 0;
+background:#d4af37;
+border-radius:2px;
 }
 
 /* stagger animation */
@@ -1533,25 +1579,29 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:10px;
+margin-bottom:12px;
 }
 
 /* logo */
 .menu-logo{
-width:85px;
+width:84px;
+opacity:.9;
+filter:brightness(1.05) contrast(1.05);
 }
 
 /* close button */
 .menu-close{
-font-size:20px;
+font-size:18px;
 color:#fff;
 cursor:pointer;
-transition:.3s ease;
+opacity:.8;
+transition:.25s ease;
 }
 
 .menu-close:hover{
+opacity:1;
 color:#d4af37;
-transform:rotate(90deg);
+transform:rotate(90deg) scale(1.1);
 }
 
 /* ===== HAMBURGER → X ===== */
@@ -1565,6 +1615,19 @@ opacity:0;
 
 #menuToggle:checked + .menu-btn span:nth-child(3){
 transform:rotate(-45deg) translateY(-8px);
+}
+
+/* ===== SOFT GOLD LIGHT (VERY SUBTLE) ===== */
+#navMenu::after{
+content:'';
+position:absolute;
+inset:0;
+background:radial-gradient(
+circle at 20% 10%,
+rgba(212,175,55,.12),
+transparent 60%
+);
+pointer-events:none;
 }
 
 }
