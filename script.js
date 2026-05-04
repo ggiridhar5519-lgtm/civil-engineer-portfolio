@@ -25,18 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ===== MENU =====
-  const menuBtn = document.getElementById("menuBtn");
-  const navMenu = document.getElementById("navMenu");
-
-  if (!menuBtn || !navMenu) return;
-
-  // create overlay
-  let overlay = document.querySelector(".menu-overlay");
-  if (!overlay) {
-    overlay = document.createElement("div");
-    overlay.className = "menu-overlay";
-    document.body.appendChild(overlay);
-  }
+ document.querySelectorAll('#navMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    const toggle = document.getElementById('menuToggle');
+    if(toggle) toggle.checked = false;
+  });
+});
 
   function openMenu(){
     navMenu.classList.add("active");
