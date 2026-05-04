@@ -1406,7 +1406,7 @@ grid-template-columns:1fr;
 }
 
 /* ===============================
-   PREMIUM FLOATING MOBILE NAV (FINAL)
+   PREMIUM FLOATING MOBILE NAV (FINAL FIXED)
 ================================*/
 
 /* hide checkbox */
@@ -1431,6 +1431,20 @@ border-radius:2px;
 transition:.4s ease;
 }
 
+/* ===== DESKTOP SAFETY (VERY IMPORTANT) ===== */
+@media(min-width:769px){
+#navMenu{
+display:none !important;
+}
+.menu-btn{
+display:none !important;
+}
+.menu-logo,
+.menu-close{
+display:none !important;
+}
+}
+
 /* MOBILE */
 @media(max-width:768px){
 
@@ -1450,10 +1464,10 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-/* premium dim */
-background:rgba(10,10,10,0.55);
-backdrop-filter:blur(14px);
--webkit-backdrop-filter:blur(14px);
+/* 🔥 FIXED: better glass visibility */
+background:rgba(10,10,10,0.35);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
 
 /* state */
 opacity:0;
@@ -1525,7 +1539,7 @@ transform:translateY(20px);
 transition:.25s ease;
 }
 
-/* subtle hover layer */
+/* hover layer */
 .menu-box a::before{
 content:'';
 position:absolute;
@@ -1536,7 +1550,6 @@ opacity:0;
 transition:.25s ease;
 }
 
-/* hover */
 .menu-box a:hover::before{
 opacity:1;
 }
@@ -1617,7 +1630,7 @@ opacity:0;
 transform:rotate(-45deg) translateY(-8px);
 }
 
-/* ===== SOFT GOLD LIGHT (VERY SUBTLE) ===== */
+/* ===== SOFT GOLD LIGHT ===== */
 #navMenu::after{
 content:'';
 position:absolute;
