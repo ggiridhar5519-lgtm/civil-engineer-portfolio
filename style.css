@@ -1677,3 +1677,36 @@ height:25vh;
 }
 
 }
+/* FILTER BUTTONS */
+.gallery-filter{
+display:flex;
+justify-content:center;
+gap:15px;
+margin:40px 0;
+flex-wrap:wrap;
+}
+
+.gallery-filter button{
+padding:10px 18px;
+border:none;
+background:#eee;
+cursor:pointer;
+border-radius:20px;
+font-weight:600;
+transition:.3s;
+}
+
+.gallery-filter button:hover{
+background:#d4af37;
+color:#000;
+}
+
+.gallery-filter button.active{
+background:#d4af37;
+color:#000;
+}
+
+/* HIDE ANIMATION */
+.gallery-item.hide{
+display:none;
+}
