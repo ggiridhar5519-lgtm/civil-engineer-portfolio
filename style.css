@@ -51,13 +51,7 @@ height:58px;
 width:auto;
 display:block;
 }
-/* NAV */
 
-nav{
-display:flex;
-align-items:center;
-gap:8px;
-}
 
 /* Your existing nav links */
 nav a{
@@ -1408,6 +1402,9 @@ grid-template-columns:1fr;
 /* ===============================
    SINGLE PANEL PREMIUM MOBILE NAV (FINAL CLEAN)
 ================================*/
+/* ===============================
+   NAVIGATION (FINAL FIXED)
+================================*/
 
 /* hide checkbox */
 #menuToggle{
@@ -1431,52 +1428,55 @@ border-radius:2px;
 transition:.4s ease;
 }
 
+/* ===== BASE NAV ===== */
+#navMenu{
+display:flex;
+align-items:center;
+gap:30px;
+margin-left:auto;
+}
+
+/* links */
+#navMenu a{
+text-decoration:none;
+color:#222;
+font-weight:700;
+font-size:16px;
+transition:.3s;
+}
+
+#navMenu a:hover{
+color:#c57b30;
+}
+
 /* ===== DESKTOP ===== */
-/* ===== DESKTOP NAV ===== */
 @media(min-width:769px){
 
 .menu-btn{
 display:none;
 }
 
-/* normal horizontal nav */
+/* clean desktop nav */
 #navMenu{
 position:static;
 transform:none;
 opacity:1;
 pointer-events:auto;
 
-width:auto;
-height:auto;
 background:none;
-backdrop-filter:none;
-
-display:flex;
-gap:30px;
-align-items:center;
-justify-content:flex-end;
-
 box-shadow:none;
 border:none;
 padding:0;
 }
 
-/* links */
-#navMenu a{
-color:#000;
-font-size:16px;
-padding:0;
-transform:none;
-opacity:1;
-}
-
-/* hide mobile-only items */
-.menu-logo,
-.menu-close{
+/* hide mobile-only */
+.menu-close,
+.menu-logo{
 display:none;
 }
 
 }
+
 /* ===== MOBILE ===== */
 @media(max-width:768px){
 
@@ -1484,88 +1484,58 @@ display:none;
 display:flex;
 }
 
-/* ===== SINGLE PANEL ===== */
+/* mobile panel */
 #navMenu{
 position:fixed;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%) scale(.9);
 
-width:88%;
-max-width:380px;
-padding:50px 25px;
+width:90%;
+max-width:320px;
+padding:40px 20px;
 
-background:rgba(15,15,15,0.9);
-backdrop-filter:blur(20px);
--webkit-backdrop-filter:blur(20px);
+background:rgba(15,15,15,0.95);
+backdrop-filter:blur(18px);
 
-border-radius:24px;
-border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+box-shadow:0 30px 80px rgba(0,0,0,.6);
 
-box-shadow:0 40px 100px rgba(0,0,0,.6);
-
-display:flex;
 flex-direction:column;
 align-items:center;
-gap:24px;
+gap:20px;
 
 opacity:0;
 pointer-events:none;
-transition:.4s cubic-bezier(.77,0,.18,1);
+transition:.3s ease;
 
 z-index:2500;
 }
 
-/* OPEN */
+/* open */
 #menuToggle:checked ~ #navMenu{
 opacity:1;
 pointer-events:auto;
 transform:translate(-50%,-50%) scale(1);
 }
 
-/* LINKS */
+/* mobile links */
 #navMenu a{
-font-size:20px;
-font-weight:600;
-letter-spacing:.4px;
 color:#fff;
-text-decoration:none;
-
-padding:12px 20px;
-border-radius:12px;
-
-transition:.25s ease;
+font-size:20px;
 }
 
-#navMenu a:hover{
-color:#d4af37;
-transform:translateX(5px);
-}
-
-/* CLOSE BUTTON */
+/* close button */
 .menu-close{
 position:absolute;
-top:20px;
-right:20px;
-
-font-size:18px;
+top:15px;
+right:18px;
+font-size:20px;
 color:#fff;
 cursor:pointer;
-transition:.3s;
 }
 
-.menu-close:hover{
-color:#d4af37;
-transform:rotate(90deg);
-}
-
-/* LOGO */
-.menu-logo{
-width:80px;
-margin-bottom:10px;
-}
-
-/* HAMBURGER → X */
+/* hamburger animation */
 #menuToggle:checked + .menu-btn span:nth-child(1){
 transform:rotate(45deg) translateY(8px);
 }
