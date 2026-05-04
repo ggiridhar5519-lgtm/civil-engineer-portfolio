@@ -1406,9 +1406,10 @@ grid-template-columns:1fr;
 }
 
 /* ===============================
-   PREMIUM MOBILE NAV
+   PREMIUM FLOATING MOBILE NAV
 ================================*/
 
+/* hide checkbox */
 #menuToggle{
 display:none;
 }
@@ -1437,55 +1438,71 @@ transition:.4s ease;
 display:flex;
 }
 
-/* ===== GLASS PANEL ===== */
+/* ===== FLOATING PREMIUM MENU ===== */
 #navMenu{
 position:fixed;
-top:0;
-right:-100%;
-width:100%;
-height:100vh;
 
-background:rgba(255,255,255,0.65);
+/* center */
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) scale(.9);
+
+/* size */
+width:85%;
+max-width:360px;
+padding:60px 30px;
+
+/* premium glass */
+background:rgba(10,10,10,0.7);
 backdrop-filter:blur(20px);
 -webkit-backdrop-filter:blur(20px);
 
+/* styling */
+border-radius:20px;
+box-shadow:0 40px 100px rgba(0,0,0,.5);
+
+/* layout */
 display:flex;
 flex-direction:column;
-justify-content:center;
 align-items:center;
 gap:28px;
 
-transition:.55s cubic-bezier(.77,0,.18,1);
-z-index:2500;
+/* hidden */
+opacity:0;
+pointer-events:none;
 
-/* depth */
-box-shadow:-20px 0 60px rgba(0,0,0,.25);
+/* animation */
+transition:.4s cubic-bezier(.77,0,.18,1);
+z-index:2500;
 }
 
-/* OPEN */
+/* ===== OPEN ===== */
 #menuToggle:checked ~ #navMenu{
-right:0;
+opacity:1;
+pointer-events:auto;
+transform:translate(-50%,-50%) scale(1);
 }
 
 /* ===== LINKS ===== */
 #navMenu a{
 font-size:24px;
-font-weight:700;
+font-weight:600;
 letter-spacing:.5px;
-color:#222;
+color:#fff;
+text-decoration:none;
 
-padding:14px 24px;
+padding:12px 20px;
 border-radius:12px;
 
 opacity:0;
-transform:translateY(30px);
-transition:.4s ease;
+transform:translateY(20px);
+
+transition:.3s ease;
 }
 
 /* hover */
 #navMenu a:hover{
-background:#d4af37;
-color:#000;
+color:#d4af37;
 transform:translateX(6px);
 }
 
@@ -1512,6 +1529,24 @@ opacity:0;
 
 #menuToggle:checked + .menu-btn span:nth-child(3){
 transform:rotate(-45deg) translateY(-8px);
+}
+
+/* ===== BACKGROUND DIM ===== */
+body::before{
+content:'';
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.55);
+opacity:0;
+pointer-events:none;
+transition:.3s;
+z-index:2000;
+}
+
+/* show dim */
+#menuToggle:checked ~ body::before{
+opacity:1;
+pointer-events:auto;
 }
 
 }
