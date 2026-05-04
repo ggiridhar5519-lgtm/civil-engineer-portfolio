@@ -1,5 +1,5 @@
 // ===============================
-// FIXED & SAFE SCRIPT (FINAL)
+// CLEAN & STABLE SCRIPT (FINAL FIX)
 // ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -28,12 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menuBtn");
   const navMenu = document.getElementById("navMenu");
 
-  if (!menuBtn || !navMenu) {
-    console.log("Menu elements missing");
-    return;
-  }
+  if (!menuBtn || !navMenu) return;
 
-  // create overlay if not exists
+  // create overlay
   let overlay = document.querySelector(".menu-overlay");
   if (!overlay) {
     overlay = document.createElement("div");
@@ -54,35 +51,20 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ===== TOGGLE MENU =====
-  menuBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-
-    if (navMenu.classList.contains("active")) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
+  menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    menuBtn.classList.toggle("open");
+    overlay.classList.toggle("show");
   });
 
-  // ===== CLICK OUTSIDE =====
+  // ===== CLOSE ON OVERLAY =====
   overlay.addEventListener("click", closeMenu);
 
-  // ===== CLICK LINKS (FINAL FIX) =====
-  document.querySelectorAll("#navMenu a").forEach(link => {
-    link.addEventListener("click", (e) => {
-
-      const href = link.getAttribute("href");
-
-      // close menu first
+  // ===== CLOSE ON LINK CLICK (NO FORCED NAVIGATION) =====
+  navMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
       closeMenu();
-
-      // force navigation (fix for mobile)
-      if (href && href !== "#") {
-        setTimeout(() => {
-          window.location.href = href;
-        }, 50);
-      }
-
+      // ⚠️ DO NOTHING ELSE → browser handles navigation
     });
   });
 
