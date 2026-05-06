@@ -35,29 +35,24 @@ const slides = document.querySelectorAll(".slide");
 
 let current = 0;
 
-/* first slide */
 slides[current].classList.add("active");
 
 setInterval(() => {
 
 let prev = current;
 
-current++;
+current = (current + 1) % slides.length;
 
-if(current >= slides.length){
-current = 0;
-}
-
-/* remove old prev */
+/* clean old prev */
 slides.forEach(slide => {
 slide.classList.remove("prev");
 });
 
-/* current active becomes prev */
+/* current slide goes left */
 slides[prev].classList.remove("active");
 slides[prev].classList.add("prev");
 
-/* next becomes active */
+/* next slide comes in */
 slides[current].classList.add("active");
 
 }, 5000);
