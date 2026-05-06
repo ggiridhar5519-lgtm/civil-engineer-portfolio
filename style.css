@@ -112,29 +112,30 @@ overflow:hidden;
 overflow:hidden;
 position:relative;
 }
-
-.slides,.slide{
+.slide{
 position:absolute;
 inset:0;
-}
 
-.slide{
 background-size:cover;
 background-position:center;
 
 transform:translateX(100%);
 transition:transform 1.8s cubic-bezier(.77,0,.18,1);
 
-z-index:0;
-visibility:hidden;
+z-index:1;
 }
 
+/* active/current slide */
 .slide.active{
 transform:translateX(0);
 z-index:2;
-visibility:visible;
 }
 
+/* previous slide stays behind */
+.slide.prev{
+transform:translateX(0);
+z-index:1;
+}
 .overlay{
 position:absolute;
 inset:0;
