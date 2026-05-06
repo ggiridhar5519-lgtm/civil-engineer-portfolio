@@ -2062,13 +2062,11 @@ border-bottom:1px solid rgba(255,255,255,0.08);
 
 /* nav links */
 nav a{
-color:rgba(255,255,255,0.9);
-
-transition:.3s ease;
+color:#d6d6d6;
 }
 
-/* hover */
-nav a:hover{
+nav a:hover,
+nav a.active{
 color:#d4af37;
 }
 
