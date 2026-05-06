@@ -31,25 +31,30 @@ if (percent) {
 }
 
   // ===== HERO SLIDER =====
-  const slides = document.querySelectorAll(".slide");
+const slides = document.querySelectorAll(".slide");
 let current = 0;
+
+/* first slide visible */
+slides[0].classList.add("active");
 
 setInterval(() => {
 
-slides[current].classList.remove("active");
-slides[current].classList.add("prev");
+let prev = current;
 
-let next = (current + 1) % slides.length;
+current = (current + 1) % slides.length;
 
-slides[next].classList.add("active");
+/* remove old classes */
+slides.forEach(slide => {
+slide.classList.remove("active","prev");
+});
 
-setTimeout(() => {
-slides[current].classList.remove("prev");
-}, 1800);
+/* previous slide moves left */
+slides[prev].classList.add("prev");
 
-current = next;
+/* next slide enters */
+slides[current].classList.add("active");
 
-}, 7000);
+}, 5000);
 
   // ===== MENU =====
  document.querySelectorAll('#navMenu a').forEach(link => {
