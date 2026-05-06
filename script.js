@@ -32,15 +32,24 @@ if (percent) {
 
   // ===== HERO SLIDER =====
   const slides = document.querySelectorAll(".slide");
-  let current = 0;
+let current = 0;
 
-  if (slides.length > 0) {
-    setInterval(() => {
-      slides[current].classList.remove("active");
-      current = (current + 1) % slides.length;
-      slides[current].classList.add("active");
-    }, 7000);
-  }
+setInterval(() => {
+
+slides[current].classList.remove("active");
+slides[current].classList.add("prev");
+
+let next = (current + 1) % slides.length;
+
+slides[next].classList.add("active");
+
+setTimeout(() => {
+slides[current].classList.remove("prev");
+}, 1800);
+
+current = next;
+
+}, 7000);
 
   // ===== MENU =====
  document.querySelectorAll('#navMenu a').forEach(link => {
