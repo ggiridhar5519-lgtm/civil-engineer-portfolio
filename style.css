@@ -2060,6 +2060,13 @@ backdrop-filter:blur(10px);
 border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
+header{
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
 nav a{
 color:rgba(255,255,255,0.88);
 }
