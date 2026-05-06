@@ -32,26 +32,32 @@ if (percent) {
 
   // ===== HERO SLIDER =====
 const slides = document.querySelectorAll(".slide");
+
 let current = 0;
 
-/* first slide visible */
-slides[0].classList.add("active");
+/* first slide */
+slides[current].classList.add("active");
 
 setInterval(() => {
 
 let prev = current;
 
-current = (current + 1) % slides.length;
+current++;
 
-/* remove old classes */
+if(current >= slides.length){
+current = 0;
+}
+
+/* remove old prev */
 slides.forEach(slide => {
-slide.classList.remove("active","prev");
+slide.classList.remove("prev");
 });
 
-/* previous slide moves left */
+/* current active becomes prev */
+slides[prev].classList.remove("active");
 slides[prev].classList.add("prev");
 
-/* next slide enters */
+/* next becomes active */
 slides[current].classList.add("active");
 
 }, 5000);
