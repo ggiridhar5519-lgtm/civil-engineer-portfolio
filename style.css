@@ -25,33 +25,38 @@ line-height:1.6;
 
 header{
 position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:14px 45px;
+top:10px;
+left:50%;
+transform:translateX(-50%);
+width:96%;
+padding:6px 24px;
 
 display:flex;
 justify-content:space-between;
 align-items:center;
 
-background:rgba(0,0,0,0.22);
-backdrop-filter:blur(8px);
--webkit-backdrop-filter:blur(8px);
+background:transparent;
+backdrop-filter:none;
+-webkit-backdrop-filter:none;
 
+border:none;
+border-radius:0;
+
+box-shadow:none;
 z-index:1000;
-transition:.3s ease;
 }
 
-.logo{
-font-size:32px;
-font-weight:800;
-color:#fff;
+.logo img{
+height:58px;
+width:auto;
+display:block;
 }
+
 
 /* Your existing nav links */
 nav a{
 text-decoration:none;
-color:#fff;
+color:#222;
 font-weight:700;
 padding:11px 16px;
 border-radius:12px;
@@ -122,9 +127,7 @@ transform:scale(1.08);
 .overlay{
 position:absolute;
 inset:0;
-background:linear-gradient(
-rgba(0,0,0,.50),
-rgba(0,0,0,.68)
+background:linear-gradient(rgba(0,0,0,.28),rgba(0,0,0,.58));
 pointer-events:none;
 }
 
@@ -141,16 +144,15 @@ z-index:5;
 }
 
 .hero-content h2{
-font-size:82px;
+font-size:62px;
+line-height:1.1;
+margin-bottom:14px;
 font-weight:800;
-line-height:1;
-margin-bottom:18px;
 }
 
 .hero-content p{
-font-size:24px;
-font-weight:400;
-letter-spacing:.5px;
+font-size:20px;
+margin-bottom:24px;
 }
 
 .btn{
@@ -1428,7 +1430,7 @@ transition:.4s ease;
 #navMenu{
 display:flex;
 align-items:center;
-gap:px;
+gap:30px;
 margin-left:auto;
 }
 
@@ -1490,7 +1492,7 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-gap:22px;
+gap:25px;
 
 background:rgba(15,15,15,0.96);
 backdrop-filter:blur(18px);
@@ -1535,23 +1537,6 @@ opacity:0;
 
 #menuToggle:checked + .menu-btn span:nth-child(3){
 transform:rotate(-45deg) translateY(-8px);
-}
-
-}
-
-@media(max-width:768px){
-
-.hero-content h2{
-font-size:48px;
-line-height:1.1;
-}
-
-.hero-content p{
-font-size:18px;
-}
-
-header{
-padding:16px 20px;
 }
 
 }
@@ -1886,30 +1871,4 @@ color:#aaa;
 #intro.hide{
 opacity:0;
 visibility:hidden;
-}
-
-  header nav a,
-#navMenu a{
-color:#fff !important;
-}
-
-header nav a:hover,
-#navMenu a:hover{
-color:#d4af37 !important;
-}
-
-@media(max-width:768px){
-
-header{
-padding:14px 20px;
-}
-
-.hero-content h2{
-font-size:46px;
-}
-
-.hero-content p{
-font-size:18px;
-}
-
 }
