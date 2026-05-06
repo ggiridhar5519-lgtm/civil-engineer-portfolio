@@ -113,6 +113,11 @@ position:absolute;
 inset:0;
 }
 
+.slides{
+position:relative;
+overflow:hidden;
+}
+
 .slide{
 position:absolute;
 inset:0;
@@ -121,15 +126,22 @@ background-size:cover;
 background-position:center;
 
 left:100%;
+
 transition:left 1.5s ease-in-out;
 
 z-index:1;
 }
 
-/* visible slide */
+/* current slide */
 .slide.active{
 left:0;
 z-index:2;
+}
+
+/* outgoing slide */
+.slide.prev{
+left:-100%;
+z-index:1;
 }
 
 .overlay{
