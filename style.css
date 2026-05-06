@@ -2076,3 +2076,27 @@ color:#d4af37;
 nav a.active{
 color:#d4af37;
 }
+/* premium underline animation */
+nav a{
+position:relative;
+transition:.3s ease;
+}
+
+nav a::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-6px;
+
+width:0;
+height:2px;
+
+background:#d4af37;
+
+transition:.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after{
+width:100%;
+}
