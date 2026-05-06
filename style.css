@@ -2053,3 +2053,21 @@ color:#aaa;
 opacity:0;
 visibility:hidden;
 }
+header{
+background:rgba(0,0,0,0.35);
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+nav a{
+color:rgba(255,255,255,0.88);
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+nav a.active{
+color:#d4af37;
+}
