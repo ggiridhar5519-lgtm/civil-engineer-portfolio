@@ -61,8 +61,6 @@ background:rgba(0,0,0,0.45);
 
 backdrop-filter:blur(10px);
 
-border:2px solid rgba(212,175,55,.7);
-
 box-shadow:
 0 10px 30px rgba(0,0,0,.35);
 
@@ -83,7 +81,6 @@ transition:.4s ease;
 /* hover */
 .logo:hover{
 transform:scale(1.05);
-border-color:#d4af37;
 }
 
 .logo:hover img{
