@@ -784,23 +784,26 @@ box-shadow:
 /* social icons */
 .social-icons{
 display:flex;
-gap:16px;
+gap:18px;
 flex-wrap:wrap;
 }
 
 .social-icons a{
-width:52px;
-height:52px;
+width:56px;
+height:56px;
+
+display:flex;
+align-items:center;
+justify-content:center;
 
 border-radius:18px;
 
-background:rgba(255,255,255,.7);
-
-backdrop-filter:blur(10px);
-
-border:1px solid rgba(0,0,0,.06);
+background:#f3f3f3;
 
 color:#222;
+font-size:22px;
+
+text-decoration:none;
 
 box-shadow:
 0 10px 25px rgba(0,0,0,.08);
@@ -808,21 +811,26 @@ box-shadow:
 transition:.35s ease;
 }
 
-.social-icons a:hover{
-background:#c59b4f;
-color:#fff;
+/* IMPORTANT FIX */
+.social-icons a i{
+display:flex;
+align-items:center;
+justify-content:center;
 
-transform:translateY(-6px);
+width:100%;
+height:100%;
+line-height:1;
 }
 
+/* hover */
 .social-icons a:hover{
-background:#d4af37;
-color:#000;
+transform:translateY(-6px);
 
-transform:translateY(-8px);
+background:#d4af37;
+color:#fff;
 
 box-shadow:
-0 15px 35px rgba(212,175,55,.35);
+0 15px 35px rgba(212,175,55,.28);
 }
 
 /* bottom */
