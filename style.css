@@ -789,25 +789,30 @@ flex-wrap:wrap;
 }
 
 .social-icons a{
-width:54px;
-height:54px;
-
-display:flex;
-align-items:center;
-justify-content:center;
+width:52px;
+height:52px;
 
 border-radius:18px;
 
-background:rgba(255,255,255,.06);
-
-border:1px solid rgba(212,175,55,.15);
+background:rgba(255,255,255,.7);
 
 backdrop-filter:blur(10px);
 
-color:#fff;
-font-size:18px;
+border:1px solid rgba(0,0,0,.06);
 
-transition:.4s ease;
+color:#222;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.08);
+
+transition:.35s ease;
+}
+
+.social-icons a:hover{
+background:#c59b4f;
+color:#fff;
+
+transform:translateY(-6px);
 }
 
 .social-icons a:hover{
