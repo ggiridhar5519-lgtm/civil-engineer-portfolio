@@ -487,9 +487,29 @@ grid-template-columns:repeat(4,1fr);
 width:100%;
 min-height:560px;
 
-background:#1f252b;
-
 overflow:hidden;
+}
+
+/* COLORFUL PANELS */
+
+/* PANEL 1 */
+.feature-item:nth-child(1){
+background:linear-gradient(135deg,#0f172a,#334155);
+}
+
+/* PANEL 2 */
+.feature-item:nth-child(2){
+background:linear-gradient(135deg,#1e293b,#111827);
+}
+
+/* PANEL 3 */
+.feature-item:nth-child(3){
+background:linear-gradient(135deg,#f4d03f,#d4af37);
+}
+
+/* PANEL 4 */
+.feature-item:nth-child(4){
+background:linear-gradient(135deg,#312e81,#1e1b4b);
 }
 
 /* PANELS */
@@ -504,16 +524,9 @@ padding:70px 35px;
 
 text-align:center;
 
-background:#2b3138;
-
 border-right:1px solid rgba(255,255,255,.06);
 
 transition:.45s ease;
-}
-
-/* GOLD CENTER PANEL */
-.gold-panel{
-background:#d4af37;
 }
 
 /* CONTENT */
@@ -538,15 +551,15 @@ color:#fff;
 font-size:16px;
 line-height:1.9;
 
-color:rgba(255,255,255,.82);
+color:rgba(255,255,255,.85);
 }
 
 /* GOLD PANEL TEXT */
-.gold-panel h3{
+.feature-item:nth-child(3) h3{
 color:#111;
 }
 
-.gold-panel p{
+.feature-item:nth-child(3) p{
 color:#222;
 }
 
@@ -567,7 +580,7 @@ left:0;
 width:100%;
 height:4px;
 
-background:#d4af37;
+background:#ffffff;
 
 transform:scaleX(0);
 
