@@ -302,6 +302,25 @@
   </a>
 
 </div>
+  <script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const chatToggle = document.getElementById("chatToggle");
+const chatBox = document.getElementById("chatBox");
+const closeChat = document.getElementById("closeChat");
+
+chatToggle.onclick = function(){
+chatBox.classList.toggle("active");
+};
+
+closeChat.onclick = function(){
+chatBox.classList.remove("active");
+};
+
+});
+
+</script>
 <script src="script.js"></script>
 </body>
 </html>
