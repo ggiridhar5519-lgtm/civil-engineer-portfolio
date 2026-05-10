@@ -2805,11 +2805,11 @@ text-align:center;
 
 z-index:5;
 
-padding:30px 45px;
+padding:28px 42px;
 
 background:rgba(0,0,0,.18);
 
-backdrop-filter:blur(8px);
+backdrop-filter:blur(6px);
 -webkit-backdrop-filter:blur(8px);
 
 border:1px solid rgba(255,255,255,.08);
@@ -2822,11 +2822,11 @@ box-shadow:
 
 /* title */
 .hero-main-content h2{
-font-size:88px;
+font-size:72px;
 
 font-weight:900;
 
-line-height:1;
+line-height:1.05;
 
 letter-spacing:-3px;
 
@@ -2840,7 +2840,7 @@ text-shadow:
 
 /* subtitle */
 .hero-main-content p{
-font-size:24px;
+font-size:20px;
 
 line-height:1.6;
 
@@ -2848,7 +2848,7 @@ color:rgba(255,255,255,.86);
 }
 
 /* mobile */
-@media(max-width:768px){
+@media(max-width:800px){
 
 .hero-main-content{
 width:90%;
