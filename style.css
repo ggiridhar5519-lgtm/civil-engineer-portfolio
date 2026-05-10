@@ -191,76 +191,23 @@ position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-
 text-align:center;
-
 color:#fff;
-
 width:92%;
-max-width:1100px;
-
+max-width:900px;
 z-index:5;
+}
 
-padding:45px 50px;
-
-background:linear-gradient(
-rgba(0,0,0,.18),
-rgba(0,0,0,.28)
-);
-
-backdrop-filter:blur(4px);
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:28px;
-
-box-shadow:
-0 20px 60px rgba(0,0,0,.28);
 .hero-content h2{
-font-size:92px;
+font-size:62px;
+line-height:1.1;
+margin-bottom:14px;
+font-weight:800;
+}
 
-line-height:.95;
-
+.hero-content p{
+font-size:20px;
 margin-bottom:24px;
-
-font-weight:900;
-
-letter-spacing:-4px;
-
-color:#ffffff;
-
-text-transform:uppercase;
-
-text-shadow:
-0 10px 30px rgba(0,0,0,.35);
-}
-.hero-content p{
-font-size:24px;
-
-line-height:1.7;
-
-color:rgba(255,255,255,.82);
-
-letter-spacing:.5px;
-}
-
-@media(max-width:768px){
-
-.hero-content{
-padding:28px 22px;
-border-radius:22px;
-}
-
-.hero-content h2{
-font-size:48px;
-letter-spacing:-2px;
-}
-
-.hero-content p{
-font-size:16px;
-line-height:1.6;
-}
-
 }
 
 .btn{
