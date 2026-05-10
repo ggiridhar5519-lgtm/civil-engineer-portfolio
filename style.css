@@ -2901,6 +2901,10 @@ margin:auto;
 
 position:relative;
 z-index:2;
+
+font-style:italic;
+
+letter-spacing:.5px;
 }
 
 /* mobile */
