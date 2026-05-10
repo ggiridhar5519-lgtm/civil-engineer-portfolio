@@ -47,35 +47,26 @@ z-index:1000;
 }
 
 .logo{
-width:40px;
-height:50px;
-
-border-radius:50%;
-overflow:hidden;
+width:120px;
+height:auto;
 
 display:flex;
 align-items:center;
 justify-content:center;
 
-background:rgba(0,0,0,0.45);
-
-backdrop-filter:blur(10px);
-
-box-shadow:
-0 10px 30px rgba(0,0,0,.35);
+background:none;
+box-shadow:none;
 
 transition:.4s ease;
 }
 
 .logo img{
 width:100%;
-height:100%;
-object-fit:cover;
+height:auto;
 
-border-radius:50%;
+object-fit:contain;
 
 display:block;
-transition:.4s ease;
 }
 
 /* hover */
