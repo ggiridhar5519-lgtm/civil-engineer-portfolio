@@ -2400,8 +2400,8 @@ justify-content:center;
 
 font-size:28px;
 
-background:#d4af37;
-color:#111;
+background:#ffffff;
+color:#111827;
 
 border-radius:50%;
 
@@ -2409,17 +2409,25 @@ cursor:pointer;
 
 z-index:9999;
 
+border:1px solid rgba(255,255,255,.08);
+
 box-shadow:
-0 15px 40px rgba(212,175,55,.35);
+0 15px 40px rgba(0,0,0,.28);
 
 transition:.35s ease;
 }
 
+/* hover */
 .consultation-toggle:hover{
 transform:scale(1.08);
+
+background:#e5e7eb;
 }
 
-/* popup */
+/* ===============================
+   POPUP
+================================*/
+
 .consultation-popup{
 position:fixed;
 
@@ -2428,7 +2436,7 @@ bottom:105px;
 
 width:340px;
 
-background:rgba(15,15,15,.92);
+background:rgba(15,15,15,.94);
 
 backdrop-filter:blur(14px);
 
@@ -2436,7 +2444,7 @@ padding:30px;
 
 border-radius:24px;
 
-border:1px solid rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.05);
 
 box-shadow:
 0 20px 60px rgba(0,0,0,.45);
@@ -2459,7 +2467,10 @@ visibility:visible;
 transform:translateY(0);
 }
 
-/* close */
+/* ===============================
+   CLOSE BUTTON
+================================*/
+
 .close-popup{
 position:absolute;
 
@@ -2474,35 +2485,50 @@ color:#fff;
 font-size:18px;
 
 cursor:pointer;
+
+transition:.3s ease;
 }
 
-/* heading */
+.close-popup:hover{
+opacity:.7;
+}
+
+/* ===============================
+   HEADING
+================================*/
+
 .consultation-popup h3{
 font-size:28px;
 
 margin-bottom:14px;
 
-color:#d4af37;
+color:#ffffff;
 }
 
-/* text */
+/* ===============================
+   TEXT
+================================*/
+
 .consultation-popup p{
 font-size:15px;
 line-height:1.8;
 
-color:#d0d0d0;
+color:#d1d5db;
 
 margin-bottom:22px;
 }
 
-/* button */
+/* ===============================
+   BUTTON
+================================*/
+
 .popup-btn{
 display:inline-block;
 
 padding:14px 24px;
 
-background:#d4af37;
-color:#111;
+background:#ffffff;
+color:#111827;
 
 font-weight:700;
 text-decoration:none;
@@ -2512,12 +2538,17 @@ border-radius:50px;
 transition:.3s ease;
 }
 
+/* hover */
 .popup-btn:hover{
-background:#fff;
+background:#e5e7eb;
+
 transform:translateY(-3px);
 }
 
-/* mobile */
+/* ===============================
+   MOBILE
+================================*/
+
 @media(max-width:768px){
 
 .consultation-popup{
@@ -2529,6 +2560,7 @@ bottom:95px;
 .consultation-toggle{
 width:58px;
 height:58px;
+
 font-size:24px;
 }
 
