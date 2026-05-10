@@ -931,6 +931,21 @@ box-shadow:
 0 10px 25px rgba(0,0,0,.18);
 }
 
+.footer-btn,
+.footer-btn:visited,
+.footer-btn:hover{
+color:#111827 !important;
+
+opacity:1 !important;
+
+-webkit-text-fill-color:#111827 !important;
+}
+
+.footer-btn *{
+opacity:1 !important;
+color:#111827 !important;
+}
+
 /* hover */
 .footer-btn:hover{
 transform:translateY(-4px);
