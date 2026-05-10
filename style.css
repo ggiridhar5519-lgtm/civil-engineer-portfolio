@@ -1956,6 +1956,9 @@ box-shadow:none;
 #navMenu a{
 position:relative;
 
+display:flex;
+align-items:center;
+
 font-size:15px;
 
 font-weight:500;
@@ -1978,13 +1981,16 @@ content:'/';
 position:absolute;
 
 right:-22px;
+
 top:50%;
 
-transform:translateY(-50%);
+transform:translateY(-55%);
 
 color:#c89b3c;
 
 font-size:14px;
+
+line-height:1;
 }
 
 /* hover */
