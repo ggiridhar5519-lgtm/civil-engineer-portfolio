@@ -1117,8 +1117,18 @@ max-width:280px;
 /* ===== ABOUT HERO ===== */
 .about-hero{
 position:relative;
-height:60vh;
-background:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750') center/cover;
+height:78vh;
+
+background:
+linear-gradient(
+rgba(8,12,20,.58),
+rgba(8,12,20,.78)
+),
+url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1800&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
 display:flex;
 align-items:center;
 justify-content:center;
@@ -1127,133 +1137,228 @@ justify-content:center;
 .about-overlay{
 position:absolute;
 inset:0;
-background:rgba(0,0,0,.6);
+
+background:
+radial-gradient(
+circle at top right,
+rgba(255,255,255,.05),
+transparent 35%
+);
 }
 
 .about-content{
 position:relative;
 color:#fff;
 text-align:center;
+max-width:900px;
+padding:0 20px;
 }
 
 .about-content h1{
-font-size:48px;
-margin-bottom:10px;
+font-size:78px;
+line-height:1.02;
+
+font-weight:800;
+
+letter-spacing:-3px;
+
+margin-bottom:20px;
+
+text-shadow:
+0 10px 30px rgba(0,0,0,.35);
 }
 
+.about-content p{
+font-size:20px;
+line-height:1.8;
 
-/* ===== ABOUT SECTION (LUXURY UPGRADE) ===== */
+color:#d1d5db;
+}
+
+/* ===== ABOUT SECTION ===== */
+
 .about-section{
-padding:100px 8%;
-background:#0f0f0f;
+padding:110px 8%;
+
+background:#0f172a;
+
 color:#fff;
+
 position:relative;
 }
 
 /* GRID */
+
 .about-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:70px;
+
+gap:80px;
+
 align-items:center;
 }
 
-/* TEXT SIDE */
-.about-text h2{
-font-size:40px;
-font-weight:800;
-margin-bottom:20px;
-position:relative;
-display:inline-block;
+/* TEXT */
+
+.about-text{
+background:rgba(255,255,255,.02);
+
+backdrop-filter:blur(6px);
+
+padding:40px;
+
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.04);
 }
 
-/* GOLD LINE */
-.about-text h2::after{
-content:'';
-position:absolute;
-left:0;
-bottom:-8px;
-width:60%;
-height:3px;
-background:#e5e7eb;
+/* HEADING */
+
+.about-text h2{
+font-size:64px;
+
+line-height:1;
+
+font-weight:800;
+
+letter-spacing:-3px;
+
+margin-bottom:30px;
+
+color:#fff;
 }
 
 /* PARAGRAPH */
-.about-text p{
-font-size:17px;
-line-height:1.9;
-color:#cfcfcf;
-margin-bottom:18px;
-max-width:520px;
-}
 
-/* IMAGE SIDE */
-.about-image{
-position:relative;
-overflow:hidden;
-border-radius:22px;
+.about-text p{
+font-size:19px;
+
+line-height:2;
+
+color:#cbd5e1;
+
+margin-bottom:22px;
 }
 
 /* IMAGE */
+
+.about-image{
+position:relative;
+
+overflow:hidden;
+
+border-radius:30px;
+}
+
 .about-image img{
 width:100%;
 height:100%;
+
 object-fit:cover;
-transition:transform 1.2s ease;
+
+border-radius:30px;
+
+transition:.6s ease;
+
+filter:brightness(.88);
+
+box-shadow:
+0 30px 80px rgba(0,0,0,.35);
 }
 
-/* IMAGE ZOOM EFFECT */
+/* hover */
+
 .about-image:hover img{
-transform:scale(1.08);
+transform:scale(1.03);
+
+filter:brightness(1);
 }
 
-/* SOFT DARK OVERLAY */
+/* overlay */
+
 .about-image::after{
 content:'';
+
 position:absolute;
 inset:0;
+
 background:linear-gradient(
-rgba(0,0,0,.1),
-rgba(0,0,0,.6)
+rgba(0,0,0,.08),
+rgba(0,0,0,.45)
 );
 }
 
-/* ===== STATS (LUXURY STRIP) ===== */
+/* ===== STATS ===== */
+
 .about-stats{
 display:flex;
+
 justify-content:center;
-gap:80px;
-padding:70px 20px;
-background:#0a0a0a;
-border-top:1px solid rgba(255,255,255,.06);
-border-bottom:1px solid rgba(255,255,255,.06);
+
+gap:90px;
+
+padding:80px 20px;
+
+background:#111827;
+
+border-top:1px solid rgba(255,255,255,.05);
+
+border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 /* EACH STAT */
+
 .stat{
 text-align:center;
-transition:.3s ease;
+
+transition:.35s ease;
 }
 
-.stat h3{
-font-size:42px;
-color:#111827;
-margin-bottom:6px;
-}
-
-.stat p{
-color:#aaa;
-font-size:14px;
-letter-spacing:.5px;
-}
-
-/* HOVER MICRO ANIMATION */
 .stat:hover{
 transform:translateY(-6px);
 }
 
+/* NUMBER */
+
+.stat h3{
+font-size:52px;
+
+font-weight:800;
+
+margin-bottom:8px;
+
+color:#e5e7eb;
+}
+
+/* LABEL */
+
+.stat p{
+color:#9ca3af;
+
+font-size:15px;
+
+letter-spacing:.5px;
+}
+
 /* ===== MOBILE ===== */
+
 @media(max-width:768px){
+
+.about-hero{
+height:auto;
+
+padding:180px 20px 120px;
+}
+
+.about-content h1{
+font-size:46px;
+
+letter-spacing:-1px;
+}
+
+.about-content p{
+font-size:16px;
+}
 
 .about-section{
 padding:70px 18px;
@@ -1261,29 +1366,36 @@ padding:70px 18px;
 
 .about-grid{
 grid-template-columns:1fr;
-gap:40px;
+
+gap:45px;
+}
+
+.about-text{
+padding:28px;
 }
 
 .about-text h2{
-font-size:30px;
+font-size:42px;
 }
 
 .about-text p{
 font-size:15px;
+line-height:1.9;
 }
 
 .about-stats{
 flex-direction:column;
-gap:30px;
-padding:50px 20px;
+
+gap:35px;
+
+padding:60px 20px;
 }
 
 .stat h3{
-font-size:32px;
+font-size:38px;
 }
 
 }
-
 
 /* ===============================
    SERVICES PAGE (UPDATED CLEAN)
