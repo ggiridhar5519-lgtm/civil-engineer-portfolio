@@ -674,8 +674,9 @@ font-size:15px;
 }
 
 }
+
 /* ===============================
-   CINEMATIC PREMIUM FOOTER
+   MODERN PREMIUM FOOTER
 ================================*/
 
 .footer{
@@ -683,8 +684,8 @@ position:relative;
 
 background:
 linear-gradient(
-rgba(0,0,0,.82),
-rgba(0,0,0,.90)
+rgba(10,15,25,.72),
+rgba(5,8,15,.82)
 ),
 url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1800&auto=format&fit=crop');
 
@@ -695,10 +696,10 @@ padding-top:90px;
 
 overflow:hidden;
 
-border-top:1px solid rgba(255,255,255,.14);
+border-top:1px solid rgba(255,255,255,.06);
 }
 
-/* soft luxury glow */
+/* subtle cinematic glow */
 .footer::before{
 content:'';
 
@@ -708,7 +709,7 @@ inset:0;
 background:
 radial-gradient(
 circle at top right,
-rgba(255,255,255,.06),
+rgba(255,255,255,.04),
 transparent 35%
 );
 
@@ -724,25 +725,30 @@ position:relative;
 z-index:2;
 
 display:grid;
-grid-template-columns:1.5fr 1fr 1fr 1fr;
+grid-template-columns:1.4fr 1fr 1fr 1fr;
 
-gap:45px;
+gap:50px;
 
 max-width:1400px;
 margin:auto;
 
 padding:0 60px 70px;
 
-border-bottom:1px solid rgba(255,255,255,.06);
+border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 /* ===============================
-   CLEAN COLUMNS
+   COLUMNS
 ================================*/
 
 .footer-col{
 position:relative;
-padding:10px 20px;
+
+padding:10px 10px;
+
+background:rgba(0,0,0,.18);
+
+backdrop-filter:blur(3px);
 }
 
 /* elegant divider */
@@ -750,13 +756,14 @@ padding:10px 20px;
 content:'';
 
 position:absolute;
-top:10%;
-right:0;
+
+top:8%;
+right:-25px;
 
 width:1px;
-height:80%;
+height:84%;
 
-background:rgba(255,255,255,.06);
+background:rgba(255,255,255,.05);
 }
 
 /* remove last divider */
@@ -769,14 +776,14 @@ display:none;
 ================================*/
 
 .footer-logo{
-width:100px;
+width:92px;
 
-margin-bottom:24px;
+margin-bottom:28px;
 
-border-radius:12px;
+border-radius:14px;
 
 box-shadow:
-0 8px 25px rgba(255,255,255,.12);
+0 8px 24px rgba(0,0,0,.25);
 }
 
 /* ===============================
@@ -784,29 +791,34 @@ box-shadow:
 ================================*/
 
 .footer-col h3{
-font-size:34px;
+font-size:32px;
 line-height:1.1;
 
-margin-bottom:16px;
+margin-bottom:18px;
 
-color:#fff;
+font-weight:700;
+
+color:#ffffff;
 }
 
 .footer-col h4{
-font-size:22px;
+font-size:24px;
+
 margin-bottom:28px;
 
-color:#111827;
+font-weight:600;
+
+color:#ffffff;
 }
 
 /* tagline */
 .footer-tagline{
-color:#9f9f9f;
+color:#9ca3af;
 
 font-size:15px;
-line-height:1.8;
+line-height:1.9;
 
-margin-bottom:24px;
+margin-bottom:26px;
 
 max-width:320px;
 }
@@ -816,12 +828,13 @@ max-width:320px;
 ================================*/
 
 .footer-col p{
-color:#c8c8c8;
+color:#d1d5db;
 
 line-height:2;
+
 font-size:15px;
 
-margin-bottom:14px;
+margin-bottom:16px;
 }
 
 /* ===============================
@@ -834,11 +847,11 @@ position:relative;
 display:block;
 width:fit-content;
 
-color:#c4c4c4;
+color:#d1d5db;
 
 text-decoration:none;
 
-margin-bottom:16px;
+margin-bottom:18px;
 
 transition:.35s ease;
 }
@@ -848,8 +861,9 @@ transition:.35s ease;
 content:'';
 
 position:absolute;
+
 left:0;
-bottom:-4px;
+bottom:-5px;
 
 width:0;
 height:1px;
@@ -860,7 +874,8 @@ transition:.35s ease;
 }
 
 .footer-col a:hover{
-color:#111827;
+color:#ffffff;
+
 transform:translateX(6px);
 }
 
@@ -873,17 +888,17 @@ width:100%;
 ================================*/
 
 .footer-stats{
-margin:28px 0;
+margin:32px 0;
 }
 
 .footer-stats span{
 display:block;
 
-margin-bottom:14px;
+margin-bottom:16px;
 
 font-size:16px;
 
-color:#a8a8a8;
+color:#cbd5e1;
 }
 
 /* ===============================
@@ -895,28 +910,35 @@ display:inline-flex;
 align-items:center;
 justify-content:center;
 
-padding:14px 30px;
+padding:15px 34px;
 
 background:#cbd5e1;
+
 color:#111827;
 
 font-weight:700;
+font-size:15px;
+
 text-decoration:none;
 
 border-radius:60px;
 
-transition:.4s ease;
+transition:.35s ease;
 
-margin-top:10px;
+margin-top:12px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.18);
 }
 
+/* hover */
 .footer-btn:hover{
-transform:translateY(-5px);
+transform:translateY(-4px);
 
 background:#e2e8f0;
 
 box-shadow:
-0 10px 25px rgba(0,0,0,.18);
+0 14px 30px rgba(0,0,0,.24);
 }
 
 /* ===============================
@@ -925,14 +947,15 @@ box-shadow:
 
 .social-icons{
 display:flex;
-gap:16px;
+gap:18px;
+
 flex-wrap:wrap;
 }
 
-/* premium icon style */
+/* icons */
 .social-icons a{
-width:52px;
-height:52px;
+width:50px;
+height:50px;
 
 display:flex;
 align-items:center;
@@ -940,29 +963,33 @@ justify-content:center;
 
 border-radius:16px;
 
-background:rgba(255,255,255,.03);
+background:rgba(255,255,255,.04);
 
-border:1px solid rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.05);
 
-color:#fff;
-font-size:20px;
+color:#ffffff;
+
+font-size:19px;
 
 text-decoration:none;
 
-transition:.4s ease;
+transition:.35s ease;
+
+backdrop-filter:blur(5px);
 }
 
 /* hover */
 .social-icons a:hover{
-transform:translateY(-6px);
+transform:translateY(-5px);
 
 background:#e5e7eb;
-color:#111;
 
-border-color:#111827;
+color:#111827;
+
+border-color:#e5e7eb;
 
 box-shadow:
-0 15px 35px rgba(255,255,255,.22);
+0 12px 28px rgba(0,0,0,.22);
 }
 
 /* ===============================
@@ -973,19 +1000,19 @@ box-shadow:
 position:relative;
 z-index:2;
 
-padding:30px 20px;
+padding:34px 20px;
 
 text-align:center;
 }
 
 .footer-links{
-margin-bottom:14px;
+margin-bottom:16px;
 }
 
 .footer-links span{
-margin:0 14px;
+margin:0 16px;
 
-color:#888;
+color:#9ca3af;
 
 cursor:pointer;
 
@@ -993,11 +1020,12 @@ transition:.3s ease;
 }
 
 .footer-links span:hover{
-color:#111827;
+color:#ffffff;
 }
 
 .footer-bottom p{
-color:#777;
+color:#6b7280;
+
 font-size:14px;
 }
 
@@ -1011,6 +1039,8 @@ font-size:14px;
 grid-template-columns:1fr 1fr;
 
 padding:0 24px 60px;
+
+gap:40px;
 }
 
 .footer-col:nth-child(2)::after{
@@ -1023,16 +1053,18 @@ display:none;
 
 .footer-top{
 grid-template-columns:1fr;
-gap:40px;
+
+gap:45px;
 }
 
-/* remove dividers mobile */
+/* remove dividers */
 .footer-col::after{
 display:none;
 }
 
 .footer-col{
 text-align:center;
+
 padding:0;
 }
 
@@ -1057,8 +1089,16 @@ margin:auto auto 24px;
 font-size:30px;
 }
 
+.footer-col h4{
+font-size:22px;
 }
 
+.footer-btn{
+width:100%;
+max-width:280px;
+}
+
+}
 /* ===== ABOUT HERO ===== */
 .about-hero{
 position:relative;
