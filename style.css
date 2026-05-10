@@ -2803,13 +2803,13 @@ text-align:center;
 
 z-index:5;
 
-padding:42px 65px;
+padding:38px 55px;
 
 background:
 linear-gradient(
 135deg,
-rgba(8,12,20,.94),
-rgba(15,20,32,.88)
+rgba(8,12,20,.92),
+rgba(15,20,32,.86)
 );
 
 border:1px solid rgba(255,255,255,.08);
@@ -2817,9 +2817,10 @@ border:1px solid rgba(255,255,255,.08);
 border-radius:30px;
 
 box-shadow:
-0 30px 80px rgba(0,0,0,.42);
+0 25px 70px rgba(0,0,0,.38);
 
-min-width:1100px;
+width:90%;
+max-width:1150px;
 
 overflow:hidden;
 }
@@ -2854,7 +2855,7 @@ right:-120px;
 width:260px;
 height:260px;
 
-background:rgba(59,130,246,.12);
+background:rgba(59,130,246,.10);
 
 filter:blur(90px);
 
@@ -2863,17 +2864,15 @@ border-radius:50%;
 
 /* title */
 .hero-main-content h2{
-font-size:64px;
+font-size:46px;
 
 font-weight:900;
 
-line-height:1.05;
+line-height:1.15;
 
-letter-spacing:-2px;
+letter-spacing:-1px;
 
-white-space:nowrap;
-
-margin-bottom:22px;
+margin-bottom:18px;
 
 color:#fff;
 
@@ -2881,6 +2880,11 @@ text-transform:uppercase;
 
 position:relative;
 z-index:2;
+
+max-width:1000px;
+
+margin-left:auto;
+margin-right:auto;
 }
 
 /* subtitle */
@@ -2905,25 +2909,21 @@ z-index:2;
 .hero-main-content{
 width:90%;
 
-min-width:auto;
+padding:24px 18px;
 
-padding:26px 20px;
-
-border-radius:24px;
+border-radius:22px;
 }
 
 .hero-main-content h2{
-font-size:42px;
+font-size:32px;
 
-line-height:1.1;
-
-white-space:normal;
+line-height:1.2;
 
 letter-spacing:-1px;
 }
 
 .hero-main-content p{
-font-size:16px;
+font-size:15px;
 
 line-height:1.6;
 }
