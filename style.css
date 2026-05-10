@@ -675,7 +675,7 @@ font-size:15px;
 
 }
 /* ===============================
-   ULTRA PREMIUM FOOTER
+   CINEMATIC PREMIUM FOOTER
 ================================*/
 
 .footer{
@@ -683,8 +683,8 @@ position:relative;
 
 background:
 linear-gradient(
-rgba(0,0,0,.80),
-rgba(0,0,0,.88)
+rgba(0,0,0,.82),
+rgba(0,0,0,.90)
 ),
 url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1800&auto=format&fit=crop');
 
@@ -695,10 +695,10 @@ padding-top:90px;
 
 overflow:hidden;
 
-border-top:1px solid rgba(212,175,55,.18);
+border-top:1px solid rgba(212,175,55,.14);
 }
 
-/* luxury overlay */
+/* soft luxury glow */
 .footer::before{
 content:'';
 
@@ -708,76 +708,86 @@ inset:0;
 background:
 radial-gradient(
 circle at top right,
-rgba(212,175,55,.08),
+rgba(212,175,55,.06),
 transparent 35%
 );
 
 z-index:0;
 }
 
-/* ===== TOP ===== */
+/* ===============================
+   TOP AREA
+================================*/
 
 .footer-top{
 position:relative;
 z-index:2;
 
 display:grid;
-grid-template-columns:1.6fr 1fr 1fr 1fr;
+grid-template-columns:1.5fr 1fr 1fr 1fr;
 
-gap:35px;
+gap:45px;
 
 max-width:1400px;
 margin:auto;
 
 padding:0 60px 70px;
 
-border-bottom:1px solid rgba(212,175,55,.10);
+border-bottom:1px solid rgba(255,255,255,.06);
 }
 
-/* ===== GLASS COLUMNS ===== */
+/* ===============================
+   CLEAN COLUMNS
+================================*/
 
 .footer-col{
-background:rgba(255,255,255,.02);
-
-backdrop-filter:blur(8px);
-
-padding:32px;
-
-border-radius:24px;
-
-border:1px solid rgba(255,255,255,.05);
-
-transition:.4s ease;
+position:relative;
+padding:10px 20px;
 }
 
-.footer-col:hover{
-transform:translateY(-6px);
+/* elegant divider */
+.footer-col::after{
+content:'';
 
-border-color:rgba(212,175,55,.18);
+position:absolute;
+top:10%;
+right:0;
 
-box-shadow:
-0 20px 50px rgba(0,0,0,.28);
+width:1px;
+height:80%;
+
+background:rgba(255,255,255,.06);
 }
 
-/* ===== LOGO ===== */
+/* remove last divider */
+.footer-col:last-child::after{
+display:none;
+}
+
+/* ===============================
+   LOGO
+================================*/
 
 .footer-logo{
-width:120px;
+width:100px;
+
 margin-bottom:24px;
 
-border-radius:14px;
+border-radius:12px;
 
 box-shadow:
-0 10px 30px rgba(212,175,55,.15);
+0 8px 25px rgba(212,175,55,.12);
 }
 
-/* ===== BRAND ===== */
+/* ===============================
+   BRAND
+================================*/
 
 .footer-col h3{
-font-size:46px;
+font-size:34px;
 line-height:1.1;
 
-margin-bottom:18px;
+margin-bottom:16px;
 
 color:#fff;
 }
@@ -789,10 +799,24 @@ margin-bottom:28px;
 color:#d4af37;
 }
 
-/* ===== TEXT ===== */
+/* tagline */
+.footer-tagline{
+color:#9f9f9f;
+
+font-size:15px;
+line-height:1.8;
+
+margin-bottom:24px;
+
+max-width:320px;
+}
+
+/* ===============================
+   TEXT
+================================*/
 
 .footer-col p{
-color:#d0d0d0;
+color:#c8c8c8;
 
 line-height:2;
 font-size:15px;
@@ -800,7 +824,9 @@ font-size:15px;
 margin-bottom:14px;
 }
 
-/* ===== LINKS ===== */
+/* ===============================
+   LINKS
+================================*/
 
 .footer-col a{
 position:relative;
@@ -817,6 +843,7 @@ margin-bottom:16px;
 transition:.35s ease;
 }
 
+/* underline */
 .footer-col a::after{
 content:'';
 
@@ -841,7 +868,9 @@ transform:translateX(6px);
 width:100%;
 }
 
-/* ===== STATS ===== */
+/* ===============================
+   STATS
+================================*/
 
 .footer-stats{
 margin:28px 0;
@@ -857,14 +886,16 @@ font-size:16px;
 color:#a8a8a8;
 }
 
-/* ===== BUTTON ===== */
+/* ===============================
+   BUTTON
+================================*/
 
 .footer-btn{
 display:inline-flex;
 align-items:center;
 justify-content:center;
 
-padding:15px 34px;
+padding:14px 30px;
 
 background:#d4af37;
 color:#111;
@@ -885,53 +916,58 @@ transform:translateY(-5px);
 background:#fff;
 
 box-shadow:
-0 15px 35px rgba(212,175,55,.30);
+0 15px 35px rgba(212,175,55,.25);
 }
 
-/* ===== SOCIAL ===== */
+/* ===============================
+   SOCIAL
+================================*/
 
 .social-icons{
 display:flex;
-gap:18px;
+gap:16px;
 flex-wrap:wrap;
 }
 
-/* premium icons */
+/* premium icon style */
 .social-icons a{
-width:60px;
-height:60px;
+width:52px;
+height:52px;
 
 display:flex;
 align-items:center;
 justify-content:center;
 
-border-radius:18px;
+border-radius:16px;
 
-background:rgba(255,255,255,.04);
+background:rgba(255,255,255,.03);
 
-border:1px solid rgba(212,175,55,.12);
+border:1px solid rgba(255,255,255,.06);
 
 color:#fff;
-font-size:22px;
+font-size:20px;
 
 text-decoration:none;
 
 transition:.4s ease;
-
-backdrop-filter:blur(8px);
 }
 
+/* hover */
 .social-icons a:hover{
-transform:translateY(-8px);
+transform:translateY(-6px);
 
 background:#d4af37;
 color:#111;
 
+border-color:#d4af37;
+
 box-shadow:
-0 18px 40px rgba(212,175,55,.30);
+0 15px 35px rgba(212,175,55,.22);
 }
 
-/* ===== BOTTOM ===== */
+/* ===============================
+   BOTTOM
+================================*/
 
 .footer-bottom{
 position:relative;
@@ -965,13 +1001,20 @@ color:#777;
 font-size:14px;
 }
 
-/* ===== MOBILE ===== */
+/* ===============================
+   MOBILE
+================================*/
 
 @media(max-width:1000px){
 
 .footer-top{
 grid-template-columns:1fr 1fr;
+
 padding:0 24px 60px;
+}
+
+.footer-col:nth-child(2)::after{
+display:none;
 }
 
 }
@@ -980,10 +1023,17 @@ padding:0 24px 60px;
 
 .footer-top{
 grid-template-columns:1fr;
+gap:40px;
+}
+
+/* remove dividers mobile */
+.footer-col::after{
+display:none;
 }
 
 .footer-col{
 text-align:center;
+padding:0;
 }
 
 .footer-col a{
@@ -999,12 +1049,15 @@ justify-content:center;
 margin:auto auto 24px;
 }
 
+.footer-tagline{
+margin:auto auto 24px;
+}
+
 .footer-col h3{
-font-size:34px;
+font-size:30px;
 }
 
 }
-
 
 /* ===== ABOUT HERO ===== */
 .about-hero{
