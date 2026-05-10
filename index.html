@@ -302,20 +302,20 @@
   </a>
 
 </div>
-  <script>
+<script>
 
 document.addEventListener("DOMContentLoaded", function(){
 
-const chatToggle = document.getElementById("chatToggle");
-const chatBox = document.getElementById("chatBox");
-const closeChat = document.getElementById("closeChat");
+const consultBtn = document.getElementById("consultBtn");
+const consultPopup = document.getElementById("consultPopup");
+const closePopup = document.getElementById("closePopup");
 
-chatToggle.onclick = function(){
-chatBox.classList.toggle("active");
+consultBtn.onclick = function(){
+consultPopup.classList.toggle("active");
 };
 
-closeChat.onclick = function(){
-chatBox.classList.remove("active");
+closePopup.onclick = function(){
+consultPopup.classList.remove("active");
 };
 
 });
