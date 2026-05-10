@@ -543,21 +543,68 @@ justify-content:center;
 
 padding:70px 35px;
 
-text-align:center;
+text-align:left;
 
 border-right:1px solid rgba(255,255,255,.08);
 
 transition:.45s ease;
 
 overflow:hidden;
+
+/* cinematic movement */
+animation:slowZoom 14s ease-in-out infinite alternate;
+}
+
+/* ===== SLOW BACKGROUND MOVEMENT ===== */
+
+@keyframes slowZoom{
+
+0%{
+background-size:100%;
+}
+
+100%{
+background-size:115%;
+}
+
 }
 
 /* ===== CONTENT ===== */
 
 .feature-text{
 max-width:320px;
+
 position:relative;
 z-index:2;
+
+/* glass effect */
+background:rgba(0,0,0,.22);
+
+backdrop-filter:blur(8px);
+
+padding:35px 28px;
+
+border-radius:24px;
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 10px 35px rgba(0,0,0,.22);
+}
+
+/* ===== MINI TITLE ===== */
+
+.mini-title{
+display:block;
+
+font-size:12px;
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+color:#d4af37;
+
+margin-bottom:16px;
 }
 
 /* ===== HEADINGS ===== */
@@ -590,10 +637,15 @@ text-shadow:0 2px 10px rgba(0,0,0,.4);
 
 .feature-item:hover{
 transform:scale(1.03);
+
+box-shadow:
+0 20px 60px rgba(212,175,55,.20);
+
 z-index:2;
 }
 
-/* IMAGE ZOOM */
+/* ===== IMAGE ZOOM ===== */
+
 .feature-item::after{
 content:'';
 
@@ -616,7 +668,7 @@ z-index:0;
 transform:scale(1.08);
 }
 
-/* PREMIUM TOP LINE */
+/* ===== PREMIUM TOP LINE ===== */
 
 .feature-item::before{
 content:'';
@@ -643,6 +695,22 @@ z-index:3;
 transform:scaleX(1);
 }
 
+/* ===== VERTICAL LUXURY LINE ===== */
+
+.feature-item .line{
+position:absolute;
+
+top:50%;
+right:0;
+
+width:1px;
+height:60%;
+
+background:rgba(255,255,255,.10);
+
+transform:translateY(-50%);
+}
+
 /* ===== MOBILE ===== */
 
 @media(max-width:1000px){
@@ -660,9 +728,17 @@ grid-template-columns:1fr;
 }
 
 .feature-item{
-min-height:300px;
+min-height:320px;
+
 border-right:none;
 border-bottom:1px solid rgba(255,255,255,.08);
+
+padding:45px 20px;
+}
+
+.feature-text{
+max-width:100%;
+padding:28px 22px;
 }
 
 .feature-text h3{
@@ -671,6 +747,7 @@ font-size:28px;
 
 .feature-text p{
 font-size:15px;
+line-height:1.8;
 }
 
 }
