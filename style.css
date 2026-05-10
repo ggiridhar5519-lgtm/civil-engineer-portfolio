@@ -15,7 +15,7 @@ scroll-behavior:smooth;
 
 body{
 font-family:Arial, Helvetica, sans-serif;
-background:#ffffff;
+background:#d1d5db;
 color:#222;
 overflow-x:hidden;
 line-height:1.6;
@@ -1348,7 +1348,7 @@ transform:translateY(-8px) scale(1.01);
 
 /* ===== PROCESS (KEEP DARK BUT DIFFERENT STRUCTURE) ===== */
 .process-section{
-background:#ffffff; /* 🔥 changed */
+background:#d1d5db; /* 🔥 changed */
 padding:100px 8%;
 text-align:center;
 color:#000;
@@ -2540,7 +2540,7 @@ display:inline-block;
 
 padding:14px 24px;
 
-background:#ffffff;
+background:#d1d5db;
 color:#111827;
 
 font-weight:700;
