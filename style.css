@@ -476,172 +476,140 @@ transform:translateY(-6px) scale(1.01);
 
 }
 
-/* ===== FEATURES CLEAN (FIXED) ===== */
+/* =====================================
+   PREMIUM PANEL SERVICES SECTION
+===================================== */
 
 .features-clean{
-position:relative;
-overflow:hidden;
-padding:90px 8% 60px;  /* reduced bottom space */
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:55px 45px;
-z-index:1;
-}
+grid-template-columns:repeat(4,1fr);
 
-/* background slider */
-.bg-slider{
-position:absolute;
-top:0;
-left:0;
 width:100%;
-height:100%;
-z-index:-2;
+min-height:560px;
+
+background:#1f252b;
+
+overflow:hidden;
 }
 
-.bg-slider span{
-position:absolute;
-width:100%;
-height:100%;
-background-size:cover;
-background-position:center;
-
-opacity:0;
-animation:fadeSlide 24s infinite,
-           zoomEffect 24s infinite;
-}
-.bg-slider span:nth-child(1){
-background-image:url('https://images.unsplash.com/photo-1494526585095-c41746248156');
-animation-delay:0s;
-}
-
-.bg-slider span:nth-child(2){
-background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750');
-animation-delay:6s;
-}
-
-.bg-slider span:nth-child(3){
-background-image:url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2');
-animation-delay:12s;
-}
-
-/* overlay */
-.features-clean::after{
-content:'';
-position:absolute;
-inset:0;
-background:rgba(0,0,0,.55);
-z-index:-1;
-}
-
-/* layout */
+/* PANELS */
 .feature-item{
-display:flex;
-align-items:flex-start;
-gap:22px;
-}
-
-/* icon */
-.feature-icon{
-min-width:80px;
-display:flex;
-align-items:flex-start;
-justify-content:center;
-}
-
-.feature-icon i{
-font-size:34px;
-color:#d4af37;
-
-width:68px;
-height:68px;
+position:relative;
 
 display:flex;
 align-items:center;
 justify-content:center;
 
-border-radius:18px;
+padding:70px 35px;
 
-background:rgba(255,255,255,0.08);
+text-align:center;
 
-backdrop-filter:blur(10px);
+background:#2b3138;
 
-box-shadow:
-0 10px 30px rgba(0,0,0,0.25);
+border-right:1px solid rgba(255,255,255,.06);
 
-transition:.35s ease;
+transition:.45s ease;
 }
 
-/* hover */
-.feature-item:hover .feature-icon i{
-transform:translateY(-6px) scale(1.06);
-
+/* GOLD CENTER PANEL */
+.gold-panel{
 background:#d4af37;
-color:#111;
-
-box-shadow:
-0 18px 40px rgba(212,175,55,.35);
 }
 
-/* text */
-.feature-text h3{
-font-size:26px;
-font-weight:600;
-margin-bottom:10px;
-color:#ffffff;
-}
-
-.feature-text p{
-font-size:16px;
-line-height:1.7;
-color:rgba(255,255,255,.85);
+/* CONTENT */
+.feature-text{
 max-width:320px;
 }
 
-/* animation */
-@keyframes fadeSlide{
-0%,100%{opacity:0;}
-8%,30%{opacity:1;}
-40%{opacity:0;}
+/* HEADINGS */
+.feature-text h3{
+font-size:34px;
+font-weight:700;
+
+letter-spacing:1px;
+
+margin-bottom:24px;
+
+color:#fff;
 }
 
-@keyframes zoomEffect{
-0%{transform:scale(1);}
-100%{transform:scale(1.12);}
+/* PARAGRAPH */
+.feature-text p{
+font-size:16px;
+line-height:1.9;
+
+color:rgba(255,255,255,.82);
 }
 
-/* responsive */
-@media(max-width:1100px){
+/* GOLD PANEL TEXT */
+.gold-panel h3{
+color:#111;
+}
+
+.gold-panel p{
+color:#222;
+}
+
+/* HOVER */
+.feature-item:hover{
+transform:translateY(-10px);
+z-index:2;
+}
+
+/* PREMIUM LINE EFFECT */
+.feature-item::before{
+content:'';
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:4px;
+
+background:#d4af37;
+
+transform:scaleX(0);
+
+transition:.4s ease;
+}
+
+.feature-item:hover::before{
+transform:scaleX(1);
+}
+
+/* MOBILE */
+@media(max-width:1000px){
+
 .features-clean{
 grid-template-columns:1fr 1fr;
 }
+
 }
 
 @media(max-width:768px){
+
 .features-clean{
 grid-template-columns:1fr;
-padding:55px 18px;
-gap:28px;
-}
-}
-.feature-item,
-.card{
-opacity:0;
-transform:translateY(40px);
-animation:fadeUp .9s ease forwards;
 }
 
-.feature-item:nth-child(2){animation-delay:.1s;}
-.feature-item:nth-child(3){animation-delay:.2s;}
-.feature-item:nth-child(4){animation-delay:.3s;}
-.feature-item:nth-child(5){animation-delay:.4s;}
-.feature-item:nth-child(6){animation-delay:.5s;}
+.feature-item{
+min-height:300px;
+border-right:none;
+border-bottom:1px solid rgba(255,255,255,.06);
+}
 
-@keyframes fadeUp{
-to{
-opacity:1;
-transform:translateY(0);
+.feature-text h3{
+font-size:28px;
 }
+
+.feature-text p{
+font-size:15px;
 }
+
+}
+
+
 /* ===============================
    PREMIUM ARCHITECTURE FOOTER
 ================================*/
