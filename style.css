@@ -384,7 +384,7 @@ font-size:28px;
 font-weight:800;
 font-style:italic;
 margin-bottom:10px;
-color:#d4af37;
+color:#e5e7eb;
 position:relative;
 }
 
@@ -402,7 +402,7 @@ left:0;
 bottom:-6px;
 width:0%;
 height:2px;
-background:#d4af37;
+background:#e5e7eb;
 transition:.4s ease;
 }
 
@@ -628,7 +628,7 @@ left:0;
 width:100%;
 height:4px;
 
-background:#d4af37;
+background:#e5e7eb;
 
 transform:scaleX(0);
 
@@ -695,7 +695,7 @@ padding-top:90px;
 
 overflow:hidden;
 
-border-top:1px solid rgba(212,175,55,.14);
+border-top:1px solid rgba(255,255,255,.14);
 }
 
 /* soft luxury glow */
@@ -708,7 +708,7 @@ inset:0;
 background:
 radial-gradient(
 circle at top right,
-rgba(212,175,55,.06),
+rgba(255,255,255,.06),
 transparent 35%
 );
 
@@ -776,7 +776,7 @@ margin-bottom:24px;
 border-radius:12px;
 
 box-shadow:
-0 8px 25px rgba(212,175,55,.12);
+0 8px 25px rgba(255,255,255,.12);
 }
 
 /* ===============================
@@ -796,7 +796,7 @@ color:#fff;
 font-size:22px;
 margin-bottom:28px;
 
-color:#d4af37;
+color:#e5e7eb;
 }
 
 /* tagline */
@@ -854,13 +854,13 @@ bottom:-4px;
 width:0;
 height:1px;
 
-background:#d4af37;
+background:#e5e7eb;
 
 transition:.35s ease;
 }
 
 .footer-col a:hover{
-color:#d4af37;
+color:#e5e7eb;
 transform:translateX(6px);
 }
 
@@ -897,7 +897,7 @@ justify-content:center;
 
 padding:14px 30px;
 
-background:#d4af37;
+background:#e5e7eb;
 color:#111;
 
 font-weight:700;
@@ -916,7 +916,7 @@ transform:translateY(-5px);
 background:#fff;
 
 box-shadow:
-0 15px 35px rgba(212,175,55,.25);
+0 15px 35px rgba(255,255,255,.25);
 }
 
 /* ===============================
@@ -956,13 +956,13 @@ transition:.4s ease;
 .social-icons a:hover{
 transform:translateY(-6px);
 
-background:#d4af37;
+background:#e5e7eb;
 color:#111;
 
-border-color:#d4af37;
+border-color:#e5e7eb;
 
 box-shadow:
-0 15px 35px rgba(212,175,55,.22);
+0 15px 35px rgba(255,255,255,.22);
 }
 
 /* ===============================
@@ -993,7 +993,7 @@ transition:.3s ease;
 }
 
 .footer-links span:hover{
-color:#d4af37;
+color:#e5e7eb;
 }
 
 .footer-bottom p{
@@ -1120,7 +1120,7 @@ left:0;
 bottom:-8px;
 width:60%;
 height:3px;
-background:#d4af37;
+background:#e5e7eb;
 }
 
 /* PARAGRAPH */
@@ -1182,7 +1182,7 @@ transition:.3s ease;
 
 .stat h3{
 font-size:42px;
-color:#d4af37;
+color:#e5e7eb;
 margin-bottom:6px;
 }
 
@@ -1332,7 +1332,7 @@ color:#fff;
 
 .service-content h3{
 font-size:22px;
-color:#d4af37;
+color:#e5e7eb;
 margin-bottom:8px;
 }
 
@@ -1373,7 +1373,7 @@ max-width:220px;
 
 .step span{
 font-size:30px;
-color:#d4af37;
+color:#e5e7eb;
 display:block;
 margin-bottom:10px;
 }
@@ -1404,7 +1404,7 @@ font-size:30px;
 .btn{
 display:inline-block;
 padding:14px 28px;
-background:#d4af37;
+background:#e5e7eb;
 color:#000;
 font-weight:700;
 border-radius:30px;
@@ -1520,7 +1520,7 @@ transition:.3s ease;
 /* active */
 .project-filter button.active,
 .project-filter button:hover{
-background:#d4af37;
+background:#e5e7eb;
 color:#000;
 }
 
@@ -1591,7 +1591,7 @@ transition:.4s ease;
 }
 
 .project-content h3{
-color:#d4af37;
+color:#e5e7eb;
 margin-bottom:6px;
 }
 
@@ -1703,7 +1703,7 @@ resize:none;
 
 .contact-form button{
 padding:14px;
-background:#d4af37;
+background:#e5e7eb;
 border:none;
 color:#000;
 font-weight:700;
@@ -1984,13 +1984,13 @@ transition:.35s ease;
 .gallery-filter button:hover,
 .gallery-filter button.active{
 
-background:#d4af37;
+background:#e5e7eb;
 color:#111;
 
 transform:translateY(-5px);
 
 box-shadow:
-0 15px 35px rgba(212,175,55,.35);
+0 15px 35px rgba(255,255,255,.35);
 }
 
 /* ===== GRID ===== */
@@ -2021,7 +2021,7 @@ border-radius:30px;
 
 background:#111;
 
-border-top:4px solid #d4af37;
+border-top:4px solid #e5e7eb;
 
 box-shadow:
 0 20px 55px rgba(0,0,0,.16);
@@ -2340,12 +2340,12 @@ color:#d6d6d6;
 
 nav a:hover,
 nav a.active{
-color:#d4af37;
+color:#e5e7eb;
 }
 
 /* active page */
 nav a.active{
-color:#d4af37;
+color:#e5e7eb;
 }
 /* premium underline animation */
 nav a{
@@ -2362,7 +2362,7 @@ bottom:-6px;
 width:0;
 height:2px;
 
-background:#d4af37;
+background:#e5e7eb;
 
 transition:.3s ease;
 }
@@ -2377,7 +2377,7 @@ color:#ffffff !important;
 
 nav a:hover,
 nav a.active{
-color:#d4af37 !important;
+color:#e5e7eb !important;
 }
 
 /* ===============================
