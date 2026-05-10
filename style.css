@@ -1924,11 +1924,15 @@ gap:10px;
 
 padding:14px 28px;
 
-background:rgba(255,255,255,.16);
+background:linear-gradient(
+135deg,
+rgba(20,20,20,.75),
+rgba(40,40,40,.45)
+);
 
-backdrop-filter:blur(18px);
+backdrop-filter:blur(16px);
 
-border:1px solid rgba(255,255,255,.25);
+border:1px solid rgba(255,255,255,.06);
 
 border-radius:60px;
 }
