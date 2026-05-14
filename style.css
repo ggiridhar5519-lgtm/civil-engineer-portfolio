@@ -820,7 +820,8 @@ max-width:320px;
 /* ===============================
    TEXT
 ================================*/
-
+@media(max-width:768px){
+   
 .footer-col p{
 display:flex;
 align-items:flex-start;
