@@ -2879,11 +2879,11 @@ border-radius:50%;
 
 /* title */
 .hero-main-content h2{
-font-size:140px;
+font-size:105px;
 
 font-weight:800;
 
-letter-spacing:10px;
+letter-spacing:6px;
 
 line-height:1;
 
@@ -2900,11 +2900,11 @@ text-shadow:
 }
 
 .hero-main-content h3{
-font-size:72px;
+font-size:48px;
 
 font-weight:700;
 
-letter-spacing:8px;
+letter-spacing:5px;
 
 line-height:1.2;
 
@@ -2922,7 +2922,7 @@ text-shadow:
 
 /* subtitle */
 .hero-main-content p{
-font-size:26px;
+font-size:20px;
 
 font-weight:300;
 
