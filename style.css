@@ -2944,26 +2944,41 @@ text-shadow:
 @media(max-width:768px){
 
 .hero-main-content{
-width:90%;
+width:100%;
 
-padding:24px 18px;
+padding:0 18px;
 
-border-radius:22px;
+top:54%;
 }
 
 .hero-main-content h2{
-font-size:32px;
+font-size:58px;
+
+line-height:1.05;
+
+letter-spacing:3px;
+
+margin-bottom:24px;
+}
+
+.hero-main-content h3{
+font-size:30px;
 
 line-height:1.2;
 
-letter-spacing:-1px;
+letter-spacing:3px;
+
+margin-bottom:28px;
 }
 
 .hero-main-content p{
-font-size:15px;
+font-size:16px;
 
-line-height:1.6;
+line-height:1.8;
+
+letter-spacing:1px;
+
+padding:0 10px;
 }
 
 }
-
