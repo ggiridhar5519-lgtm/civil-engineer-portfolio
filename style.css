@@ -2882,13 +2882,13 @@ border-radius:50%;
 
 /* title */
 .hero-main-content h2{
-font-size:128px;
+font-size:140px;
 
 font-weight:800;
 
-line-height:.95;
+letter-spacing:10px;
 
-letter-spacing:2px;
+line-height:1;
 
 text-transform:uppercase;
 
@@ -2896,18 +2896,20 @@ font-family:'Poppins',sans-serif;
 
 color:#ffffff;
 
-margin-bottom:46px;
+margin-bottom:38px;
 
 text-shadow:
-0 10px 35px rgba(0,0,0,.38);
+0 10px 35px rgba(0,0,0,.35);
 }
 
 .hero-main-content h3{
-font-size:44px;
+font-size:72px;
 
-font-weight:600;
+font-weight:700;
 
-letter-spacing:12px;
+letter-spacing:8px;
+
+line-height:1.2;
 
 text-transform:uppercase;
 
@@ -2915,10 +2917,10 @@ font-family:'Poppins',sans-serif;
 
 color:#facc15;
 
-margin-bottom:52px;
+margin-bottom:42px;
 
 text-shadow:
-0 6px 20px rgba(0,0,0,.30);
+0 6px 20px rgba(0,0,0,.28);
 }
 
 /* subtitle */
