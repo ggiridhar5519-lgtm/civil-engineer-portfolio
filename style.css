@@ -2882,32 +2882,32 @@ border-radius:50%;
 
 /* title */
 .hero-main-content h2{
-font-size:92px;
+font-size:108px;
 
 font-weight:800;
 
 line-height:1;
 
-letter-spacing:4px;
+letter-spacing:3px;
 
 text-transform:uppercase;
 
 font-family:'Poppins',sans-serif;
 
-color:#f8fafc;
+color:#ffffff;
 
-margin-bottom:18px;
+margin-bottom:28px;
 
 text-shadow:
-0 5px 18px rgba(0,0,0,.35);
+0 8px 28px rgba(0,0,0,.38);
 }
 
 .hero-main-content h3{
-font-size:52px;
+font-size:56px;
 
 font-weight:700;
 
-letter-spacing:6px;
+letter-spacing:8px;
 
 text-transform:uppercase;
 
@@ -2915,25 +2915,30 @@ font-family:'Poppins',sans-serif;
 
 color:#facc15;
 
-margin-bottom:26px;
+margin-bottom:34px;
 
 text-shadow:
-0 5px 16px rgba(0,0,0,.28);
-}   
+0 6px 20px rgba(0,0,0,.35);
+} 
 
 /* subtitle */
 .hero-main-content p{
-font-size:22px;
+font-size:24px;
 
 font-weight:300;
 
-letter-spacing:1px;
+letter-spacing:1.5px;
 
-line-height:1.8;
+line-height:1.9;
 
-color:rgba(255,255,255,.82);
+font-style:italic;
+
+color:rgba(255,255,255,.88);
 
 font-family:'Poppins',sans-serif;
+
+text-shadow:
+0 2px 12px rgba(0,0,0,.28);
 }
 
 /* mobile */
