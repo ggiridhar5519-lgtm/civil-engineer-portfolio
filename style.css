@@ -2943,45 +2943,59 @@ text-shadow:
 @media(max-width:768px){
 
 .hero-main-content{
+position:absolute;
+
+top:58%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
 width:100%;
 
-padding:0 16px;
+padding:0 20px;
 
-top:56%;
+text-align:center;
 }
 
 .hero-main-content h2{
-font-size:64px;
+font-size:clamp(42px,11vw,72px);
 
-line-height:.95;
+font-weight:800;
+
+line-height:.92;
+
+letter-spacing:1px;
+
+margin-bottom:18px;
+
+white-space:normal;
+
+word-break:keep-all;
+}
+
+.hero-main-content h3{
+font-size:clamp(18px,5vw,30px);
+
+font-weight:700;
+
+line-height:1.25;
 
 letter-spacing:2px;
 
 margin-bottom:22px;
 
-font-weight:800;
-}
-
-.hero-main-content h3{
-font-size:26px;
-
-line-height:1.25;
-
-letter-spacing:3px;
-
-margin-bottom:26px;
-
-font-weight:700;
+white-space:normal;
 }
 
 .hero-main-content p{
-font-size:13px;
+font-size:clamp(11px,2.8vw,15px);
 
-line-height:1.9;
+line-height:1.8;
 
-letter-spacing:.8px;
+letter-spacing:.5px;
 
-padding:0 12px;
+padding:0 6px;
 }
 
 }
