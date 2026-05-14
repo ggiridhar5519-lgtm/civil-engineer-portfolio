@@ -2838,12 +2838,7 @@ z-index:5;
 
 padding:38px 55px;
 
-background:
-linear-gradient(
-135deg,
-rgba(8,12,20,.92),
-rgba(15,20,32,.86)
-);
+background:rgba(0,0,0,.45);
 
 border:1px solid rgba(255,255,255,.08);
 
@@ -2856,6 +2851,8 @@ width:90%;
 max-width:1150px;
 
 overflow:hidden;
+
+backdrop-filter:blur(8px);
 }
 
 /* premium top glow */
