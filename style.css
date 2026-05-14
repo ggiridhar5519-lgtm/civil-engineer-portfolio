@@ -822,13 +822,26 @@ max-width:320px;
 ================================*/
 
 .footer-col p{
-color:#d1d5db;
-
-line-height:2;
+display:flex;
+align-items:flex-start;
+gap:12px;
 
 font-size:15px;
+line-height:1.8;
 
-margin-bottom:16px;
+color:#d1d5db;
+
+margin-bottom:18px;
+
+word-break:break-word;
+}
+
+.footer-col p i{
+margin-top:6px;
+
+font-size:16px;
+
+min-width:18px;
 }
 
 /* ===============================
