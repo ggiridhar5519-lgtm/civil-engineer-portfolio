@@ -2888,7 +2888,7 @@ right:-120px;
 width:260px;
 height:260px;
 
-background:rgba(59,130,246,.10);
+background:rgba(255,255,255,.04);
 
 filter:blur(90px);
 
@@ -2897,47 +2897,38 @@ border-radius:50%;
 
 /* title */
 .hero-main-content h2{
-font-size:46px;
+font-size:64px;
 
-font-weight:900;
+font-weight:800;
 
-line-height:1.15;
-
-letter-spacing:-1px;
-
-margin-bottom:18px;
-
-color:#fff;
+letter-spacing:3px;
 
 text-transform:uppercase;
 
-position:relative;
-z-index:2;
+color:#ffffff;
 
-max-width:1000px;
+margin-bottom:22px;
 
-margin-left:auto;
-margin-right:auto;
+text-shadow:
+0 4px 18px rgba(0,0,0,.45);
+
+font-family:'Poppins',sans-serif;
 }
 
 /* subtitle */
 .hero-main-content p{
 font-size:22px;
 
-line-height:1.7;
+line-height:1.8;
 
-color:rgba(255,255,255,.78);
-
-max-width:760px;
-
-margin:auto;
-
-position:relative;
-z-index:2;
+color:rgba(255,255,255,.82);
 
 font-style:italic;
 
-letter-spacing:.5px;
+letter-spacing:1px;
+
+text-shadow:
+0 3px 10px rgba(0,0,0,.35);
 }
 
 /* mobile */
