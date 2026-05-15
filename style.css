@@ -1465,7 +1465,84 @@ font-size:38px;
 /* =================================
    PREMIUM SERVICES SHOWCASE
 ================================= */
+/* ===============================
+   SERVICES HERO
+================================*/
 
+.services-hero{
+position:relative;
+
+height:60vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.65)
+),
+url('https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=1800&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+overflow:hidden;
+}
+
+.services-hero .overlay{
+position:absolute;
+inset:0;
+}
+
+.services-hero-content{
+position:relative;
+z-index:2;
+
+color:#fff;
+}
+
+.services-hero-content h1{
+font-size:64px;
+
+font-weight:800;
+
+margin-bottom:18px;
+
+font-family:'Poppins',sans-serif;
+}
+
+.services-hero-content p{
+font-size:20px;
+
+color:#e5e7eb;
+
+letter-spacing:1px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.services-hero{
+height:45vh;
+
+padding:0 20px;
+}
+
+.services-hero-content h1{
+font-size:42px;
+}
+
+.services-hero-content p{
+font-size:15px;
+
+line-height:1.8;
+}
+
+}
 /* HERO FIX */
 .services-hero-content
 position:relative !important;
