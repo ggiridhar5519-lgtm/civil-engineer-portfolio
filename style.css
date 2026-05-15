@@ -2182,14 +2182,37 @@ display:none;
 .menu-close{
 position:absolute;
 
-top:22px;
-right:24px;
+top:26px;
+right:26px;
+
+width:52px;
+height:52px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.10);
+
+border-radius:18px;
+
+backdrop-filter:blur(12px);
 
 font-size:28px;
 
 color:#fff;
 
 cursor:pointer;
+
+transition:.35s ease;
+}
+
+.menu-close:hover{
+transform:rotate(90deg);
+
+background:rgba(255,255,255,.12);
 }
 
 /* hamburger animation */
