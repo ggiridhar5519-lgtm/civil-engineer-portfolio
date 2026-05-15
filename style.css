@@ -1809,24 +1809,27 @@ gap:35px;
 /* CARD */
 
 .step{
-background:#111111;
+position:relative;
 
-padding:40px 30px;
+background:
+linear-gradient(
+180deg,
+#0f0f0f,
+#050505
+);
 
-border-radius:28px;
+padding:55px 28px 38px;
+
+border-radius:34px;
 
 border:1px solid rgba(255,255,255,.06);
 
-backdrop-filter:blur(10px);
+overflow:hidden;
 
 box-shadow:
-0 25px 60px rgba(0,0,0,.18);
+0 25px 60px rgba(0,0,0,.22);
 
 transition:.45s ease;
-
-position:relative;
-
-overflow:hidden;
 }
 
 .step::before{
@@ -1872,29 +1875,35 @@ background:rgba(255,255,255,.05);
 /* NUMBER */
 
 .step span{
-display:block;
+position:absolute;
 
-font-size:42px;
+top:18px;
+right:24px;
+
+font-size:72px;
 
 font-weight:800;
 
-margin-bottom:18px;
+color:rgba(255,255,255,.06);
 
-color:#ffffff !important;
+line-height:1;
 
-opacity:.18;
+pointer-events:none;
 }
 
 /* TITLE */
 
 .step h4{
-font-size:26px;
+font-size:30px;
 
-margin-bottom:16px;
+margin-top:35px;
+margin-bottom:18px;
 
 font-weight:700;
 
 color:#ffffff;
+
+font-family:'Poppins',sans-serif;
 }
 
 /* TEXT */
@@ -1904,7 +1913,7 @@ font-size:15px;
 
 line-height:1.9;
 
-color:#cbd5e1;
+color:#bfc5d1;
 }
 
 /* ===============================
