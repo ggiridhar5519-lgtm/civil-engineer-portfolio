@@ -1467,7 +1467,7 @@ font-size:38px;
 ================================= */
 
 /* HERO FIX */
-.services-hero .hero-content{
+.services-hero-content
 position:relative !important;
 
 top:auto !important;
@@ -1640,7 +1640,7 @@ justify-content:center;
 padding-left:0;
 }
 
-.services-hero .hero-content{
+.services-hero-content
 text-align:center;
 
 max-width:90%;
