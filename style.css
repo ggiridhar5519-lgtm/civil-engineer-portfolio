@@ -1776,7 +1776,7 @@ font-size:14px;
 ================================*/
 
 .process-section{
-background:#0b1120;
+background:#f5f5f3;
 
 padding:110px 8%;
 
@@ -1807,15 +1807,18 @@ gap:35px;
 /* CARD */
 
 .step{
-background:rgba(255,255,255,.03);
+background:#ffffff;
 
 padding:40px 30px;
 
 border-radius:28px;
 
-border:1px solid rgba(255,255,255,.06);
+border:1px solid rgba(0,0,0,.06);
 
 backdrop-filter:blur(10px);
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.08);
 
 transition:.4s ease;
 }
@@ -1850,6 +1853,8 @@ font-size:26px;
 margin-bottom:16px;
 
 font-weight:700;
+
+color:#111111;
 }
 
 /* TEXT */
@@ -1859,7 +1864,7 @@ font-size:15px;
 
 line-height:1.9;
 
-color:#cbd5e1;
+color:#555;
 }
 
 /* ===============================
@@ -1943,7 +1948,7 @@ padding:30px 24px;
 }
 
 .step span{
-font-size:34px;
+color:#111827;
 }
 
 .step h4{
