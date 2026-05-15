@@ -1880,7 +1880,9 @@ font-weight:800;
 
 margin-bottom:18px;
 
-color:#e5e7eb;
+color:#ffffff !important;
+
+opacity:.18;
 }
 
 /* TITLE */
