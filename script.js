@@ -121,3 +121,29 @@ filterButtons.forEach(btn => {
 
   });
 });
+
+// ===== PREMIUM CARD REVEAL =====
+
+const cards = document.querySelectorAll(".card");
+
+if(cards.length){
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+
+});
+
+},{
+threshold:0.18
+});
+
+cards.forEach((card)=>{
+observer.observe(card);
+});
+
+}
