@@ -124,6 +124,8 @@ filterButtons.forEach(btn => {
 
 // ===== PREMIUM CARD REVEAL =====
 
+// ===== PREMIUM CARD REVEAL =====
+
 const cards = document.querySelectorAll(".card");
 
 if(cards.length){
@@ -142,8 +144,12 @@ entry.target.classList.add("show");
 threshold:0.18
 });
 
-cards.forEach((card)=>{
+cards.forEach((card,index)=>{
+
+card.style.transitionDelay = `${index * 120}ms`;
+
 observer.observe(card);
+
 });
 
 }
