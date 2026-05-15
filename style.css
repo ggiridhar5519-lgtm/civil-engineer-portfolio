@@ -498,7 +498,7 @@ max-width:90%;
 
 .card:hover{
 transform:
-translateY(-10px)
+translateY(-6px)
 scale(1.015);
 
 box-shadow:
