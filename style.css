@@ -283,6 +283,45 @@ margin:auto;
 overflow:hidden;
 }
 
+/* SECTION BACKGROUND */
+
+.blocks::before{
+content:'';
+
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.72)
+),
+url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1800&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+z-index:-2;
+
+transform:scale(1.05);
+}
+
+.blocks{
+isolation:isolate;
+}
+
+/* subtle dark overlay */
+.blocks::after{
+content:'';
+
+position:absolute;
+inset:0;
+
+background:rgba(0,0,0,.18);
+
+z-index:-1;
+}
+
 /* =========================
    CARD
 ========================= */
