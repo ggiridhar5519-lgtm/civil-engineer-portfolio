@@ -873,8 +873,10 @@ max-width:320px;
 /* ===============================
    TEXT
 ================================*/
-@media(max-width:768px){
-   
+/* ===============================
+   TEXT
+================================*/
+
 .footer-col p{
 display:flex;
 align-items:flex-start;
@@ -906,7 +908,7 @@ justify-content:center;
 text-align:left;
 }
 
-}  
+}
 
 /* ===============================
    LINKS
