@@ -1972,13 +1972,7 @@ display:none;
 }
 
 /* hamburger */
-.menu-btn{
-display:none;
-flex-direction:column;
-gap:6px;
-cursor:pointer;
-z-index:3000;
-}
+
 
 .menu-btn span{
 position:absolute;
