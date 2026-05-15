@@ -1460,14 +1460,27 @@ font-size:38px;
 
 }
 
-/* ===============================
-   SERVICES PAGE (UPDATED CLEAN)
-================================*/
+
 
 /* =================================
    PREMIUM SERVICES SHOWCASE
 ================================= */
 
+/* HERO FIX */
+.services-hero .hero-content{
+position:relative !important;
+
+top:auto !important;
+left:auto !important;
+
+transform:none !important;
+
+max-width:600px;
+
+text-align:left;
+}
+
+/* MAIN SECTION */
 .services-section{
 background:#0b1120;
 
@@ -1620,6 +1633,18 @@ background:#e5e7eb;
 
 /* MOBILE */
 @media(max-width:768px){
+
+.services-hero{
+justify-content:center;
+
+padding-left:0;
+}
+
+.services-hero .hero-content{
+text-align:center;
+
+max-width:90%;
+}
 
 .services-section{
 padding:70px 18px;
