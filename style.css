@@ -1981,10 +1981,15 @@ z-index:3000;
 }
 
 .menu-btn span{
-width:28px;
-height:3px;
-background:#111827;
-border-radius:2px;
+position:absolute;
+
+width:24px;
+height:2.5px;
+
+background:#ffffff;
+
+border-radius:20px;
+
 transition:.4s ease;
 }
 
