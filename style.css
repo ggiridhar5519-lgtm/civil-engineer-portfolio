@@ -110,7 +110,7 @@ transform:scale(1.05);
 }
 
 .logo:hover img{
-transform:scale(1.08);
+transform:scale(1.03);
 }
 
 @media(max-width:768px){
@@ -434,7 +434,7 @@ z-index:-2;
 
 /* gentle auto zoom */
 .card:hover::before{
-transform:scale(1.08);
+transform:scale(1.03);
 }
 
 /* =========================
@@ -728,7 +728,7 @@ z-index:0;
 }
 
 .feature-item:hover::after{
-transform:scale(1.08);
+transform:scale(1.03);
 }
 
 /* PREMIUM TOP LINE */
@@ -1691,7 +1691,7 @@ rgba(0,0,0,.45)
 /* hover */
 
 .service-block:hover .service-image img{
-transform:scale(1.08);
+transform:scale(1.03);
 }
 
 /* DETAILS */
@@ -2826,7 +2826,7 @@ filter .6s ease;
 }
 
 .gallery-item:hover img{
-transform:scale(1.08);
+transform:scale(1.03);
 filter:brightness(.75);
 }
 
