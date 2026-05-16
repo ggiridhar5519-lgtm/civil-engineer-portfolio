@@ -2251,8 +2251,6 @@ box-shadow:
 .projects-section{
 position:relative;
 
-isolation:isolate;
-
 padding:70px 6% 120px;
 
 background:
@@ -2287,7 +2285,7 @@ transparent 70%
 
 filter:blur(100px);
 
-z-index:-1;
+z-index:0;
 
 animation:floatGlow 9s ease-in-out infinite alternate;
 }
@@ -2312,7 +2310,7 @@ transparent 70%
 
 filter:blur(110px);
 
-z-index:-1;
+z-index:0;
 
 animation:floatGlow2 11s ease-in-out infinite alternate;
 }
@@ -2362,6 +2360,9 @@ repeat(12,1fr);
 grid-auto-rows:260px;
 
 gap:34px;
+
+position:relative;
+z-index:2;
 }
 
 /* ===== CARD ===== */
