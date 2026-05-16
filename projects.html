@@ -206,34 +206,5 @@ Dhone-518222</p>
 
 </footer>
 <script src="script.js"></script>
- <script>
-
-const cards = document.querySelectorAll(".project-card");
-
-const observer = new IntersectionObserver((entries)=>{
-
-entries.forEach((entry,index)=>{
-
-if(entry.isIntersecting){
-
-setTimeout(()=>{
-
-entry.target.classList.add("show");
-
-}, index * 140);
-
-}
-
-});
-
-},{
-threshold:0.18
-});
-
-cards.forEach((card)=>{
-observer.observe(card);
-});
-
-</script> 
 </body>
 </html>
