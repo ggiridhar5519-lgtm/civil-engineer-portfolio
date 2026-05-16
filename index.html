@@ -309,5 +309,34 @@ consultPopup.classList.remove("active");
 
 </script>
 <script src="script.js"></script>
+  <script>
+
+const featureItems = document.querySelectorAll(".feature-item");
+
+const featureObserver = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry,index)=>{
+
+if(entry.isIntersecting){
+
+setTimeout(()=>{
+
+entry.target.classList.add("show");
+
+}, index * 180);
+
+}
+
+});
+
+},{
+threshold:0.2
+});
+
+featureItems.forEach((item)=>{
+featureObserver.observe(item);
+});
+
+</script>
 </body>
 </html>
