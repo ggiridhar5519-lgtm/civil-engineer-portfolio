@@ -309,11 +309,11 @@ consultPopup.classList.remove("active");
 
 </script>
 <script src="script.js"></script>
-  <script>
+<script>
 
 const featureItems = document.querySelectorAll(".feature-item");
 
-const featureObserver = new IntersectionObserver((entries)=>{
+const observer = new IntersectionObserver((entries)=>{
 
 entries.forEach((entry,index)=>{
 
@@ -323,7 +323,7 @@ setTimeout(()=>{
 
 entry.target.classList.add("show");
 
-}, index * 180);
+}, index * 120);
 
 }
 
@@ -334,7 +334,7 @@ threshold:0.2
 });
 
 featureItems.forEach((item)=>{
-featureObserver.observe(item);
+observer.observe(item);
 });
 
 </script>
