@@ -66,42 +66,42 @@
   <div class="projects-grid">
 
     <div class="project-card" data-category="res" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');">
-      <div class="project-content">
+      <div class="project-content" data-number="01">
         <h3>Luxury Villa</h3>
         <p>Modern residential design</p>
       </div>
     </div>
 
     <div class="project-card" data-category="com" style="background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750');">
-      <div class="project-content">
+      <div class="project-content" data-number="02">
         <h3>Office Complex</h3>
         <p>Commercial planning</p>
       </div>
     </div>
 
     <div class="project-card" data-category="int" style="background-image:url('https://images.unsplash.com/photo-1494526585095-c41746248156');">
-      <div class="project-content">
+      <div class="project-content" data-number="03">
         <h3>Luxury Interiors</h3>
         <p>Elegant design</p>
       </div>
     </div>
 
     <div class="project-card" data-category="res" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85');">
-      <div class="project-content">
+      <div class="project-content" data-number="04">
         <h3>Modern House</h3>
         <p>Smart architecture</p>
       </div>
     </div>
 
     <div class="project-card" data-category="com" style="background-image:url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688');">
-      <div class="project-content">
+      <div class="project-content" data-number="05">
         <h3>Retail Space</h3>
         <p>Optimized design</p>
       </div>
     </div>
 
     <div class="project-card" data-category="int" style="background-image:url('https://images.unsplash.com/photo-1519643381401-22c77e60520e');">
-      <div class="project-content">
+      <div class="project-content" data-number="06">
         <h3>Interior Design</h3>
         <p>Premium living</p>
       </div>
@@ -206,5 +206,34 @@ Dhone-518222</p>
 
 </footer>
 <script src="script.js"></script>
+ <script>
+
+const cards = document.querySelectorAll(".project-card");
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry,index)=>{
+
+if(entry.isIntersecting){
+
+setTimeout(()=>{
+
+entry.target.classList.add("show");
+
+}, index * 140);
+
+}
+
+});
+
+},{
+threshold:0.18
+});
+
+cards.forEach((card)=>{
+observer.observe(card);
+});
+
+</script> 
 </body>
 </html>
