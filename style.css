@@ -1,3 +1,38 @@
+/* ===== ULTRA SMOOTH ENGINE ===== */
+
+*{
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+overflow-x:hidden;
+
+text-rendering:optimizeLegibility;
+}
+
+/* GPU ACCELERATION */
+
+.card,
+.project-card,
+.gallery-item,
+.feature-item,
+.step,
+.service-image img,
+.hero-image,
+.btn{
+transform:translateZ(0);
+
+will-change:transform, opacity;
+
+backface-visibility:hidden;
+
+perspective:1000px;
+}
 /* ===================================
    HARI ASSOCIATES PREMIUM STYLE
    White + Charcoal + Copper
