@@ -3741,3 +3741,208 @@ padding:0 6px;
 }
 
 }
+
+/* ===============================
+   PREMIUM MAP SECTION
+================================*/
+
+.map-section{
+padding:0 8% 100px;
+
+background:
+linear-gradient(
+180deg,
+#f7f7f7,
+#ececec
+);
+}
+
+/* ===== HEADER ===== */
+
+.map-header{
+text-align:center;
+
+margin-bottom:45px;
+}
+
+.map-header span{
+display:inline-block;
+
+font-size:13px;
+
+letter-spacing:4px;
+
+font-weight:700;
+
+color:#9ca3af;
+
+margin-bottom:18px;
+}
+
+.map-header h2{
+font-size:58px;
+
+font-weight:800;
+
+line-height:1;
+
+margin-bottom:18px;
+
+font-family:'Poppins',sans-serif;
+
+color:#111827;
+}
+
+.map-header p{
+font-size:17px;
+
+color:#6b7280;
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.9;
+}
+
+/* ===== MAP WRAPPER ===== */
+
+.map-wrapper{
+position:relative;
+
+overflow:hidden;
+
+border-radius:34px;
+
+box-shadow:
+0 30px 80px rgba(0,0,0,.18);
+
+background:#fff;
+}
+
+/* ===== MAP ===== */
+
+.map-wrapper iframe{
+width:100%;
+height:520px;
+
+border:none;
+
+display:block;
+
+filter:grayscale(.15) contrast(1.02);
+}
+
+/* ===== FLOATING CARD ===== */
+
+.map-overlay-card{
+position:absolute;
+
+left:40px;
+bottom:40px;
+
+width:340px;
+
+padding:30px;
+
+background:rgba(15,15,15,.88);
+
+backdrop-filter:blur(14px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:28px;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.35);
+}
+
+.map-overlay-card h3{
+font-size:30px;
+
+margin-bottom:12px;
+
+color:#fff;
+
+font-weight:700;
+}
+
+.map-overlay-card p{
+font-size:15px;
+
+line-height:1.8;
+
+color:#d1d5db;
+
+margin-bottom:24px;
+}
+
+/* ===== BUTTON ===== */
+
+.map-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:14px 28px;
+
+background:#ffffff;
+color:#111827;
+
+font-weight:700;
+
+text-decoration:none;
+
+border-radius:50px;
+
+transition:.35s ease;
+}
+
+.map-btn:hover{
+transform:translateY(-4px);
+
+background:#f3f4f6;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+.map-section{
+padding:0 18px 70px;
+}
+
+.map-header h2{
+font-size:40px;
+}
+
+.map-header p{
+font-size:15px;
+}
+
+.map-wrapper{
+border-radius:24px;
+}
+
+.map-wrapper iframe{
+height:350px;
+}
+
+.map-overlay-card{
+position:relative;
+
+left:auto;
+bottom:auto;
+
+width:100%;
+
+border-radius:0;
+
+padding:24px;
+}
+
+.map-overlay-card h3{
+font-size:24px;
+}
+
+}
