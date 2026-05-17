@@ -21,17 +21,16 @@ text-rendering:optimizeLegibility;
 .project-card,
 .gallery-item,
 .feature-item,
-.step,
-.service-image img,
-.hero-image,
-.btn{
-transform:translateZ(0);
-
-will-change: transform;
-
+.step{
 backface-visibility:hidden;
+transform:translateZ(0);
+}
 
-perspective:1000px;
+/* ONLY ON HOVER */
+.project-card:hover,
+.card:hover,
+.gallery-item:hover{
+will-change:transform;
 }
 /* ===================================
    HARI ASSOCIATES PREMIUM STYLE
@@ -427,7 +426,7 @@ background-position:center;
 
 transform:scale(1);
 
-transition:transform 7s ease;
+transition:transform 26s ease;
 
 z-index:-2;
 }
@@ -468,10 +467,10 @@ padding:34px;
 transform:translateY(20px);
 
 transition:
-transform .7s ease,
-opacity .7s ease;
+transform .27s ease,
+opacity .27s ease;
 
-opacity:.92;
+opacity:.28;
 }
 
 /* =========================
@@ -2137,7 +2136,7 @@ background:
 url('https://images.unsplash.com/photo-1519643381401-22c77e60520e')
 center/cover no-repeat;
 
-animation:heroZoom 20s ease-in-out infinite alternate;
+animation:none;
 z-index:0;
 }
 
@@ -2210,6 +2209,10 @@ linear-gradient(
 );
 
 overflow:hidden;
+
+/* PERFORMANCE */
+content-visibility:auto;
+contain-intrinsic-size:1000px;
 }
 
 /* ambient glow */
@@ -2231,7 +2234,7 @@ rgba(212,161,93,.10),
 transparent 70%
 );
 
-filter:blur(100px);
+filter:blur(40px);
 
 z-index:0;
 }
@@ -2253,7 +2256,7 @@ rgba(255,255,255,.04),
 transparent 70%
 );
 
-filter:blur(100px);
+filter:blur(40px);
 
 z-index:0;
 }
@@ -2294,21 +2297,30 @@ background-repeat:no-repeat;
 
 border:none;
 
-/* lighter shadow */
 box-shadow:
-0 12px 35px rgba(0,0,0,.28);
+0 8px 24px rgba(0,0,0,.22);
 
 transform:translateY(0);
 
 transition:
-transform .45s ease,
-box-shadow .45s ease;
-
-will-change:transform;
+transform .28s ease,
+box-shadow .28s ease;
 
 backface-visibility:hidden;
 
+contain:layout paint;
+   
 isolation:isolate;
+}
+
+/* hover */
+.project-card:hover{
+transform:translateY(-4px);
+
+box-shadow:
+0 14px 34px rgba(0,0,0,.30);
+
+will-change:transform;
 }
 
 /* overlay */
