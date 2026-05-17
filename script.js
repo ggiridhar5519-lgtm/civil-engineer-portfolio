@@ -153,3 +153,31 @@ observer.observe(card);
 });
 
 }
+
+const projectCards=document.querySelectorAll('.project-card');
+
+if(projectCards.length){
+
+const projectObserver=new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+
+});
+
+},{
+threshold:.15
+});
+
+projectCards.forEach((card,index)=>{
+
+card.style.transitionDelay=`${index * 100}ms`;
+
+projectObserver.observe(card);
+
+});
+
+}
