@@ -4,13 +4,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                echo 'Cloning GitHub Repository...'
-                git 'https://github.com/ggiridhar5519-lgtm/ggiridhar5519.github.io.git'
-            }
-        }
-
         stage('Check Files') {
             steps {
                 echo 'Checking project files...'
@@ -21,42 +14,42 @@ pipeline {
         stage('HTML Validation') {
             steps {
                 echo 'Validating HTML files...'
+                bat 'timeout /t 5'
             }
         }
 
         stage('CSS Validation') {
             steps {
                 echo 'Checking CSS files...'
+                bat 'timeout /t 5'
             }
         }
 
         stage('JavaScript Validation') {
             steps {
                 echo 'Checking JavaScript files...'
+                bat 'timeout /t 5'
             }
         }
 
         stage('Build') {
             steps {
                 echo 'Building Website...'
+                bat 'timeout /t 8'
             }
         }
 
         stage('Testing') {
             steps {
-                echo 'Running test cases...'
-            }
-        }
-
-        stage('Security Scan') {
-            steps {
-                echo 'Running security scan...'
+                echo 'Running Tests...'
+                bat 'timeout /t 8'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying website...'
+                echo 'Deploying Website...'
+                bat 'timeout /t 5'
             }
         }
     }
