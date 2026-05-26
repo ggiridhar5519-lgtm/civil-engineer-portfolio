@@ -14,42 +14,42 @@ pipeline {
         stage('HTML Validation') {
             steps {
                 echo 'Validating HTML files...'
-                bat 'timeout /t 5'
+                sleep(time: 5, unit: 'SECONDS')
             }
         }
 
         stage('CSS Validation') {
             steps {
                 echo 'Checking CSS files...'
-                bat 'timeout /t 5'
+                sleep(time: 5, unit: 'SECONDS')
             }
         }
 
         stage('JavaScript Validation') {
             steps {
                 echo 'Checking JavaScript files...'
-                bat 'timeout /t 5'
+                sleep(time: 5, unit: 'SECONDS')
             }
         }
 
         stage('Build') {
             steps {
                 echo 'Building Website...'
-                bat 'timeout /t 8'
+                sleep(time: 8, unit: 'SECONDS')
             }
         }
 
         stage('Testing') {
             steps {
                 echo 'Running Tests...'
-                bat 'timeout /t 8'
+                sleep(time: 8, unit: 'SECONDS')
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Deploying Website...'
-                bat 'timeout /t 5'
+                sleep(time: 5, unit: 'SECONDS')
             }
         }
     }
