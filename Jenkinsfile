@@ -30,7 +30,7 @@ pipeline {
                 echo 'Checking JavaScript files...'
                 sleep(time: 5, unit: 'SECONDS')
             }
-        }
+        
 
         stage('Build') {
             steps {
